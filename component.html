@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>koreanre component</title>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/ui.jqgrid.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/modal.css">
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/common.js"></script>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/grid.locale-kr.js"></script>
+    <script src="js/jquery.jqGrid.min.js"></script>
+    <!-- <script src="js/common.js"></script> -->
+    <script src="js/modal.js"></script>
 </head>
 <body>
     <div class="side_menu_wrap">
@@ -29,6 +35,9 @@
             </li>
             <li>
                 <a href="#fontsection">font</a>
+            </li>
+            <li>
+              <a href="#grid">grid</a>
             </li>
             <li>
                 <a href="#modalsection">modal</a>
@@ -170,12 +179,12 @@
         <div class="calWrap">
             <div class="inpWrap">
                 <label for=""><span>date of birth</span></label>
-                <input type="text" placeholder="" class="" value="YYYY. DD. MM" />
+                <input type="text" placeholder="" class="" id="datepicker" value="YYYY. DD. MM" />
                 <i class="iconCal"></i>
             </div>
             <div class="inpWrap inpError mt40">
                 <label for=""><span>date of birth</span></label>
-                <input type="text" placeholder="" class="" value="YYYY. DD. MM" />
+                <input type="text" placeholder="" class="" id="datepicker2" value="YYYY. DD. MM" />
                 <i class="iconCal"></i>
                 <em class="errorCaption">Wrong date of birth</em>
             </div>
@@ -312,6 +321,17 @@
             <p class="disclaimer l2">L2 - (Disclaimer) 14px</p>
         </div>
     </div>
+    <div class="font pd60" id="grid" style="">
+      <div class="mt10">
+          <h3 class="tit_head_3">grid</h3>
+      </div>
+      <div>
+        <table id="jqGrid"></table>
+        <div id="jqGridPager"></div>
+      </div>
+      <div class="mt10"></div>
+      <div class="mt10"></div>
+    </div>
     <div class="modalArea pd60" id="modalsection" style="background-color: #d9ebff;">
         <div class="mt10">
             <button type="button" class="js-modal-trigger sample_modal_open" data-micromodal-trigger="modal-1">팝업열기</button>
@@ -354,5 +374,35 @@ $(document).on('click', '.modal .modal__close', function() {
     $('body').removeClass('scrollLock');
 });
 </script>
+<script>
+$( function() {
+  $( "#datepicker" ).datepicker();
+  $( "#datepicker2" ).datepicker();
+});
+</script>
+<script type="text/javascript"> 
+  $(document).ready(function () {
+      $("#jqGrid").jqGrid({
+          url: 'http://trirand.com/blog/phpjqgrid/examples/jsonp/getjsonp.php?callback=?&qwery=longorders',
+          mtype: "GET",
+          datatype: "jsonp",
+          colModel: [
+              { label: 'OrderID', name: 'OrderID', key: true, width: 75 },
+              { label: 'Customer ID', name: 'CustomerID', width: 150 },
+              { label: 'Order Date', name: 'OrderDate', width: 150,
+    formatter : 'date', formatoptions: { srcformat : 'Y-m-d H:i:s', newformat :'ShortDate'}},
+              { label: 'Freight', name: 'Freight', width: 150 },
+              { label:'Ship Name', name: 'ShipName', width: 150 }
+          ],
+  viewrecords: true,
+          width: 780,
+          height: 250,
+          rowNum: 20,
+          pager: "#jqGridPager"
+      });
+  });
+
+</script>
+
 </body>
 </html>
