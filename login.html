@@ -6,51 +6,65 @@
     <title>login</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/modal.css">
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <!-- <script src="js/common.js"></script> -->
-    <script src="js/modal.js"></script>
+    
 </head>
 <body>
-    <div class="wrap">
-        <!-- <div class="header">
+  <div class="wrap">
+    <!-- <div class="header">
 
-        </div> -->
-        <div class="container login_bg">
-            <!-- ▼컨텐츠 영역▼ -->
-            <div class="content">
-              <div class="loginArea">
-                <div class="contentsInner">
-                    <form action="">
-                        <h3 class="title tac">koreanre</h3>
-                        <div class="inpWrap inpw_id">
-                          <label for="" class="is-hidden"><span>ID</span></label>
-                          <input type="text" id="" class="input block" placeholder="ID">
-                          <!-- <em class="errorCaption">Invalid ID</em> -->
-                        </div>
-                        <div class="inpWrap inpw_password">
-                          <label for="" class="is-hidden"><span>Password</span></label>
-                          <input type="password" id="" class="input block" placeholder="PW">
-                          <!-- <button class="btn_password_view"></button> -->
-                          <!-- <em class="errorCaption">Invalid PW</em> -->
-                        </div>
-                        <!-- <p class="forgetPw tac"><a href="#">Forgot password?</a></p> -->
-                        <div class="btnWrap btnw_login">
-                            <button type="button" class="btnType btnColorG block btnSize48">Login</button>
-                        </div>
-                        <div class="chkWrap">
-                          <input class="chkSquare" type="checkbox" name="cate" id="cateOpt1">
-                          <label for="cateOpt1"><span>Save ID</span></label>
-                        </div>
-                        <!-- <div class="btnWrap btnw_back">
-                            <button type="button" class="btnType btnOutGray01 btnSize48">Back</button>
-                        </div> -->
-                    </form>
-                    <!-- <p class="createNew tac mt24">Don’t have an Business ID? <a href="">Create yours now.</a></p> -->
+    </div> -->
+    <div class="container login_bg">
+      <!-- ▼컨텐츠 영역▼ -->
+      <div class="content">
+        <div class="loginArea">
+          <div class="title_box">
+            <h3 class="title">sign<br>in</h3>
+            <img src="images/logo.png" alt="logo" class="logo">
+          </div>
+          <div class="login_box">
+            <form action="">
+              <div class="selWrap">
+                <div class="selected">
+                  <div class="selectedValue">
+                    <p data-val="">language</p>
+                    <i class="selArrow"></i>
+                  </div>
+                  <ul class="optBox">
+                    <li class="option optChk" data-val="0">Korea</li>
+                    <li class="option" data-val="1">Eng</li>
+                  </ul>
                 </div>
               </div>
-            </div>
-            <!-- ▲컨텐츠 영역▲ -->
+              <div class="inpWrap inpw_id">
+                <label for="" class="is-hidden"><span>ID</span></label>
+                <input type="text" id="" class="input block" placeholder="ID" style='font-size:12px'>
+                <!-- <em class="errorCaption">Invalid ID</em> -->
+              </div>
+              <div class="inpWrap inpw_password">
+                <label for="" class="is-hidden"><span>Password</span></label>
+                <input type="password" id="" class="input block" placeholder="PW">
+                <!-- <button class="btn_password_view"></button> -->
+                <!-- <em class="errorCaption">Invalid PW</em> -->
+              </div>
+              <!-- <p class="forgetPw tac"><a href="#">Forgot password?</a></p> -->
+              <div class="btnWrap btnw_login">
+                <button type="button" class="btnType btnColorG block btnSize40">Login</button>
+              </div>
+              <div class="chkWrap">
+                <input class="chkSquare" type="checkbox" name="cate" id="cateOpt1" checked>
+                <label for="cateOpt1"><span>Save ID</span></label>
+              </div>
+            </form>
+          </div>
+          <div class="white_line"></div>
         </div>
+      </div>
+      <!-- ▲컨텐츠 영역▲ -->
     </div>
+  </div>
+
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/modal.js"></script>  
 </body>
 </html>

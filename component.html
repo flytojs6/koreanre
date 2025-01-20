@@ -8,12 +8,7 @@
     <link rel="stylesheet" href="css/ui.jqgrid.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/modal.css">
-    <script src="js/jquery-1.7.2.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/grid.locale-kr.js"></script>
-    <script src="js/jquery.jqGrid.min.js"></script>
-    <!-- <script src="js/common.js"></script> -->
-    <script src="js/modal.js"></script>
+    
 </head>
 <body>
     <div class="side_menu_wrap">
@@ -217,59 +212,6 @@
         </div>
         <div class="mt40"></div>
 
-        <script>
-            // Function to toggle the select box
-            function toggleSelectBox(selectBox) {
-                selectBox.classList.toggle("active");
-            }
-
-            // Function to handle selecting an option
-            function selectOption(optionElement) {
-                const selectBox = optionElement.closest(".selWrap");
-                const selectedElement = selectBox.querySelector(".selectedValue p");
-                selectedElement.textContent = optionElement.textContent;
-                selectedElement.classList.add('selected');
-
-                // Remove the .optChk class from all options
-                selectBox.querySelectorAll(".option").forEach(option => {
-                    option.classList.remove("optChk");
-                });
-
-                // Add .optChk class to the selected option
-                optionElement.classList.add("optChk");
-
-                // Update the selected value text
-                selectedElement.textContent = optionElement.textContent;
-                selectedElement.setAttribute('data-val', optionElement.getAttribute('data-val'));
-            }
-
-            // Event listener for each select box
-            document.querySelectorAll(".selWrap").forEach(selectBoxElement => {
-                selectBoxElement.addEventListener("click", function (e) {
-                    const targetElement = e.target;
-                    const isOptionElement = targetElement.classList.contains("option");
-
-                    if (isOptionElement) {
-                        selectOption(targetElement);
-                    }
-
-                    toggleSelectBox(selectBoxElement);
-                });
-            });
-
-            // Event listener to close all select boxes if clicking outside
-            document.addEventListener("click", function (e) {
-                const targetElement = e.target;
-                const isSelect = targetElement.classList.contains("selWrap") || targetElement.closest(".selWrap");
-                if (isSelect) {
-                    return;
-                }
-
-                document.querySelectorAll(".selWrap.active").forEach(boxElement => {
-                    boxElement.classList.remove("active");
-                });
-            });
-        </script>
         <div class="mt40"></div>
         <div class="selWrap disabled">
           <label for="">Country</label>
@@ -360,6 +302,12 @@
         <div class="mt10"></div>
     </div>
     
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/grid.locale-kr.js"></script>
+    <script src="js/jquery.jqGrid.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/modal.js"></script>
 <script>
 // 팝업 열기
 $(document).on('click', '.js-modal-trigger.sample_modal_open', function() {

@@ -208,7 +208,7 @@ em.errorCaption .icon_error_caption{margin-right: 8px;}
     .chkWrap input[type="checkbox"].chkSquare + label{display: flex; cursor: pointer; margin-left: unset;}
 }
 
-.chkWrap input[type="checkbox"].chkSquare + label span{margin-top: 8px; font-size: var(--fontSize14); font-weight: var(--fw400); line-height: 18.2px; color: #716F64;}
+.chkWrap input[type="checkbox"].chkSquare + label span{margin-left: 8px; font-size: var(--fontSize14); font-weight: var(--fw400); line-height: 18.2px; color: #716F64;}
 .chkWrap input[type="checkbox"].chkSquare:disabled + label span{color: #CBCBC2;}
 .inp_check_desc{font-size: 13px; font-weight: 400; line-height: 16.7px; color: #716F64;}
 .policy_btm_foam .inp_check_desc{padding-left: 0px;}
@@ -217,8 +217,8 @@ em.errorCaption .icon_error_caption{margin-right: 8px;}
 }
 
 .inp_check_desc > a.link{text-decoration: underline; color: #262626; cursor: pointer;}
-.chkWrap input[type="checkbox"].chkSquare + label:before{content: ""; width: 34px; height:34px; min-width: 34px; display: inline-block; background:url("../../icon/icon-checkboxBorderOff.svg") no-repeat center center / 100%;}
-.chkWrap input[type="checkbox"].chkSquare:checked + label:before {content: ""; background:url("../../icon/icon-checkboxBorderOn.svg") no-repeat center center / 100%;}
+.chkWrap input[type="checkbox"].chkSquare + label:before{content: ""; width: 17px; height:17px; min-width: 17px; display: inline-block; background:url("../../icon/icon_check.png") no-repeat center center / 100%;}
+.chkWrap input[type="checkbox"].chkSquare:checked + label:before {content: ""; background:url("../../icon/icon_checked.png") no-repeat center center / 100%;}
 .chkWrap input[type="checkbox"].chkSquare:disabled + label:before{background:url("../../icon/icon-checkboxBorderDisabled.svg") no-repeat center center / 100%;}
 .chkWrap i.policyDetail{display: inline-block; width: 11px; height: 20px; margin-left: 4px; background: url("../../icon/icon-checkboxArrowRight.svg") no-repeat center center / 100%;}
 .chkWrap a.link{text-decoration: underline; color: #262626; cursor: pointer;}
