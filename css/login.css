@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+.login_layout{width: 100%; display: flex; min-height: 100vh; background: linear-gradient(90deg, #18ab94 0%, #0bb49b 35%);}
+
+.login_layout .aside{position: relative; width: 40%;}
+.asideBox{position: absolute; top: 50%; left: 50%; width: 410px; transform: translate(-50%, -50%);}
+.asidetxt{font-size: 36px; line-height: 1.4; text-transform: uppercase;}
+.asideBox .asidetxt + .imgBox{margin-top: 50px;}
+
+.login_layout .loginArea{position: relative; background-color: #fff; flex: 1; border-top-left-radius: 75px; border-bottom-left-radius: 75px;}
+
+.loginBox{position: absolute; top: 50%; left: 50%; width: 480px; transform: translate(-50%, -50%);}
+
+.loginBox .title{font-size: 32px;}
+.loginBox .title + .inpWrap{margin-top: 50px;}
+.loginBox .inpWrap + .inpWrap{margin-top: 10px;}
+.loginBox .inpWrap + .btnWrap{margin-top: 50px;}
+
+
+.login_bg {min-height: 100vh; background-color: #ece8df;}
