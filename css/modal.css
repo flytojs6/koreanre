@@ -41,8 +41,11 @@
 .modal__header .modal__close:before { content: "\2715"; font-size: 18px; }
 
 .modal__content {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
   line-height: 1.5;
 }
 
@@ -143,17 +146,28 @@
 
 
 /* google otp 설정 팝업 */
-.modal.otp_seting_modal .modal__container{width: 100%; max-width: 880px;}
+.modal.otp_seting_modal .modal__container{width: 100%; max-width: 850px;}
 
 .modal__content .tit_area .title{font-size: 18px; font-weight: 600;}
 
 .modal__content .tit_area .title + .list_disc{margin-top: 10px;}
 
-.modal__content .tit_area + .otp_group{margin-top: 20px;}
+.modal__content .tit_area + .otp_group{margin-top: 25px;}
+.modal__content .otp_group + .otp_group{margin-top: 25px;}
 .modal__content .otp_group .group_title{font-size: 18px;}
 .modal__content .otp_group .group_title + .group_body{margin-top: 10px;}
 .modal__content .otp_group .group_body{color: #262626;}
 .modal__content .otp_group .group_body p{color: #262626;}
+.modal__content .otp_group .group_body .app_img_area{display: flex; gap: 10px;}
+.modal__content .otp_group .group_body .app_img_area > .link{width: 150px;}
+.modal__content .otp_group .group_body .app_img_area > img{width: 150px;}
+
+.modal__content .otp_group .group_body .inp_group + .inp_group{margin-top: 15px;}
+.modal__content .otp_group .group_body .inp_group{display: flex; gap: 15px; align-items: center;}
+.modal__content .otp_group .group_body .inp_group .inp_tit{min-width: 170px; color: #333333;}
+.modal__content .otp_group .group_body .inp_group .inp_tit.tit_qr{border: 3px solid #555; width: 170px; padding: 8px; box-sizing: border-box;}
+.inp_group .inp_body{flex: 1;}
+.inp_group .inp_body .inpWrap{width: 100%; display: flex; gap: 10px;}
 
 
 /* google otp 인증 팝업 */

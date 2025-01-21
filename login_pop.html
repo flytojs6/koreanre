@@ -41,15 +41,59 @@
               </ul>
             </div>
             <div class="otp_group">
-              <p class="group_title">①Google OTP 인증앱을 스마트폰에 설치하세요.</p>
+              <p class="group_title">1.Google OTP 인증앱을 스마트폰에 설치하세요.</p>
               <div class="group_body">
-                <img src="" alt="">
+                <div class="app_img_area">
+                  <a href="https://play.google.com/store/apps?hl=ko" target="_blank" class="link">
+                    <img src="images/appgoogle.png" alt="google">
+                  </a>
+                  <a href="" class="link">
+                    <img src="images/appios.png" alt="ios">
+                  </a>
+                </div>
               </div>
             </div>
             <div class="otp_group">
-              <p class="group_title">②Google Authenticator 앱에서 "계정설정" -> "바코드스캔" 을 이용하여 아래 바코드를 스캔하세요.</p>
+              <p class="group_title">2.Google Authenticator 앱에서 "계정설정" -> "바코드스캔" 을 이용하여 아래 바코드를 스캔하세요.</p>
               <div class="group_body">
-                <p>sample text 01129873489753</p>
+                <div class="inp_group">
+                  <div class="inp_tit tit_qr">
+                    <img src="images/qr-code.png" alt="qrcode">
+                  </div>
+                  <div class="inp_body">
+                    <em class="desctop">바코드 스캔이 불가능한경우 아래키를 입력해주세요.</em>
+                    <div class="inpWrap">
+                      <input type="text" id="" class="input block" value="2154864648747" readonly>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="otp_group">
+              <p class="group_title">3.아래 인증번호 요청을 차례대로 진행해 주세요.</p>
+              <div class="group_body">
+                <div class="inp_group">
+                  <div class="inp_tit">
+                  인증번호
+                  </div>
+                  <div class="inp_body">
+                    <div class="inpWrap">
+                      <input type="text" id="" class="input block" value="" placeholder="숫자 6자리 입력">
+                      <button type="button" class="btnType btnOutGray01 btnSize48">인증요청</button>
+                    </div>
+                    <em class="descCaption">등록된 연락처 : 010-****-1234</em>
+                  </div>
+                </div>
+                <div class="inp_group">
+                  <div class="inp_tit">
+                  Google OTP 인증번호
+                  </div>
+                  <div class="inp_body">
+                    <div class="inpWrap">
+                      <input type="text" id="" class="input block" value="" placeholder="숫자 6자리 입력">
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </main>
@@ -71,7 +115,21 @@
             <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
           </header>
           <main class="modal__content">
-            <p>sample text 01129873489753</p>
+            <div class="otp_group">
+              <div class="group_body">
+                <div class="inp_group">
+                  <div class="inp_tit">
+                  Google OTP 인증번호
+                  </div>
+                  <div class="inp_body">
+                    <div class="inpWrap">
+                      <input type="text" id="" class="input block" value="" placeholder="숫자 6자리 입력">
+                      <button type="button" class="btnType btnColorR btnSize48">확인</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </main>
         </div>
       </div>
