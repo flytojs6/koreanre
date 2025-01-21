@@ -49,6 +49,55 @@ document.addEventListener("click", function (e) {
 
 
 
+// 로그인 2차 google otp 설정 팝업 열기
+$(document).on('click', '.js-modal-trigger.otp_seting_modal_open', function() {
+  $(this).closest('.container').siblings('.modal.otp_seting_modal').addClass('is-open');
+  $('body').addClass('scrollLock');
+});
+
+// 로그인 2차 google otp 설정 팝업 닫기
+$(document).on('click', '.modal.otp_seting_modal .modal__close', function() {
+  $(this).closest('.modal').removeClass('is-open');
+  $('body').removeClass('scrollLock');
+});
+
+
+// 로그인 2차 google otp 인증 팝업 열기
+$(document).on('click', '.js-modal-trigger.otp_cert_modal_open', function() {
+  $(this).closest('.container').siblings('.modal.otp_cert_modal').addClass('is-open');
+  $('body').addClass('scrollLock');
+});
+
+// 로그인 2차 google otp 인증 팝업 닫기
+$(document).on('click', '.modal.otp_cert_modal .modal__close', function() {
+  $(this).closest('.modal').removeClass('is-open');
+  $('body').removeClass('scrollLock');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // gnb menu 열기
 $(document).on('mouseenter', '.nav .menu > li', function() {
     $(this).not($(".mlink")).closest('.nav').addClass('on');
@@ -319,44 +368,6 @@ $(document).on('click', '.tab_area.tab_mypage > ul > li.tab_btn_04', function() 
 
 
 
-// $('document').ready(function(){
-//     $('.tab_area.type_red > ul > li.tab_btn_01').on("click", function(){
-//         // $(this).siblings('li').removeClass('active');
-//         // $(this).addClass('active');
-//         // $('.tab_area.type_red > .tab_cont_01').addClass('active');
-//         // $('.tab_area.type_red > .tab_cont_02').removeClass('active');
-//         // $('.tab_area.type_red > .tab_cont_03').removeClass('active');
-//         // $('.tab_area.type_red > .tab_cont_04').removeClass('active');
-//     })
-//     $('.tab_area.type_red > ul > li.tab_btn_02').on("click", function(){
-//         // $(this).siblings('li').removeClass('active');
-//         // $(this).addClass('active');
-//         // $('.tab_area.type_red > .tab_cont_01').removeClass('active');
-//         // $('.tab_area.type_red > .tab_cont_02').addClass('active');
-//         // $('.tab_area.type_red > .tab_cont_03').removeClass('active');
-//         // $('.tab_area.type_red > .tab_cont_04').removeClass('active');
-//     })
-//     $('.tab_area.type_red > ul > li.tab_btn_03').on("click", function(){
-//         // $(this).siblings('li').removeClass('active');
-//         // $(this).addClass('active');
-//         // $('.tab_area.type_red > .tab_cont_01').removeClass('active');
-//         // $('.tab_area.type_red > .tab_cont_02').removeClass('active');
-//         // $('.tab_area.type_red > .tab_cont_03').addClass('active');
-//         // $('.tab_area.type_red > .tab_cont_04').removeClass('active');
-//     })
-//     $('.tab_area.type_red > ul > li.tab_btn_04').on("click", function(){
-//         // $(this).siblings('li').removeClass('active');
-//         // $(this).addClass('active');
-//         // $('.tab_area.type_red > .tab_cont_01').removeClass('active');
-//         // $('.tab_area.type_red > .tab_cont_02').removeClass('active');
-//         // $('.tab_area.type_red > .tab_cont_03').removeClass('active');
-//         // $('.tab_area.type_red > .tab_cont_04').addClass('active');
-//     })
-// });
-
-
-
-
 
 // faq accordion 토글
 $('document').ready(function(){
@@ -507,71 +518,9 @@ $(document).on('click', '.main-slider .swiper-pagination .swiper-pagination-bull
 
 
 
-// 검색창 해시태그
-$(document).on('click', '.hashTag.clickable .hashItem', function() {
-    $(this).siblings('.hashItem').removeClass('active');
-    $(this).addClass('active');
-});
 
 
 
-// pdp detail 슬라이더 2개 이상시 화살표 생김
-$('document').ready(function(){
-    if($('.dv_img_slider.dvslider1 .swiper-slide').length > 2 ) {
-        $('.dv_img_slider.dvslider1').addClass('has_arrow');
-    }
-});
-
-$('document').ready(function(){
-    if($('.dv_img_slider.dvslider2 .swiper-slide').length > 2 ) {
-        $('.dv_img_slider.dvslider2').addClass('has_arrow');
-    }
-});
-
-$('document').ready(function(){
-    if($('.dv_img_slider.dvslider3 .swiper-slide').length > 2 ) {
-        $('.dv_img_slider.dvslider3').addClass('has_arrow');
-    }
-});
-
-
-
-// customer_experience_section 슬라이더 4개 이상시 화살표 생김
-$('document').ready(function(){
-    if($('.cus_exp_slider .swiper-slide').length > 2 ) {
-        $('.cus_exp_slider').addClass('has_arrow');
-    }
-});
-
-
-
-// main_bg_slider 슬라이더 2개 이상시 화살표 생김
-$('document').ready(function(){
-    if($('.main_bg_slider .swiper-slide').length > 2 ) {
-        $('.main_bg_slider').addClass('has_arrow');
-    }
-});
-
-
-
-// pdp 하단 리스트 슬라이더 6개 이상시 화살표 생김
-$('document').ready(function(){
-    if($('.pdp_list_slider .swiper-slide').length > 5 ) {
-        $('.pdp_list_slider').addClass('has_arrow');
-    }
-});
-
-// 이미지 리스트 슬라이더 팝업 열기
-$(document).on('click', '.js-modal-trigger.slider_img_modal_open', function() {
-    $(this).closest('.container').siblings('.modal.slider_img_modal').addClass('is-open');
-    $('body').addClass('scrollLock');
-});
-
-// 이미지 리스트 슬라이더 팝업 닫기
-$(document).on('click', '.modal.slider_img_modal .modal__close', function() {
-    $(this).closest('.modal').removeClass('is-open');
-    $('body').removeClass('scrollLock');
-});
 
 
 // btn like 토글

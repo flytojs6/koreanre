@@ -19,9 +19,7 @@
 }
 
 .modal__container {padding: 24px; width: 100%; max-width: 610px; max-height: 100vh; background-color: #fff; border-radius: 10px; overflow-y: auto;  box-sizing: border-box;}
-@media (min-width: 1280px) {
-  .modal__container {padding: 30px;}
-}
+
 
 .modal__header {
   display: flex;
@@ -33,21 +31,19 @@
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 30px;
   line-height: 1.25;
-  color: #00449e;
   box-sizing: border-box;
 }
 
 .modal__close {background: transparent; border: 0; margin-left: auto; cursor: pointer;}
 
-.modal__header .modal__close:before { content: "\2715"; }
+.modal__header .modal__close:before { content: "\2715"; font-size: 18px; }
 
 .modal__content {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   line-height: 1.5;
-  color: rgba(0,0,0,.8);
 }
 
 .modal__btn {
@@ -78,16 +74,18 @@
   transition: transform .25s ease-out,-webkit-transform .25s ease-out;
 }
 
-.modal__btn:focus, .modal__btn:hover {
+/* .modal__btn:focus, .modal__btn:hover {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
-}
+} */
 
 .modal__btn-primary {
   background-color: #00449e;
   color: #fff;
 }
 
+
+.modal .modal__footer{text-align: center;}
 
 
 /**************************\
@@ -144,21 +142,43 @@
 
 
 
+/* google otp 설정 팝업 */
+.modal.otp_seting_modal .modal__container{width: 100%; max-width: 880px;}
+
+.modal__content .tit_area .title{font-size: 18px; font-weight: 600;}
+
+.modal__content .tit_area .title + .list_disc{margin-top: 10px;}
+
+.modal__content .tit_area + .otp_group{margin-top: 20px;}
+.modal__content .otp_group .group_title{font-size: 18px;}
+.modal__content .otp_group .group_title + .group_body{margin-top: 10px;}
+.modal__content .otp_group .group_body{color: #262626;}
+.modal__content .otp_group .group_body p{color: #262626;}
+
+
+/* google otp 인증 팝업 */
+.modal.otp_cert_modal .modal__container{width: 100%; max-width: 800px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 비디오 팝업 */
 .modal.kv_video_modal .modal__container{position: relative; width: 100%; max-width: calc(100% - 48px); max-height: 85vh; margin-top: 50px; aspect-ratio: 1.77; overflow-y: visible; padding: 0; border-radius: 0;}
-@media (min-width: 768px) {
-  .modal.kv_video_modal .modal__container{max-width: calc(100% - 68px);}
-}
-@media (min-width: 1280px) {
-  .modal.kv_video_modal .modal__container{max-width: calc(100% - 256px);}
-}
-@media (min-width: 1920px) {
-  .modal.kv_video_modal .modal__container{max-width: calc(100% - 320px);}
-}
+
 .modal.kv_video_modal .modal__container .modal__close{position: absolute; right: 0; top: -52px; width: 20px; height: 20px; background: url("../icon/icon_modal_close.svg") no-repeat center center;}
-@media (min-width: 768px) {
-  .modal.kv_video_modal .modal__container .modal__close{top: -54px; width: 30px; height: 30px;}
-}
+
 .modal.kv_video_modal .modal__header .modal__close:before{display: none;}
 .modal.kv_video_modal .modal__container .modal__content{position: relative; width: 100%; height: 100%; margin-top: 0; margin-bottom: 0; line-height: unset; background-color: #000;}
 .modal.kv_video_modal .modal__container .modal__content video{width: 100%; height: 100%; max-height: 100%;}
@@ -172,15 +192,9 @@
 .slider_img_modal .modal__container .modal__header{justify-content: flex-end;}
 
 .slider_img_modal .modal__container .pdp_popup_slider .list_thumb{border-radius: 20px; overflow: hidden; 
-/* height: 330px; */
 max-height: 450px;
 }
-@media (min-width: 1280px) {
-  .slider_img_modal .modal__container .pdp_popup_slider .list_thumb{margin-left: 50px; margin-right: 50px;
-  /* height: 380px; */
-  max-height: 500px;
-  box-sizing: border-box;}
-}
+
 
 .slider_img_modal .modal__container .pdp_popup_slider .list_thumb > img{width: 100%; height: 100%; object-fit: cover;}
 
@@ -191,9 +205,7 @@ max-height: 450px;
 
 /* 비밀번호 변경 팝업 */
 .change_password_modal .modal__container{border-radius: 28px;}
-@media (min-width: 1280px) {
-  .change_password_modal .modal__container{max-width: 860px;}
-}
+
 
 .change_password_modal .modal__container .modal__header .modal__close{width: 20px; height: 20px; background: url("../icon/icon_pop_close.svg") no-repeat center center;}
 .change_password_modal .modal__container .modal__header .modal__close::before{display: none;}
@@ -209,34 +221,23 @@ max-height: 450px;
 
 /* 회원가입약관 팝업 */
 .modal.type_round .modal__container{border-radius: 28px;}
-@media (min-width: 768px) {
-  .modal.type_round .modal__container{max-width: 670px;}
-}
-@media (min-width: 1280px) {
-  .modal.type_round .modal__container{max-width: 670px;}
-}
+
 
 .modal.type_round .modal__container .modal__header .modal__close{width: 20px; height: 20px; background: url("../icon/icon_pop_close.svg") no-repeat center center;}
 .modal.type_round .modal__container .modal__header .modal__close::before{display: none;}
 
 .modal.type_round .modal__container .modal__content{margin-top: 6px; margin-bottom: 26px; line-height: unset;}
 .modal.type_round .modal__container .marketing_cont_section{max-width: 510px; margin-left: auto; margin-right: auto;}
-@media (min-width: 1280px) {
-  .modal.type_round .modal__container .marketing_cont_section{max-width: 510px; margin-left: 80px; margin-right: unset;}
-}
+
 
 .modal.type_round .modal__container .marketing_cont_section .imgBox + .popup_title{margin-top: 16px;}
 .modal.type_round .modal__container .marketing_cont_section .popup_title{font-size: 24px; font-family: var(--ffhl); font-weight: 550; text-align: center;}
-@media (min-width: 1280px) {
-  .modal.type_round .modal__container .marketing_cont_section .popup_title{font-size: 36px;}
-}
+
 
 .modal.type_round .modal__container .marketing_cont_section .popup_title + .popup_txt{margin-top: 48px;}
 .modal.type_round .modal__container .marketing_cont_section .popup_title + .popup_body{margin-top: 48px;}
 .modal.type_round .modal__container .marketing_cont_section .popup_body{overflow-y: auto; max-height: 450px; padding-right: 20px;}
-@media (min-width: 1280px) {
-  .modal.type_round .modal__container .marketing_cont_section .popup_body{padding-right: 60px;}
-}
+
 .modal.type_round .modal__container .marketing_cont_section .popup_body_txt{color: #716F64; font-size: 14px; font-weight: 400; line-height: 18.9px;}
 .modal.type_round .modal__container .marketing_cont_section .btnWrap.btnw_login{margin-top: 48px;}
 
@@ -252,5 +253,5 @@ max-height: 450px;
 .modal.delete_account_modal .modal__container .modal__header .modal__close::before{display: none;}
 .pop_body_txt22{font-size: 22px;}
 
-.modal .modal__footer{margin-top: 4px;}
+
 .modal .btnWrap.btm_btn_area{padding-left: 10px; padding-right: 10px;}

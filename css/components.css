@@ -769,3 +769,8 @@ gap: 8px;}
 
 
 .underline{text-decoration: underline;}
+
+
+/* 리스트 */
+ul.list_disc{list-style: disc outside; margin-inline-start: 1.5em;}
+ul.list_disc li{color: #262626;}

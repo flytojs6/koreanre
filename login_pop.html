@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login popup</title>
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+  <div class="wrap">
+    <!-- <div class="header">
+
+    </div> -->
+    <div class="container login_bg">
+      <!-- ▼컨텐츠 영역▼ -->
+      <div class="content">
+        <div class="loginArea">
+          <button type="button" class="js-modal-trigger otp_seting_modal_open" data-micromodal-trigger="loginModal">google otp 설정 팝업</button>
+          <button type="button" class="js-modal-trigger otp_cert_modal_open" data-micromodal-trigger="otpCertMidal">google otp 인증 팝업</button>
+        </div>
+      </div>
+      <!-- ▲컨텐츠 영역▲ -->
+    </div>
+    <!-- google otp 설정 팝업 -->
+    <div class="modal otp_seting_modal" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <header class="modal__header">
+            <h2 class="modal__title">
+              Google OTP 설정
+            </h2>
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          </header>
+          <main class="modal__content">
+            <div class="tit_area">
+              <p class="title">Google OTP 인증</p>
+              <ul class="list_disc">
+                <li>고정된 비밀번호 대신 무작위로 생성되는 일회용 비밀번호를 이용하여 인증하는 방식입니다.</li>
+                <li>안드로이드, iOS 스마트폰 기기에서 Google Authenticator 앱을 통해 등록이 가능합니다.</li>
+                <li>Google OTP 인증을 등록하면 알림톡 또는 SMS 인증을 대체합니다.</li>
+              </ul>
+            </div>
+            <div class="otp_group">
+              <p class="group_title">①Google OTP 인증앱을 스마트폰에 설치하세요.</p>
+              <div class="group_body">
+                <img src="" alt="">
+              </div>
+            </div>
+            <div class="otp_group">
+              <p class="group_title">②Google Authenticator 앱에서 "계정설정" -> "바코드스캔" 을 이용하여 아래 바코드를 스캔하세요.</p>
+              <div class="group_body">
+                <p>sample text 01129873489753</p>
+              </div>
+            </div>
+          </main>
+          <footer class="modal__footer">
+            <button type="button" class="modal__btn modal__close btnType btnColorR btnSize48">확인</button>
+            <button type="button" class="modal__btn modal__close btnType btnColorBR btnSize48">취소</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!-- google otp 인증 팝업 -->
+    <div class="modal otp_cert_modal" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <header class="modal__header">
+            <h2 class="modal__title">
+              Google OTP 인증
+            </h2>
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          </header>
+          <main class="modal__content">
+            <p>sample text 01129873489753</p>
+          </main>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/common.js"></script>
+<script src="js/modal.js"></script>  
+</body>
+</html>
