@@ -776,3 +776,54 @@ gap: 8px;}
 /* 리스트 */
 ul.list_disc{list-style: disc outside; margin-inline-start: 1.5em;}
 ul.list_disc li{color: #262626;}
+
+
+/* 브래드컴 */
+.breadcrumb ol, .breadcrumb ul{display: flex; align-items: flex-start; justify-content: flex-start; flex-wrap: nowrap;}
+.breadcrumb li{display: flex; align-items: center;}
+.breadcrumb li+li:before{color: #9e9e9e; content: ">";}
+.breadcrumb a{display: flex; align-items: center; padding: 0 10px; color: #535353;}
+
+
+/* 테이블 */
+.grid_wrap .ui-widget.ui-widget-content{border: 0;}
+.grid_wrap .ui-widget.ui-widget-content .ui-jqgrid-view{border: 1px solid #c5c5c5;}
+.grid_wrap.haspager .ui-widget.ui-widget-content .ui-jqgrid-view{margin-top: 40px;}
+
+
+.ui-jqgrid .ui-jqgrid-hdiv{border-top: 1px solid #c5c5c5 !important;}
+
+.ui-jqgrid .ui-jqgrid-hbox{padding-right: 0;}
+.ui-jqgrid .ui-jqgrid-htable{width: 100% !important;}
+.ui-jqgrid .ui-jqgrid-htable th{height: 40px;}
+.ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr:first-child{border-left: 1px solid #c5c5c5;}
+/* .ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr:last-child{border-right: 0;} */
+.ui-jqgrid .ui-jqgrid-htable th div{font-size: 16px; font-family: 'Pretendard';}
+
+.ui-jqgrid .ui-jqgrid-btable{width: 100% !important;}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{border-left: 0;}
+
+.ui-jqgrid tr.jqgfirstrow + tr.ui-widget-content.jqgrow.ui-row-ltr{border-top: 0;}
+.ui-jqgrid tr.jqgrow{}
+.ui-jqgrid tr.ui-row-ltr td{text-align: center;}
+.ui-jqgrid tr.jqgrow td{height: 35px; font-size: 12px;}
+.ui-jqgrid tr.jqgrow td:first-child{border-left: 0;}
+.ui-jqgrid tr.jqgrow td:last-child{border-right: 0;}
+
+.ui-jqgrid tr.jqgrow:last-child td{border-bottom: 0;}
+
+.ui-jqgrid .ui-pg-input{width: 40px; height: 30px; font-size: 14px; padding: 0 10px; border-radius: 0;}
+.ui-jqgrid .ui-pg-button{height: 40px !important;}
+.ui-jqgrid .ui-pg-button:hover{padding: unset;}
+.ui-jqgrid .ui-pg-table td{padding: 0 2px; font-size: 14px;}
+.ui-jqgrid .ui-jqgrid-pager{height: 40px;}
+
+.ui-jqgrid .ui-pg-selbox{height: 30px; font-size: 14px;}
+
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl, .ui-corner-right, .ui-corner-tr, .ui-corner-bottom, .ui-corner-bl, .ui-corner-br {border-radius:0;}
+
+.custompager{border: 0 !important; background-color: transparent !important;}
+
+.grid_wrap.haspager .ui-jqgrid .ui-jqgrid-pager{position: absolute; left: 0; top: -40px; width: 290px !important;}
+.grid_wrap.haspager .ui-jqgrid .ui-pg-table td{text-align: unset;}

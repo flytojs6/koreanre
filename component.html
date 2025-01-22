@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>koreanre component</title>
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/ui.jqgrid.css">
-    <link rel="stylesheet" href="css/common.css">    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>koreanre component</title>
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/ui.jqgrid.css">
+  <link rel="stylesheet" href="css/common.css">    
 </head>
 <body>
     <div class="side_menu_wrap">
@@ -305,7 +305,7 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/jquery-ui.js"></script>
     <!-- <script src="js/grid.locale-kr.js"></script> -->
-    <script src="js/grid.locale-en.js"></script>
+    <!-- <script src="js/grid.locale-en.js"></script> -->
     <script src="js/jquery.jqGrid.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/modal.js"></script>
@@ -330,37 +330,33 @@ $( function() {
 });
 </script>
 
-
 <script>
   //<![CDATA[
   $(function () {
     "use strict";
     $("#Gridsample").jqGrid({
+      url: 'https://jsonplaceholder.typicode.com/users',
+      datatype: "json",
       colModel: [
-                { name: "name", label: "Client", width: 53 },
-                { name: "invdate", label: "Date", width: 75, align: "center", sorttype: "date",
-                    formatter: "date", formatoptions: { newformat: "d-M-Y" } },
-                { name: "amount", label: "Amount", width: 65, template: "number" },
-                { name: "tax", label: "Tax", width: 41, template: "number" },
-                { name: "total", label: "Total", width: 51, template: "number" },
-                { name: "closed", label: "Closed", width: 59, template: "booleanCheckbox", firstsortorder: "desc" },
-                { name: "ship_via", label: "Shipped via", width: 87, align: "center", formatter: "select",
-                    formatoptions: { value: "FE:FedEx;TN:TNT;DH:DHL", defaultValue: "DH" } }
-            ],
-            data: [
-                { id: "10",  invdate: "2015-10-01", name: "test",   amount: "" },
-                { id: "20",  invdate: "2015-09-01", name: "test2",  amount: "300.00", tax:"20.00", closed:false, ship_via:"FE", total:"320.00"},
-                { id: "30",  invdate: "2015-09-01", name: "test3",  amount: "400.00", tax:"30.00", closed:false, ship_via:"FE", total:"430.00"},
-                { id: "40",  invdate: "2015-10-04", name: "test4",  amount: "200.00", tax:"10.00", closed:true,  ship_via:"TN", total:"210.00"},
-                { id: "50",  invdate: "2015-10-31", name: "test5",  amount: "300.00", tax:"20.00", closed:false, ship_via:"FE", total:"320.00"},
-                { id: "60",  invdate: "2015-09-06", name: "test6",  amount: "400.00", tax:"30.00", closed:false, ship_via:"FE", total:"430.00"},
-                { id: "70",  invdate: "2015-10-04", name: "test7",  amount: "200.00", tax:"10.00", closed:true,  ship_via:"TN", total:"210.00"},
-                { id: "80",  invdate: "2015-10-03", name: "test8",  amount: "300.00", tax:"20.00", closed:false, ship_via:"FE", total:"320.00"},
-                { id: "90",  invdate: "2015-09-01", name: "test9",  amount: "400.00", tax:"30.00", closed:false, ship_via:"TN", total:"430.00"},
-                { id: "100", invdate: "2015-09-08", name: "test10", amount: "500.00", tax:"30.00", closed:true,  ship_via:"TN", total:"530.00"},
-                { id: "110", invdate: "2015-09-08", name: "test11", amount: "500.00", tax:"30.00", closed:false, ship_via:"FE", total:"530.00"},
-                { id: "120", invdate: "2015-09-10", name: "test12", amount: "500.00", tax:"30.00", closed:false, ship_via:"FE", total:"530.00"}
-            ],
+        { name: 'id', label: '순번', width: 50 },
+          { name: 'name', label: '거래사', width: 100 },
+        { name: "name", label: "순번", width: 53 },
+        { name: "username", label: "거래사", width: 75, align: "center", sorttype: "date",
+            formatter: "date", formatoptions: { newformat: "d-M-Y" } },
+        { name: "username", label: "종목", width: 65, template: "number" },
+        { name: "email", label: "업무", width: 41, template: "number" },
+        { name: "email", label: "Total", width: 51, template: "number" },
+        { name: "phone", label: "Closed", width: 59, template: "booleanCheckbox", firstsortorder: "desc" },
+        { name: "phone", label: "Shipped via", width: 87, align: "center", formatter: "select",
+            formatoptions: { value: "FE:FedEx;TN:TNT;DH:DHL", defaultValue: "DH" } }
+      ],
+      
+      width: '1200',
+      autowidth : true,
+      rowNum : 10,  // 보여줄 행의 개수 설정
+      rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
+      pager : "#jqGridPager",
+      rownumber : true, // 각 row의 맨 앞줄에 각 행의 번호가 자동으로 부여 되도록 설정
     });
   });
   //]]>
