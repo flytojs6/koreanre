@@ -13,13 +13,41 @@
     <div class="header">
       <div class="top">
         <div class="logo">
-          <img src="images/logo.png" alt="logo">
+          <img src="images/logo1.png" alt="logo">
           <p>재보험 데이터 수신 시스템</p>
+        </div>
+        <div class="util_area">
+          <div class="lang_change">
+            <ul>
+              <li>
+                <a href="">KOR</a>
+              </li>
+              <li>
+                <a href="">ENG</a>
+              </li>
+            </ul>
+          </div>
+          <div class="btn_area">
+            <button type="button" class="btn_icon icon_login"></button>
+          </div>
         </div>
       </div>
       <div class="nav">
         <div class="gnbArea">
-          
+          <div class="mainmenu">
+            <ul class="menu">
+              <li><a href="javascript:void(0)" class="mlink active">파일송수신</a></li>
+              <li><a href="javascript:void(0)" class="mlink">데이터분석용파일송수신</a></li>
+              <li><a href="javascript:void(0)" class="mlink">접근기록조회</a></li>
+            </ul>
+          </div>
+          <div class="submenu">
+            <ul class="menu">
+              <li><a href="javascript:void(0)" class="mlink active">파일송수신</a></li>
+              <li><a href="javascript:void(0)" class="mlink">데이터분석용파일송수신</a></li>
+              <li><a href="javascript:void(0)" class="mlink">접근기록조회</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -38,8 +66,9 @@
           <div class="right_area">
             <div class="breadcrumb" aria-label="breadcrumbs">
               <ul>
-                <li><a href="#">데이터통신</a></li>
-                <li class="is-active"><a href="#" aria-current="page">파일 송신 내역 조회</a></li>
+                <li><a href="javascript:void(0)">home</a></li>
+                <li><a href="javascript:void(0)">데이터통신</a></li>
+                <li class="is-active"><a href="javascript:void(0)" aria-current="page">파일 송신 내역 조회</a></li>
               </ul>
             </div>
             <button type="button" class="btnType btnOutGray01 btnSize30 btn_help hasicon">
@@ -337,8 +366,8 @@ $( function() {
       url: 'https://jsonplaceholder.typicode.com/users',
       datatype: "json",
       colModel: [
-        { name: 'name', label: '거래사', width: 230 },
-        { name: 'username', label: '거래사명', width: 490 },
+        { name: 'name', label: '거래사', width: 300 },
+        { name: 'username', label: '거래사명', width: 422 },
         
       ],
       width: '730',
@@ -360,15 +389,15 @@ $( function() {
       url: 'https://jsonplaceholder.typicode.com/users',
       datatype: "json",
       colModel: [
-        { name: 'name', label: '사원명', width: 150 },
-        { name: 'username', label: '사원번호', width: 150 },
-        { name: 'website', label: '소속부서', width: 200 },
-        { name: 'email', label: '이메일주소', width: 200 },
+        { name: 'name', label: '사원명', width: 160 },
+        { name: 'username', label: '사원번호', width: 160 },
+        { name: 'website', label: '소속부서', width: 160 },
+        { name: 'email', label: '이메일주소', width: 232 },
       ],
       width: '730',
       height: '300',
       autowidth : true,
-      shrinkToFit: true,
+      // shrinkToFit: true,
       rowNum : 8,  // 보여줄 행의 개수 설정
       rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
     });

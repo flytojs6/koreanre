@@ -125,51 +125,34 @@ $(document).on('click', '.modal.manager_search_modal .modal__close', function() 
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// gnb menu 열기
-$(document).on('mouseenter', '.nav .menu > li', function() {
-    $(this).not($(".mlink")).closest('.nav').addClass('on');
-    $(this).not($(".mlink")).closest('.nav').siblings('.lnb_wrap').addClass('open');
-    $(this).not($(".mlink")).closest('.nav').siblings('.search_wrap').removeClass('open');
-    $(this).not($(".mlink")).addClass('active');
+// 상단 메인메뉴 클릭시 active
+$(document).on('click', '.nav .mainmenu .menu > li > a', function() {
+  $(this).closest('li').siblings('li').find('.mlink').removeClass('active');
+  $(this).addClass('active');
 });
 
-
-// showroom gnb 열기
-$(document).on('mouseenter', '.nav.showroom .menu > li', function() {
-    $(this).not($(".mlink")).closest('.nav').addClass('on');
-    $(this).not($(".mlink")).closest('.nav').siblings('.lnb_wrap').addClass('open');
-    $(this).not($(".mlink")).closest('.nav').siblings('.search_wrap').removeClass('open');
-    $(this).not($(".mlink")).addClass('active');
-    $(this).not($(".mlink")).closest('.header').siblings('.container').addClass('blur');
+// 서브메뉴 클릭시 active
+$(document).on('click', '.nav .submenu .menu > li > a', function() {
+  $(this).closest('li').siblings('li').find('.mlink').removeClass('active');
+  $(this).addClass('active');
 });
 
 
 
-// showroom gnb 영역 밖으로 나가면 닫기
-$(document).on('mouseleave', '.header', function() {
-    $('.nav').removeClass('on');
-    $('.nav').siblings('.lnb_wrap').removeClass('open');
-    $('.nav .menu > li').removeClass('active');
-    $('.container').removeClass('blur');
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // gnb 영역 밖으로 나가면 닫기
@@ -193,78 +176,6 @@ $(document).on('click', 'body', function(e){
         // console.log("영역 안입니다");
     }
 });
-
-// 모바일 gnb menu 열기
-$(document).on('click', '.hamburger', function() {
-    $(this).closest('.nav').siblings('.mobile_gnb_wrap').addClass('open');
-    $(this).closest('.nav').siblings('.mgnb_bg_dimmed').addClass('on');
-    $(this).addClass('active');
-    $('body').addClass('scrollLock');
-});
-
-// 모바일 gnb menu 닫기
-$(document).on('click', '.mobile_gnb_wrap .mlnb_close', function() {
-    $(this).closest('.mobile_gnb_wrap').removeClass('open');
-    $(this).closest('.mobile_gnb_wrap').siblings('.mgnb_bg_dimmed').removeClass('on');
-    $('body').removeClass('scrollLock');
-});
-
-// 모바일 gnb submenu 열기
-$(document).on('click', '.mgnb_main_menu li .mo_main_menu_txt', function() {
-    $(this).closest('.mgnb_main_menu').addClass('on');
-});
-$(document).on('click', '.mgnb_main_menu li:nth-child(1) .mo_main_menu_txt', function() {
-    $(this).closest('.mgnb_main_menu').siblings('.mgnb_sub_menu.menu01').addClass('on');
-});
-$(document).on('click', '.mgnb_main_menu li:nth-child(2) .mo_main_menu_txt', function() {
-    $(this).closest('.mgnb_main_menu').siblings('.mgnb_sub_menu.menu02').addClass('on');
-});
-$(document).on('click', '.mgnb_main_menu li:nth-child(3) .mo_main_menu_txt', function() {
-    $(this).closest('.mgnb_main_menu').siblings('.mgnb_sub_menu.menu03').addClass('on');
-});
-$(document).on('click', '.mgnb_main_menu li:nth-child(4) .mo_main_menu_txt', function() {
-    $(this).closest('.mgnb_main_menu').siblings('.mgnb_sub_menu.menu04').addClass('on');
-});
-$(document).on('click', '.mgnb_main_menu li:nth-child(5) .mo_main_menu_txt', function() {
-    $(this).closest('.mgnb_main_menu').siblings('.mgnb_sub_menu.menu05').addClass('on');
-});
-$(document).on('click', '.mgnb_main_menu li:nth-child(6) .mo_main_menu_txt', function() {
-    $(this).closest('.mgnb_main_menu').siblings('.mgnb_sub_menu.menu06').addClass('on');
-});
-$(document).on('click', '.mgnb_main_menu li:nth-child(7) .mo_main_menu_txt', function() {
-    $(this).closest('.mgnb_main_menu').siblings('.mgnb_sub_menu.menu07').addClass('on');
-});
-
-// 모바일 gnb submenu 닫기
-$(document).on('click', '.sub_menu_head', function() {
-    $(this).closest('.mgnb_sub_menu').removeClass('on');
-    $(this).closest('.mgnb_sub_menu').siblings('.mgnb_main_menu').removeClass('on');
-})
-
-
-
-// nav gnb showroom 이미지
-$(document).on('mouseover', '.header.showroom .lnb_wrap .lnb_menu_area .sub_category li:nth-child(1)', function() {
-    $(this).closest('.lnb_menu_area').siblings('.lnb_con_img_area').find('ul li').removeClass('on');
-    $(this).closest('.lnb_menu_area').siblings('.lnb_con_img_area').find('ul li:nth-child(1)').addClass('on');
-});
-$(document).on('mouseover', '.header.showroom .lnb_wrap .lnb_menu_area .sub_category li:nth-child(2)', function() {
-    $(this).closest('.lnb_menu_area').siblings('.lnb_con_img_area').find('ul li').removeClass('on');
-    $(this).closest('.lnb_menu_area').siblings('.lnb_con_img_area').find('ul li:nth-child(2)').addClass('on');
-});
-$(document).on('mouseover', '.header.showroom .lnb_wrap .lnb_menu_area .sub_category li:nth-child(3)', function() {
-    $(this).closest('.lnb_menu_area').siblings('.lnb_con_img_area').find('ul li').removeClass('on');
-    $(this).closest('.lnb_menu_area').siblings('.lnb_con_img_area').find('ul li:nth-child(3)').addClass('on');
-});
-$(document).on('mouseover', '.header.showroom .lnb_wrap .lnb_menu_area .sub_category li:nth-child(4)', function() {
-    $(this).closest('.lnb_menu_area').siblings('.lnb_con_img_area').find('ul li').removeClass('on');
-    $(this).closest('.lnb_menu_area').siblings('.lnb_con_img_area').find('ul li:nth-child(4)').addClass('on');
-});
-$(document).on('mouseover', '.header.showroom .lnb_wrap .lnb_menu_area .sub_category li:nth-child(5)', function() {
-    $(this).closest('.lnb_menu_area').siblings('.lnb_con_img_area').find('ul li').removeClass('on');
-    $(this).closest('.lnb_menu_area').siblings('.lnb_con_img_area').find('ul li:nth-child(5)').addClass('on');
-});
-
 
 
 
