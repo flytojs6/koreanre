@@ -48,14 +48,17 @@ padding: 20px; background-color: #fff; border-radius: 6px; box-shadow: 1px 1px 5
 
 
 
-.wrap.sys_bg .container .content .search_box .search_item_wrap{display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 10px 25px;}
-.wrap.sys_bg .container .content .search_box .search_item_wrap .inp_group{min-width: 23%;}
-/* .wrap.sys_bg .container .content .search_box .search_item_wrap .inp_group label{min-width: 102px;} */
-.wrap.sys_bg .container .content .search_box .search_item_wrap .inp_item.inp_group:nth-child(n + 4) label{min-width: 56px;}
-.wrap.sys_bg .container .content .search_box .search_item_wrap .inp_item.inp_group:nth-child(4n) label{min-width: 102px;}
+.wrap.sys_bg .container .content .search_box .search_item_wrap{display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px 25px; width: 100%;}
+.wrap.sys_bg .container .content .search_box .search_item_wrap .inp_group{min-width: calc((100vw - 143px) / 4 );}
+.wrap.sys_bg .container .content .search_box .search_item_wrap .inp_group.whalf{min-width: calc((100vw - 93px) / 2 );}
+.wrap.sys_bg .container .content .search_box .search_item_wrap .inp_item.inp_group label{min-width: 56px;}
+.wrap.sys_bg .container .content .search_box .search_item_wrap .inp_item.inp_group.txt4 label{min-width: 71px;}
+.wrap.sys_bg .container .content .search_box .search_item_wrap .inp_item.inp_group.txt6 label{min-width: 103px;}
+.wrap.sys_bg .container .content .search_box .search_item_wrap .inp_group.full .inpWrap{width: 100%;}
+.wrap.sys_bg .container .content .search_box .search_item_wrap .inp_group.full .inpWrap input[type="text"], input[type="password"]{width: 100%;}
 .wrap.sys_bg .container .content .search_box .search_item_wrap .inp_group .inpWrap{display: flex; align-items: center;}
 .wrap.sys_bg .container .content .search_box .search_item_wrap .inp_group .inpWrap input[type="text"], input[type="password"]{height: 40px;}
-.wrap.sys_bg .container .content .search_box .search_item_wrap .inp_group .inpWrap .icon_seacrh{margin-left: 5px; margin-right: 5px;}
+.wrap.sys_bg .container .content .search_box .search_item_wrap .inp_group .inpWrap .icon_seacrh{margin-left: 6px; margin-right: 6px;}
 .wrap.sys_bg .container .content .search_box .search_item_wrap .inp_group .selWrap .selected .selectedValue{width: 120px; height: 40px;}
 .wrap.sys_bg .container .content .search_box .search_item_wrap .inp_group .selWrap.active ul.optBox{padding-top: 10px; padding-bottom: 10px; top: 40px;}
 

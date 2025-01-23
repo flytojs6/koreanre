@@ -107,6 +107,7 @@ textarea::placeholder{font-size: var(--fontSize16); font-weight: var(--fw400); c
 .inpWrap label .icon + .txt{margin-left: 4px;}
 .inp_item .inpWrap label + input{margin-left: 8px;}
 .inpWrap label span{position: relative; color: #474747; font-weight: 500; font-size: 18px; white-space: nowrap;}
+.inpWrap .inp_date{background: url("../../icon/icon-calendarBlack-48.svg") no-repeat center right}
 
 .inpWrap.inpError{}
 .inpWrap.inpError label{color: var(--mainColorR);}
@@ -137,9 +138,12 @@ textarea::placeholder{font-size: var(--fontSize16); font-weight: var(--fw400); c
 .inpWrap.type_search .btn_input_delete.on{display: block;}
 
 
+/* date picker 달력 */
 .calWrap .inpWrap{}
 .calWrap .inpWrap i.iconCal{position: absolute; width: 48px; height: 48px; top: 0; right: 0; margin: auto; display: inline-block; background: url("../../icon/icon-calendarBlack-48.svg") no-repeat center center / 48px;}
 .calWrap .inpWrap input[type="text"]:disabled + i.iconCal{position: absolute; width: 48px; height: 48px; top: 0; right: 0; margin: auto; display: inline-block; background: url("../../icon/icon-calendarDisabled-48.svg") no-repeat center center / 48px;}
+.calWrap .inpWrap .txt{margin-left: 6px; margin-right: 6px;} 
+
 
 /* selectBox  */
 /* selWrap - common */
@@ -224,8 +228,8 @@ em.errorCaption .icon_error_caption{margin-right: 8px;}
 
 .inp_check_desc > a.link{text-decoration: underline; color: #262626; cursor: pointer;}
 .chkWrap input[type="checkbox"].chkSquare + label:before{content: ""; width: 17px; height:17px; min-width: 17px; display: inline-block; background:url("../../icon/icon_check.png") no-repeat center center / 100%;}
-.chkWrap input[type="checkbox"].chkSquare:checked + label:before {content: ""; background:url("../../icon/icon_checked.png") no-repeat center center / 100%;}
-.chkWrap input[type="checkbox"].chkSquare:disabled + label:before{background:url("../../icon/icon-checkboxBorderDisabled.svg") no-repeat center center / 100%;}
+.chkWrap input[type="checkbox"].chkSquare:checked + label:before {content: ""; background:url("../icon/icon_checked.png") no-repeat center center / 100%;}
+.chkWrap input[type="checkbox"].chkSquare:disabled + label:before{background:url("../icon/icon-checkboxBorderDisabled.svg") no-repeat center center / 100%;}
 .chkWrap i.policyDetail{display: inline-block; width: 11px; height: 20px; margin-left: 4px; background: url("../../icon/icon-checkboxArrowRight.svg") no-repeat center center / 100%;}
 .chkWrap a.link{text-decoration: underline; color: #262626; cursor: pointer;}
 
