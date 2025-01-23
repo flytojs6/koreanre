@@ -96,11 +96,11 @@ h5{font-size: var(--fontSize30); font-weight: 600;}
 /* input Common / inpError / read / must / calen dar-calWrap */
 input{outline-color: var(--gray4A4946);}
 input::placeholder{font-size: var(--fontSize16); font-weight: var(--fw400); color: var(--grayCBCBC2);}
-input[type="text"], input[type="password"]{height: 48px; border: 1px solid #CACACB; border-radius: 0.375rem; padding: 0 16px; font-size: var(--fontSize16); font-weight: var(--fw400); box-sizing: border-box;}
+input[type="text"], input[type="password"]{height: 40px; border: 1px solid #CACACB; border-radius: 0.375rem; padding: 0 12px; font-size: var(--fontSize16); font-weight: var(--fw400); box-sizing: border-box;}
 /* input:focus-visible{outline: none;} */
 input.block{width: 100%;}
 
-textarea{width: 100%; border: 1px solid var(--gray716F64); border-radius: 20px; padding: 0 16px; font-size: var(--fontSize16); font-weight: var(--fw400); line-height: 48px; box-sizing: border-box; min-height: 260px; resize: none;}
+textarea{width: 100%; border: 1px solid var(--gray716F64); border-radius: 20px; padding: 0 12px; font-size: var(--fontSize16); font-weight: var(--fw400); line-height: 48px; box-sizing: border-box; min-height: 260px; resize: none;}
 textarea::placeholder{font-size: var(--fontSize16); font-weight: var(--fw400); color: var(--grayCBCBC2);}
 
 .inpWrap{position: relative; width: fit-content;}
@@ -153,7 +153,7 @@ textarea::placeholder{font-size: var(--fontSize16); font-weight: var(--fw400); c
 .selWrap label + .selected{margin-left: 8px;}
 .selWrap .selected{position: relative;}
 
-.selWrap .selected .selectedValue{position: relative; display: flex; align-items: center; width: 100%; height: 48px; padding: 0 48px 0 16px; border: 1px solid #CACACB; background-color: var(--mainColorW); border-radius: 0.375rem; box-sizing: border-box; cursor: pointer;}
+.selWrap .selected .selectedValue{position: relative; display: flex; align-items: center; width: 100%; height: 40px; padding: 0 48px 0 12px; border: 1px solid #CACACB; background-color: var(--mainColorW); border-radius: 0.375rem; box-sizing: border-box; cursor: pointer;}
 
 .selWrap label span{position: relative; color: #474747; font-weight: 500; font-size: 18px; white-space: nowrap;}
 
@@ -166,7 +166,7 @@ textarea::placeholder{font-size: var(--fontSize16); font-weight: var(--fw400); c
 .selWrap .selected .selectedValue .icon_sort{display: block; width: 20px; height: 20px; background: url("../icon/icon_sort_white.svg") no-repeat center center;}
 .selWrap .selected .selectedValue .icon_sort.type_black{background: url("../icon/icon_sort.svg") no-repeat center center;}
 .selWrap ul{display: none; position: absolute; z-index: 600; top: 55px; left: 0; right: 0; width: calc(100% - 20px); box-sizing: border-box; border-radius: 4px; border: 1px solid var(--grayCBCBC2); background-color: var(--mainColorW); margin: auto; overflow: hidden; cursor: pointer; height: 0;}
-.selWrap ul.optBox{ top: 50px; width: 100%; border-radius: 0.375rem;}
+.selWrap ul.optBox{ top: 40px; width: 100%; border-radius: 0.375rem;}
 
 
 .selWrap ul.optBox.type_nopadding{width: 100%;}
@@ -180,7 +180,7 @@ textarea::placeholder{font-size: var(--fontSize16); font-weight: var(--fw400); c
 .selWrap ul li:hover{}
 
 .selWrap.active ul{display: block; height: auto; border: 1px solid var(--grayCBCBC2);}
-.selWrap.active ul.optBox{padding-top: 12px; padding-bottom: 12px;}
+.selWrap.active ul.optBox{padding-top: 10px; padding-bottom: 10px;}
 .selWrap.active .selected .selectedValue{border: 1px solid #262626;}
 
 .selWrap.disabled{pointer-events: none;}

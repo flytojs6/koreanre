@@ -28,7 +28,7 @@ body{overflow-x: hidden;}
 .wrap.sys_bg .container .content{display: flex; flex-direction: column; gap: 7px; width: 100%; padding: 7px; box-sizing: border-box;}
 
 .wrap.sys_bg .container .content .title_box{display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 48px; padding-left: 20px; padding-right: 20px; background-color: #fff; border-radius: 6px; box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.3); box-sizing: border-box;}
-.wrap.sys_bg .container .content .search_box{width: 100%; min-height: 80px; padding: 20px; background-color: #fff; border-radius: 6px; box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.3); box-sizing: border-box;}
+.wrap.sys_bg .container .content .search_box{position: relative; width: 100%; min-height: 80px; padding: 20px; background-color: #fff; border-radius: 6px; box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.3); box-sizing: border-box;}
 .wrap.sys_bg .container .content .contents_box{flex:1; 
 width: 100%;
 /* width: calc(100vw - 28px); */
@@ -63,7 +63,7 @@ padding: 20px; background-color: #fff; border-radius: 6px; box-shadow: 1px 1px 5
 .wrap.sys_bg .container .content .search_box .search_item_wrap .inp_group .inpWrap .icon_seacrh{margin-left: 6px; margin-right: 6px;}
 .wrap.sys_bg .container .content .search_box .search_item_wrap .inp_group .selWrap .selected .selectedValue{width: 120px; height: 40px;}
 .wrap.sys_bg .container .content .search_box .search_item_wrap .inp_group .selWrap.active ul.optBox{padding-top: 10px; padding-bottom: 10px; top: 40px;}
-
+.wrap.sys_bg .container .content .search_box .search_btn_area{position: absolute; right: 20px; bottom: 20px;}
 
 
 .wrap.sys_bg .container .content .contents_box .title_area{display: flex; align-items: center; justify-content: space-between;}
