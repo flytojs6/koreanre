@@ -17,7 +17,7 @@
 
 .modal__header .modal__close:before {content: "\2715"; font-size: 18px;}
 
-.modal__content {margin-top: 30px; margin-bottom: 40px; padding-left: 10px; padding-right: 10px; box-sizing: border-box; line-height: 1.5;}
+.modal__content {margin-top: 30px; margin-bottom: 30px; padding-left: 10px; padding-right: 10px; box-sizing: border-box; line-height: 1.5;}
 
 .modal__btn {height: 36px; padding-left: 1rem; padding-right: 1rem; padding-top: .5rem; padding-bottom: .5rem; background-color: #e6e6e6; color: rgba(0,0,0,.8); border-radius: .25rem; border-style: none; border-width: 0; cursor: pointer; -webkit-appearance: button; text-transform: none; overflow: visible; line-height: 1.15; margin: 0; will-change: transform; -moz-osx-font-smoothing: grayscale; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: translateZ(0); transform: translateZ(0); transition: -webkit-transform .25s ease-out; transition: transform .25s ease-out; transition: transform .25s ease-out,-webkit-transform .25s ease-out;}
 
@@ -126,6 +126,13 @@
 .modal.otp_cert_modal .modal__container .modal__content{margin-top: 50px; margin-bottom: 30px; padding-left: 15px; padding-right: 15px; box-sizing: border-box;}
 
 
+/* 거래사 조회 팝업 */
+.modal_inp_wrap{display: flex; justify-content: space-between; gap: 20px;}
+.modal_inp_wrap .inp_item .inpWrap{display: flex; width: unset;}
+.modal_inp_wrap .inp_item .inpWrap label{display: flex; align-items: center;}
+.modal_inp_wrap .inp_item .inpWrap input{width: 100%;}
+
+.modal_inp_wrap + .modal_grid_wrap{margin-top: 30px;}
 
 
 

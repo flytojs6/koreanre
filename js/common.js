@@ -99,7 +99,30 @@ $(document).on('click', '.modal .modal__close', function() {
 });
 
 
+// 거래사 조회 팝업 열기
+$(document).on('click', '.js-modal-trigger.company_search_modal_open', function() {
+  $(this).closest('.container').siblings('.modal.company_search_modal').addClass('is-open');
+  $('body').addClass('scrollLock');
+});
 
+// 거래사 조회 팝업 닫기
+$(document).on('click', '.modal.company_search_modal .modal__close', function() {
+  $(this).closest('.modal').removeClass('is-open');
+  $('body').removeClass('scrollLock');
+});
+
+
+// 담당자 조회 팝업 열기
+$(document).on('click', '.js-modal-trigger.manager_search_modal_open', function() {
+  $(this).closest('.container').siblings('.modal.manager_search_modal').addClass('is-open');
+  $('body').addClass('scrollLock');
+});
+
+// 담당자 조회 팝업 닫기
+$(document).on('click', '.modal.manager_search_modal .modal__close', function() {
+  $(this).closest('.modal').removeClass('is-open');
+  $('body').removeClass('scrollLock');
+});
 
 
 

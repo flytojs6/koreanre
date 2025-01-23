@@ -54,7 +54,7 @@
               <div class="inpWrap">
                 <label for=""><span class="icon">·</span><span class="txt">거래사</span></label>
                 <input type="text" id="" class="input wdh_100" placeholder="">
-                <button type="button" class="btn_icon icon_seacrh"></button>
+                <button type="button" class="btn_icon icon_seacrh js-modal-trigger company_search_modal_open"></button>
                 <input type="text" id="" class="input wdh_140" placeholder="">
               </div>
             </div>
@@ -159,7 +159,7 @@
               <div class="inpWrap">
                 <label for=""><span class="icon">·</span><span class="txt">담당자</span></label>
                 <input type="text" id="" class="input wdh_100" placeholder="">
-                <button type="button" class="btn_icon icon_seacrh"></button>
+                <button type="button" class="btn_icon icon_seacrh js-modal-trigger manager_search_modal_open"></button>
                 <input type="text" id="" class="input wdh_100" placeholder="" readonly>
               </div>
             </div>
@@ -174,6 +174,9 @@
               </div>
             </div>
           </div>
+          <div class="search_btn_area">
+            <button type="button" class="btnType btnColorB btnSize40">조회</button>
+          </div>
         </div>
         <div class="contents_box">
           <div class="cont_group">
@@ -187,7 +190,6 @@
               </div>
             </div>
             <div class="grid_wrap">
-              <!-- <div id="jqGridPager" class="custompager"></div> -->
               <table id="Gridsample"></table>
             </div>
           </div>
@@ -195,10 +197,94 @@
       </div>
       <!-- ▲컨텐츠 영역▲ -->
     </div>
+    <!-- 거래사 조회 팝업 -->
+    <div class="modal company_search_modal" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <header class="modal__header">
+            <h2 class="modal__title">
+              거래사 조회
+            </h2>
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          </header>
+          <main class="modal__content">
+            <div class="modal_inp_wrap">
+              <div class="inp_item">
+                <div class="inpWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">거래사코드</span></label>
+                  <input type="text" id="" class="input " placeholder="">
+                </div>
+              </div>
+              <div class="inp_item">
+                <div class="inpWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">거래사명</span></label>
+                  <input type="text" id="" class="input " placeholder="">
+                </div>
+              </div>
+              <button type="button" class="btnType btnColorB btnSize40">조회</button>
+            </div>
+            <div class="modal_grid_wrap">
+              <div class="grid_wrap">
+                <table id="modalGrid"></table>
+              </div>
+            </div>
+          </main>
+          <footer class="modal__footer">
+            <button type="button" class="modal__btn modal__close btnType btnColorR btnSize40">확인</button>
+            <button type="button" class="modal__btn modal__close btnType btnColorBR btnSize40">닫기</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!-- 담당자 조회 팝업 -->
+    <div class="modal manager_search_modal" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+          <header class="modal__header">
+            <h2 class="modal__title">
+              담당자 조회
+            </h2>
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          </header>
+          <main class="modal__content">
+            <div class="modal_inp_wrap">
+              <div class="inp_item">
+                <div class="inpWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">사원명</span></label>
+                  <input type="text" id="" class="input " placeholder="">
+                </div>
+              </div>
+              <div class="inp_item">
+                <div class="inpWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">사원번호</span></label>
+                  <input type="text" id="" class="input " placeholder="">
+                </div>
+              </div>
+              <div class="inp_item">
+                <div class="inpWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">부서명</span></label>
+                  <input type="text" id="" class="input " placeholder="">
+                </div>
+              </div>
+              <button type="button" class="btnType btnColorB btnSize40">조회</button>
+            </div>
+            <div class="modal_grid_wrap">
+              <div class="grid_wrap">
+                <table id="managerSearchGrid"></table>
+              </div>
+            </div>
+          </main>
+          <footer class="modal__footer">
+            <button type="button" class="modal__btn modal__close btnType btnColorR btnSize40">확인</button>
+            <button type="button" class="modal__btn modal__close btnType btnColorBR btnSize40">닫기</button>
+          </footer>
+        </div>
+      </div>
+    </div>
   </div>
 
-<script src="js/jquery-1.11.0.min.js"></script>
-<!-- <script src="js/jquery-3.7.1.min.js"></script> -->
+<!-- <script src="js/jquery-1.11.0.min.js"></script> -->
+<script src="js/jquery-3.7.1.min.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/grid.locale-en.js"></script>
 <script src="js/jquery.jqGrid.min.js"></script>
@@ -220,13 +306,13 @@ $( function() {
       url: 'https://jsonplaceholder.typicode.com/users',
       datatype: "json",
       colModel: [
-          { name: 'id', label: '순번', width: 50 },
-          { name: 'name', label: '거래사', width: 100 },
-          { name: 'username', label: '종목', width: 100 },
-          { name: 'email', label: '업무', width: 100 },
-          { name: 'phone', label: '마감자료구분', width: 100 },
-          { name: 'phone', label: '제목', width: 100 },
-          { name: 'phone', label: '등록구분', width: 100 },
+        { name: 'id', label: '순번', width: 50 },
+        { name: 'name', label: '거래사', width: 100 },
+        { name: 'username', label: '종목', width: 100 },
+        { name: 'email', label: '업무', width: 100 },
+        { name: 'phone', label: '마감자료구분', width: 100 },
+        { name: 'phone', label: '제목', width: 100 },
+        { name: 'phone', label: '등록구분', width: 100 },
       ],
       width: '1200',
       height: '300',
@@ -238,6 +324,53 @@ $( function() {
       rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
       pager : "#jqGridPager",
       rownumber : true, // 각 row의 맨 앞줄에 각 행의 번호가 자동으로 부여 되도록 설정
+    });
+  });
+  //]]>
+</script>
+
+<script>
+  //<![CDATA[
+  $(function () {
+    "use strict";
+    $("#modalGrid").jqGrid({
+      url: 'https://jsonplaceholder.typicode.com/users',
+      datatype: "json",
+      colModel: [
+        { name: 'name', label: '거래사', width: 230 },
+        { name: 'username', label: '거래사명', width: 490 },
+        
+      ],
+      width: '730',
+      height: '300',
+      autowidth : true,
+      shrinkToFit: true,
+      rowNum : 8,  // 보여줄 행의 개수 설정
+      rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
+    });
+  });
+  //]]>
+</script>
+
+<script>
+  //<![CDATA[
+  $(function () {
+    "use strict";
+    $("#managerSearchGrid").jqGrid({
+      url: 'https://jsonplaceholder.typicode.com/users',
+      datatype: "json",
+      colModel: [
+        { name: 'name', label: '사원명', width: 150 },
+        { name: 'username', label: '사원번호', width: 150 },
+        { name: 'website', label: '소속부서', width: 200 },
+        { name: 'email', label: '이메일주소', width: 200 },
+      ],
+      width: '730',
+      height: '300',
+      autowidth : true,
+      shrinkToFit: true,
+      rowNum : 8,  // 보여줄 행의 개수 설정
+      rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
     });
   });
   //]]>

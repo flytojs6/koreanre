@@ -107,7 +107,7 @@ textarea::placeholder{font-size: var(--fontSize16); font-weight: var(--fw400); c
 .inpWrap label .icon + .txt{margin-left: 4px;}
 .inp_item .inpWrap label + input{margin-left: 8px;}
 .inpWrap label span{position: relative; color: #474747; font-weight: 500; font-size: 18px; white-space: nowrap;}
-.inpWrap .inp_date{background: url("../../icon/icon-calendarBlack-48.svg") no-repeat center right}
+.inpWrap .inp_date{background: url("../icon/icon-calendarBlack-48.svg") no-repeat center right}
 
 .inpWrap.inpError{}
 .inpWrap.inpError label{color: var(--mainColorR);}
@@ -809,7 +809,7 @@ ul.list_disc li{color: #262626;}
 .ui-jqgrid .ui-jqgrid-htable th{height: 40px;}
 .ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr:first-child{border-left: 1px solid #c5c5c5;}
 /* .ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr:last-child{border-right: 0;} */
-.ui-jqgrid .ui-jqgrid-htable th div{font-size: 16px; font-family: 'Pretendard';}
+.ui-jqgrid .ui-jqgrid-htable th div{font-size: 16px; font-family: 'Pretendard'; overflow: visible;}
 
 .ui-jqgrid .ui-jqgrid-btable{width: 100% !important;}
 
