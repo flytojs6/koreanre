@@ -123,6 +123,7 @@
 
 /* google otp 인증 팝업 */
 .modal.otp_cert_modal .modal__container{width: 100%; max-width: 700px;}
+.modal.otp_cert_modal .modal__container .modal__content{margin-top: 50px; margin-bottom: 30px; padding-left: 15px; padding-right: 15px; box-sizing: border-box;}
 
 
 
