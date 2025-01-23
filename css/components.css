@@ -227,10 +227,10 @@ em.errorCaption .icon_error_caption{margin-right: 8px;}
 }
 
 .inp_check_desc > a.link{text-decoration: underline; color: #262626; cursor: pointer;}
-.chkWrap input[type="checkbox"].chkSquare + label:before{content: ""; width: 17px; height:17px; min-width: 17px; display: inline-block; background:url("../../icon/icon_check.png") no-repeat center center / 100%;}
+.chkWrap input[type="checkbox"].chkSquare + label:before{content: ""; width: 17px; height:17px; min-width: 17px; display: inline-block; background:url("../icon/icon_check.png") no-repeat center center / 100%;}
 .chkWrap input[type="checkbox"].chkSquare:checked + label:before {content: ""; background:url("../icon/icon_checked.png") no-repeat center center / 100%;}
 .chkWrap input[type="checkbox"].chkSquare:disabled + label:before{background:url("../icon/icon-checkboxBorderDisabled.svg") no-repeat center center / 100%;}
-.chkWrap i.policyDetail{display: inline-block; width: 11px; height: 20px; margin-left: 4px; background: url("../../icon/icon-checkboxArrowRight.svg") no-repeat center center / 100%;}
+.chkWrap i.policyDetail{display: inline-block; width: 11px; height: 20px; margin-left: 4px; background: url("../icon/icon-checkboxArrowRight.svg") no-repeat center center / 100%;}
 .chkWrap a.link{text-decoration: underline; color: #262626; cursor: pointer;}
 
 /* radio */
@@ -271,12 +271,12 @@ em.errorCaption .icon_error_caption{margin-right: 8px;}
 .hashTag .hashItem.outline.disabled{background-color: var(--mainColorW); color: var(--grayE5E5E5); border: 1px solid var(--grayE5E5E5);}
 
 .hashTag .hashItem.hasicon:before{content: ""; display: inline-block; width: 18px; height: 18px; padding-right: 4px; vertical-align: -4px;}
-.hashTag .hashItem.hasicon.white:before{background:url("../../icon/icon-checkboxRoundChk-18.svg") no-repeat center center / 100%;}
-.hashTag .hashItem.hasicon.gray:before{background:url("../../icon/icon-checkboxRoundChk-18.svg") no-repeat center center / 100%;}
-.hashTag .hashItem.hasicon.warm:before{background:url("../../icon/icon-checkboxRoundChk-18.svg") no-repeat center center / 100%;}
-.hashTag .hashItem.hasicon.red:before{background:url("../../icon/icon-checkboxRoundChkWhite-18.svg") no-repeat center center / 100%;}
-.hashTag .hashItem.hasicon.black:before{background:url("../../icon/icon-checkboxRoundChkWhite-18.svg") no-repeat center center / 100%;}
-.hashTag .hashItem.outline.hasicon.red:before{background:url("../../icon/icon-checkboxRoundChkRed-18.svg") no-repeat center center / 100%;}
+.hashTag .hashItem.hasicon.white:before{background:url("../icon/icon-checkboxRoundChk-18.svg") no-repeat center center / 100%;}
+.hashTag .hashItem.hasicon.gray:before{background:url("../icon/icon-checkboxRoundChk-18.svg") no-repeat center center / 100%;}
+.hashTag .hashItem.hasicon.warm:before{background:url("../icon/icon-checkboxRoundChk-18.svg") no-repeat center center / 100%;}
+.hashTag .hashItem.hasicon.red:before{background:url("../icon/icon-checkboxRoundChkWhite-18.svg") no-repeat center center / 100%;}
+.hashTag .hashItem.hasicon.black:before{background:url("../icon/icon-checkboxRoundChkWhite-18.svg") no-repeat center center / 100%;}
+.hashTag .hashItem.outline.hasicon.red:before{background:url("../icon/icon-checkboxRoundChkRed-18.svg") no-repeat center center / 100%;}
 
 .tag.state{display: inline-block; height: 24px; line-height: 24px; padding: 0px 8px; font-size: 12px; font-weight: var(--fw400); border-radius: 15px; white-space: nowrap;}
 .tag.state.complete{color: #287D00; background-color: #EBF9E5;}
@@ -345,7 +345,7 @@ a.btnType.btnSize48{line-height: 48px;}
 
 .btn_icon{border: 0; background-color: transparent;}
 
-.icon_seacrh{display: inline-block; width: 22px; height: 22px; background:url("../../icon/icon_search-24.svg") no-repeat center center; background-size: contain; cursor: pointer;}
+.icon_seacrh{display: inline-block; width: 22px; height: 22px; background:url("../icon/icon_search-24.svg") no-repeat center center; background-size: contain; cursor: pointer;}
 
 
 
