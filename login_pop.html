@@ -17,6 +17,8 @@
         <div class="loginArea">
           <button type="button" class="js-modal-trigger otp_seting_modal_open" data-micromodal-trigger="loginModal">google otp 설정 팝업</button>
           <button type="button" class="js-modal-trigger otp_cert_modal_open" data-micromodal-trigger="otpCertMidal">google otp 인증 팝업</button>
+          <button type="button" class="js-modal-trigger alert_modal_open" data-micromodal-trigger="idAlert">얼러트 팝업 아이디입력</button>
+          <button type="button" class="js-modal-trigger alert_pw_modal_open" data-micromodal-trigger="pwAlert">얼러트 팝업 비밀번호입력</button>
         </div>
       </div>
       <!-- ▲컨텐츠 영역▲ -->
@@ -131,6 +133,38 @@
               </div>
             </div>
           </main>
+        </div>
+      </div>
+    </div>
+    <!-- alert 아이디 입력 팝업 -->
+    <div class="modal type_alert alert_modal" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <main class="modal__content">
+            <div class="tac">
+              <i class="icon icon_notice"></i>
+            </div>
+            <p class="tac">아이디를 입력하세요.</p>
+          </main>
+          <footer class="modal__footer">
+            <button class="modal__btn modal__close modal__btn-primary">OK</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!-- alert 비밀번호 입력 팝업 -->
+    <div class="modal type_alert alert_pw_modal" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <main class="modal__content">
+            <div class="tac">
+              <i class="icon icon_notice"></i>
+            </div>
+            <p class="tac">비밀번호를 입력하세요.</p>
+          </main>
+          <footer class="modal__footer">
+            <button class="modal__btn modal__close modal__btn-primary">OK</button>
+          </footer>
         </div>
       </div>
     </div>

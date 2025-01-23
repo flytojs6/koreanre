@@ -793,7 +793,7 @@ ul.list_disc li{color: #262626;}
 .breadcrumb ol, .breadcrumb ul{display: flex; align-items: flex-start; justify-content: flex-start; flex-wrap: nowrap;}
 .breadcrumb li{display: flex; align-items: center;}
 .breadcrumb li+li:before{color: #9e9e9e; content: ">";}
-.breadcrumb a{display: flex; align-items: center; padding: 0 10px; color: #535353;}
+.breadcrumb a{display: flex; align-items: center; padding: 0 10px; color: #535353; font-size: 14px;}
 
 
 /* 테이블 */

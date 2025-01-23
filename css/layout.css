@@ -3,6 +3,8 @@
 html{overflow-x: hidden;}
 body{overflow-x: hidden;}
 
+.scrollLock{overflow: hidden;}
+
 /* wrap */
 .wrap{position: relative; width: 100%;}
 .wrap.sys_bg{display: flex; flex-direction: column; gap: 7px; background-color: #dddddd; min-height: 100vh;}
@@ -35,11 +37,11 @@ padding: 20px; background-color: #fff; border-radius: 6px; box-shadow: 1px 1px 5
 
 
 .wrap.sys_bg .container .content .title_box .title{display: flex; align-items: center;}
-.wrap.sys_bg .container .content .title_box .title .tit_icon{font-size: 20px;}
-.wrap.sys_bg .container .content .title_box .title .tit_icon + .tit_txt{margin-left: 3px;}
-.wrap.sys_bg .container .content .title_box .title .tit_txt{font-size: 20px; font-weight: 600; color: #262626;}
+.wrap.sys_bg .container .content .title_box .title .tit_icon{font-size: 18px; color: #18ab94;}
+.wrap.sys_bg .container .content .title_box .title .tit_icon + .tit_txt{margin-left: 4px;}
+.wrap.sys_bg .container .content .title_box .title .tit_txt{font-size: 20px; font-weight: 600; color: #262626; color: #18ab94;}
 .wrap.sys_bg .container .content .title_box .title .line{font-size: 18px; color: #a3a3a3; margin-left: 6px; margin-right: 4px;}
-.wrap.sys_bg .container .content .title_box .title .tit_desc{font-size: 16px; color: #4A4946;}
+.wrap.sys_bg .container .content .title_box .title .tit_desc{font-size: 16px; color: #727272;}
 .wrap.sys_bg .container .content .title_box .right_area{display: flex; align-items: center;}
 
 .btnType.hasicon{display: flex; align-items: center; gap: 4px;}

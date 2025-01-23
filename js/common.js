@@ -75,6 +75,28 @@ $(document).on('click', '.modal.otp_cert_modal .modal__close', function() {
 });
 
 
+// 얼러트 아이디 팝업 열기
+$(document).on('click', '.js-modal-trigger.alert_modal_open', function() {
+  $(this).closest('.container').siblings('.modal.alert_modal').addClass('is-open');
+});
+
+// 얼러트 아이디 팝업 닫기
+$(document).on('click', '.modal .modal__close', function() {
+  $(this).closest('.modal').removeClass('is-open');
+  $('body').removeClass('scrollLock');
+});
+
+
+// 얼러트 비밀번호 팝업 열기
+$(document).on('click', '.js-modal-trigger.alert_pw_modal_open', function() {
+  $(this).closest('.container').siblings('.modal.alert_pw_modal').addClass('is-open');
+});
+
+// 얼러트 비밀번호 팝업 닫기
+$(document).on('click', '.modal .modal__close', function() {
+  $(this).closest('.modal').removeClass('is-open');
+  $('body').removeClass('scrollLock');
+});
 
 
 

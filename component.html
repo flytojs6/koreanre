@@ -274,25 +274,59 @@
     </div>
     <div class="modalArea pd60" id="modalsection" style="background-color: #d9ebff;">
         <div class="mt10">
-            <button type="button" class="js-modal-trigger sample_modal_open" data-micromodal-trigger="modal-1">팝업열기</button>
+            <button type="button" class="js-modal-trigger sample_modal_open" data-micromodal-trigger="modal-1">기본팝업열기</button>
             <div class="modal sample_modal" aria-hidden="true">
-                <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-                    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                        <header class="modal__header">
-                            <h2 class="modal__title">
-                                Micromodal
-                            </h2>
-                            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-                        </header>
-                        <main class="modal__content">
-                            <p>sample text 01129873489753</p>
-                        </main>
-                        <footer class="modal__footer">
-                            <button class="modal__btn modal__btn-primary">Continue</button>
-                            <button class="modal__btn modal__close" data-micromodal-close aria-label="Close this dialog window">Close</button>
-                        </footer>
-                    </div>
+              <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                  <header class="modal__header">
+                    <h2 class="modal__title">
+                      Micromodal
+                    </h2>
+                    <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                  </header>
+                  <main class="modal__content">
+                    <p>sample text 01129873489753</p>
+                  </main>
+                  <footer class="modal__footer">
+                    <button class="modal__btn modal__btn-primary">Continue</button>
+                    <button class="modal__btn modal__close" data-micromodal-close aria-label="Close this dialog window">Close</button>
+                  </footer>
                 </div>
+              </div>
+            </div>
+            <button type="button" class="js-modal-trigger alert_modal_open" data-micromodal-trigger="modal-1">얼러트 팝업 아이디입력</button>
+            <div class="modal type_alert alert_modal" aria-hidden="true">
+              <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                  <main class="modal__content">
+                    <div class="tac">
+                      <i class="icon icon_notice"></i>
+                    </div>
+                    <p class="tac">아이디를 입력하세요.</p>
+                  </main>
+                  <footer class="modal__footer">
+                    <button class="modal__btn modal__close modal__btn-primary">OK</button>
+                    <!-- <button class="modal__btn modal__close" data-micromodal-close aria-label="Close this dialog window">Close</button> -->
+                  </footer>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="js-modal-trigger alert_pw_modal_open" data-micromodal-trigger="modal-1">비밀번호입력</button>
+            <div class="modal type_alert alert_pw_modal" aria-hidden="true">
+              <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                  <main class="modal__content">
+                    <div class="tac">
+                      <i class="icon icon_notice"></i>
+                    </div>
+                    <p class="tac">비밀번호를 입력하세요.</p>
+                  </main>
+                  <footer class="modal__footer">
+                    <button class="modal__btn modal__close modal__btn-primary">OK</button>
+                    <!-- <button class="modal__btn modal__close" data-micromodal-close aria-label="Close this dialog window">Close</button> -->
+                  </footer>
+                </div>
+              </div>
             </div>
         </div>
         <div class="mt10"></div>
@@ -300,29 +334,60 @@
         <div class="mt10"></div>
     </div>
     
-    <!-- <script src="js/jquery-1.11.0.min.js"></script> -->
-    <!-- <script src="js/jquery-1.12.4.js"></script> -->
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <!-- <script src="js/grid.locale-kr.js"></script> -->
-    <!-- <script src="js/grid.locale-en.js"></script> -->
-    <script src="js/jquery.jqGrid.min.js"></script>
-    <script src="js/common.js"></script>
-    <script src="js/modal.js"></script>
+<!-- <script src="js/jquery-1.11.0.min.js"></script> -->
+<!-- <script src="js/jquery-1.12.4.js"></script> -->
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<!-- <script src="js/grid.locale-kr.js"></script> -->
+<!-- <script src="js/grid.locale-en.js"></script> -->
+<script src="js/jquery.jqGrid.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/modal.js"></script>
 <script>
-// 팝업 열기
+// 기본 팝업 열기
 $(document).on('click', '.js-modal-trigger.sample_modal_open', function() {
-    // $(this).closest('.container').siblings('.modal.sample_modal').addClass('is-open');
-    $(this).siblings('.modal.sample_modal').addClass('is-open');
-    $('body').addClass('scrollLock');
+  // $(this).closest('.container').siblings('.modal.sample_modal').addClass('is-open');
+  $(this).siblings('.modal.sample_modal').addClass('is-open');
+  $('body').addClass('scrollLock');
 });
 
-// 팝업 닫기
+// 기본 팝업 닫기
 $(document).on('click', '.modal .modal__close', function() {
-    $(this).closest('.modal').removeClass('is-open');
-    $('body').removeClass('scrollLock');
+  $(this).closest('.modal').removeClass('is-open');
+  $('body').removeClass('scrollLock');
 });
 </script>
+
+<script>
+// 얼러트 아이디 팝업 열기
+$(document).on('click', '.js-modal-trigger.alert_modal_open', function() {
+  // $(this).closest('.container').siblings('.modal.sample_modal').addClass('is-open');
+  $(this).siblings('.modal.alert_modal').addClass('is-open');
+  // $('body').addClass('scrollLock');
+});
+
+// 얼러트 아이디 팝업 닫기
+$(document).on('click', '.modal .modal__close', function() {
+  $(this).closest('.modal').removeClass('is-open');
+  $('body').removeClass('scrollLock');
+});
+</script>
+
+<script>
+// 얼러트 비밀번호 팝업 열기
+$(document).on('click', '.js-modal-trigger.alert_pw_modal_open', function() {
+  // $(this).closest('.container').siblings('.modal.sample_modal').addClass('is-open');
+  $(this).siblings('.modal.alert_pw_modal').addClass('is-open');
+  // $('body').addClass('scrollLock');
+});
+
+// 얼러트 비밀번호 팝업 닫기
+$(document).on('click', '.modal .modal__close', function() {
+  $(this).closest('.modal').removeClass('is-open');
+  $('body').removeClass('scrollLock');
+});
+</script>
+
 <script>
 $( function() {
   $( "#datepicker" ).datepicker();
