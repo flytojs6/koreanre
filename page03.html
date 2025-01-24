@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>데이터송신내역조회</title>
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/ui.jqgrid.css">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+  <div class="wrap sys_bg">
+    <div class="header">
+      <div class="top">
+        <div class="logo">
+          <img src="images/logo1.png" alt="logo">
+          <p>재보험 데이터 수신 시스템</p>
+        </div>
+        <div class="util_area">
+          <div class="lang_change">
+            <ul>
+              <li>
+                <a href="">KOR</a>
+              </li>
+              <li>
+                <a href="">ENG</a>
+              </li>
+            </ul>
+          </div>
+          <div class="btn_area">
+            <button type="button" class="btn_icon icon_login"></button>
+          </div>
+        </div>
+      </div>
+      <div class="nav">
+        <div class="gnbArea">
+          <div class="mainmenu">
+            <ul class="menu">
+              <li><a href="javascript:void(0)" class="mlink active">파일송수신</a></li>
+              <li><a href="javascript:void(0)" class="mlink">데이터분석용파일송수신</a></li>
+              <li><a href="javascript:void(0)" class="mlink">접근기록조회</a></li>
+            </ul>
+          </div>
+          <div class="submenu">
+            <ul class="menu">
+              <li><a href="javascript:void(0)" class="mlink active">파일송수신</a></li>
+              <li><a href="javascript:void(0)" class="mlink">데이터분석용파일송수신</a></li>
+              <li><a href="javascript:void(0)" class="mlink">접근기록조회</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <!-- ▼컨텐츠 영역▼ -->
+      <div class="content">
+        <div class="title_box">
+          <div class="title_area">
+            <div class="title">
+              <span class="tit_icon">●</span>
+              <span class="tit_txt">데이터송신내역조회</span>
+              <!-- <span class="line">|</span> -->
+              <!-- <span class="tit_desc">ESC102545</span> -->
+            </div>
+          </div>
+          <div class="right_area">
+            <div class="breadcrumb" aria-label="breadcrumbs">
+              <ul>
+                <li><a href="javascript:void(0)">home</a></li>
+                <li><a href="javascript:void(0)">데이터통신</a></li>
+                <li class="is-active"><a href="javascript:void(0)" aria-current="page">데이터송신내역조회</a></li>
+              </ul>
+            </div>
+            <button type="button" class="btnType btnOutGray01 btnSize30 btn_help hasicon">
+              <i class="icon_notice"></i>
+              <span class="txt">Help</span>
+            </button>
+          </div>
+        </div>
+        <div class="search_box">
+          <div class="search_item_wrap">
+            <div class="inp_item inp_group txt4">
+              <div class="inpWrap">
+                <label for=""><span class="icon">·</span><span class="txt">거래사</span></label>
+                <input type="text" id="" class="input wdh_100" placeholder="">
+                <button type="button" class="btn_icon icon_seacrh js-modal-trigger company_search_modal_open"></button>
+                <input type="text" id="" class="input wdh_140" placeholder="">
+              </div>
+            </div>
+            <div class="inp_item inp_group">
+              <div class="selWrap">
+                <label for=""><span class="icon">·</span><span class="txt">종목</span></label>
+                <div class="selected">
+                  <div class="selectedValue">
+                    <p data-val="">전체</p>
+                    <i class="selArrow"></i>
+                  </div>
+                  <ul class="optBox">
+                    <li class="option optChk" data-val="0">전체</li>
+                    <li class="option" data-val="1">선택1</li>
+                    <li class="option" data-val="2">선택2</li>
+                    <li class="option" data-val="3">선택3</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="inp_item inp_group">
+              <div class="selWrap">
+                <label for=""><span class="icon">·</span><span class="txt">업무</span></label>
+                <div class="selected">
+                  <div class="selectedValue">
+                    <p data-val="">전체</p>
+                    <i class="selArrow"></i>
+                  </div>
+                  <ul class="optBox">
+                    <li class="option optChk" data-val="0">전체</li>
+                    <li class="option" data-val="1">선택1</li>
+                    <li class="option" data-val="2">선택2</li>
+                    <li class="option" data-val="3">선택3</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="inp_item inp_group txt6">
+              <div class="selWrap">
+                <label for=""><span class="icon">·</span><span class="txt">마감자료구분</span></label>
+                <div class="selected">
+                  <div class="selectedValue">
+                    <p data-val="">전체</p>
+                    <i class="selArrow"></i>
+                  </div>
+                  <ul class="optBox">
+                    <li class="option optChk" data-val="0">전체</li>
+                    <li class="option" data-val="1">선택1</li>
+                    <li class="option" data-val="2">선택2</li>
+                    <li class="option" data-val="3">선택3</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="inp_item inp_group whalf full txt4">
+              <div class="inpWrap">
+                <label for=""><span class="icon">·</span><span class="txt">제목</span></label>
+                <input type="text" id="" class="input" placeholder="">
+              </div>
+            </div>
+            <div class="inp_item inp_group">
+              <div class="inpWrap">
+                <label for=""><span class="icon">·</span><span class="txt">게시자</span></label>
+                <input type="text" id="" class="input" placeholder="">
+              </div>
+            </div>
+            <div class="inp_item inp_group txt6">
+              <div class="selWrap">
+                <label for=""><span class="icon">·</span><span class="txt">등록구분</span></label>
+                <div class="selected">
+                  <div class="selectedValue">
+                    <p data-val="">전체</p>
+                    <i class="selArrow"></i>
+                  </div>
+                  <ul class="optBox">
+                    <li class="option optChk" data-val="0">전체</li>
+                    <li class="option" data-val="1">선택1</li>
+                    <li class="option" data-val="2">선택2</li>
+                    <li class="option" data-val="3">선택3</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="inp_item inp_group txt4">
+              <div class="selWrap">
+                <label for=""><span class="icon">·</span><span class="txt">처리상태</span></label>
+                <div class="selected">
+                  <div class="selectedValue">
+                    <p data-val="">전체</p>
+                    <i class="selArrow"></i>
+                  </div>
+                  <ul class="optBox">
+                    <li class="option optChk" data-val="0">전체</li>
+                    <li class="option" data-val="1">선택1</li>
+                    <li class="option" data-val="2">선택2</li>
+                    <li class="option" data-val="3">선택3</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="inp_item inp_group">
+              <div class="inpWrap">
+                <label for=""><span class="icon">·</span><span class="txt">담당자</span></label>
+                <input type="text" id="" class="input wdh_100" placeholder="">
+                <button type="button" class="btn_icon icon_seacrh js-modal-trigger manager_search_modal_open"></button>
+                <input type="text" id="" class="input wdh_100" placeholder="" readonly>
+              </div>
+            </div>
+            <div class="inp_item inp_group whalf">
+              <div class="calWrap">
+                <div class="inpWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">기간</span></label>
+                  <input type="text" placeholder="" class="input inp_date" id="datepicker" value="YYYY. DD. MM" />
+                  <span class="txt">~</span>
+                  <input type="text" placeholder="" class="input inp_date" id="datepicker2" value="YYYY. DD. MM" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search_btn_area">
+            <button type="button" class="btnType btnColorB btnSize40">조회</button>
+          </div>
+        </div>
+        <div class="contents_box">
+          <div class="cont_group">
+            <div class="title_area">
+              <!-- <div class="title">
+                <span class="tit_icon">●</span>
+                <span class="tit_txt">파일 송신 내역</span>
+              </div> -->
+              <div class="grid_paging_wrap">
+                <div class="selWrap">
+                  <div class="selected">
+                    <div class="selectedValue">
+                      <p data-val="">10</p>
+                      <i class="selArrow"></i>
+                    </div>
+                    <ul class="optBox">
+                      <li class="option optChk" data-val="0">10</li>
+                      <li class="option" data-val="1">20</li>
+                      <li class="option" data-val="2">30</li>
+                      <li class="option" data-val="3">40</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="paging_num_area">
+                  <div class="current_page">
+                    <span>1</span>
+                    <span>/</span>
+                    <span>20</span>
+                  </div>
+                  <div class="total_page">
+                    <span>(총</span>
+                    <span>400</span>
+                    <span>건)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="btn_area">
+                <button type="button" class="btnType btnOutGray01 btnSize40">신규</button>
+              </div>
+            </div>
+            <div class="grid_wrap">
+              <table id="Gridsample"></table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ▲컨텐츠 영역▲ -->
+    </div>
+    <!-- 거래사 조회 팝업 -->
+    <div class="modal company_search_modal" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <header class="modal__header">
+            <h2 class="modal__title">
+              거래사 조회
+            </h2>
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          </header>
+          <main class="modal__content">
+            <div class="modal_inp_wrap">
+              <div class="inp_item">
+                <div class="inpWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">거래사코드</span></label>
+                  <input type="text" id="" class="input " placeholder="">
+                </div>
+              </div>
+              <div class="inp_item">
+                <div class="inpWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">거래사명</span></label>
+                  <input type="text" id="" class="input " placeholder="">
+                </div>
+              </div>
+              <button type="button" class="btnType btnColorB btnSize40">조회</button>
+            </div>
+            <div class="modal_grid_wrap">
+              <div class="grid_wrap">
+                <table id="modalGrid"></table>
+              </div>
+            </div>
+          </main>
+          <footer class="modal__footer">
+            <button type="button" class="modal__btn modal__close btnType btnColorR btnSize40">확인</button>
+            <button type="button" class="modal__btn modal__close btnType btnColorBR btnSize40">닫기</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!-- 담당자 조회 팝업 -->
+    <div class="modal manager_search_modal" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+          <header class="modal__header">
+            <h2 class="modal__title">
+              담당자 조회
+            </h2>
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          </header>
+          <main class="modal__content">
+            <div class="modal_inp_wrap">
+              <div class="inp_item">
+                <div class="inpWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">사원명</span></label>
+                  <input type="text" id="" class="input " placeholder="">
+                </div>
+              </div>
+              <div class="inp_item">
+                <div class="inpWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">사원번호</span></label>
+                  <input type="text" id="" class="input " placeholder="">
+                </div>
+              </div>
+              <div class="inp_item">
+                <div class="inpWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">부서명</span></label>
+                  <input type="text" id="" class="input " placeholder="">
+                </div>
+              </div>
+              <button type="button" class="btnType btnColorB btnSize40">조회</button>
+            </div>
+            <div class="modal_grid_wrap">
+              <div class="grid_wrap">
+                <table id="managerSearchGrid"></table>
+              </div>
+            </div>
+          </main>
+          <footer class="modal__footer">
+            <button type="button" class="modal__btn modal__close btnType btnColorR btnSize40">확인</button>
+            <button type="button" class="modal__btn modal__close btnType btnColorBR btnSize40">닫기</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- <script src="js/jquery-1.11.0.min.js"></script> -->
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/grid.locale-en.js"></script>
+<script src="js/jquery.jqGrid.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/modal.js"></script>
+
+<script>
+$( function() {
+  $( "#datepicker" ).datepicker();
+  $( "#datepicker2" ).datepicker();
+});
+</script>
+  
+<script>
+  //<![CDATA[
+  $(function () {
+    "use strict";
+    $("#Gridsample").jqGrid({
+      url: 'https://jsonplaceholder.typicode.com/users',
+      datatype: "json",
+      colModel: [
+        { name: 'id', label: '순번', width: 50 },
+        { name: 'name', label: '거래사', width: 100 },
+        { name: 'username', label: '종목', width: 100 },
+        { name: 'email', label: '업무', width: 100 },
+        { name: 'phone', label: '마감자료구분', width: 100 },
+        { name: 'phone', label: '제목', width: 100 },
+        { name: 'phone', label: '등록구분', width: 100 },
+      ],
+      width: '1200',
+      height: '300',
+      height: '360',
+      autowidth : true,
+      shrinkToFit: true,
+      // mtype: get,
+      rowNum : 10,  // 보여줄 행의 개수 설정
+      rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
+      pager : "#jqGridPager",
+      rownumber : true, // 각 row의 맨 앞줄에 각 행의 번호가 자동으로 부여 되도록 설정
+    });
+  });
+  //]]>
+</script>
+
+<script>
+  //<![CDATA[
+  $(function () {
+    "use strict";
+    $("#modalGrid").jqGrid({
+      url: 'https://jsonplaceholder.typicode.com/users',
+      datatype: "json",
+      colModel: [
+        { name: 'name', label: '거래사', width: 300 },
+        { name: 'username', label: '거래사명', width: 422 },
+        
+      ],
+      width: '730',
+      height: '300',
+      autowidth : true,
+      shrinkToFit: true,
+      rowNum : 8,  // 보여줄 행의 개수 설정
+      rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
+    });
+  });
+  //]]>
+</script>
+
+<script>
+  //<![CDATA[
+  $(function () {
+    "use strict";
+    $("#managerSearchGrid").jqGrid({
+      url: 'https://jsonplaceholder.typicode.com/users',
+      datatype: "json",
+      colModel: [
+        { name: 'name', label: '사원명', width: 160 },
+        { name: 'username', label: '사원번호', width: 160 },
+        { name: 'website', label: '소속부서', width: 160 },
+        { name: 'email', label: '이메일주소', width: 232 },
+      ],
+      width: '730',
+      height: '300',
+      autowidth : true,
+      // shrinkToFit: true,
+      rowNum : 8,  // 보여줄 행의 개수 설정
+      rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
+    });
+  });
+  //]]>
+</script>
+
+</body>
+</html>
