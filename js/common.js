@@ -126,22 +126,76 @@ $(document).on('click', '.modal.manager_search_modal .modal__close', function() 
 
 
 // 상단 메인메뉴 클릭시 active
-$(document).on('click', '.nav .mainmenu .menu > li > a', function() {
+// $(document).on('click', '.nav .mainmenu .menu > li > a', function() {
+//   $(this).closest('li').siblings('li').find('.mlink').removeClass('active');
+//   $(this).addClass('active');
+// });
+
+$(document).on('click', '.nav .mainmenu .menu .mlink1', function() {
   $(this).closest('li').siblings('li').find('.mlink').removeClass('active');
   $(this).addClass('active');
+  $(this).closest('.mainmenu').siblings('.submenu').addClass('active');
+  $(this).closest('.mainmenu').siblings('.submenu').find('.menu').removeClass('active');
+  $(this).closest('.mainmenu').siblings('.submenu').find('.smenu1').addClass('active');
 });
+
+$(document).on('click', '.nav .mainmenu .menu .mlink2', function() {
+  $(this).closest('li').siblings('li').find('.mlink').removeClass('active');
+  $(this).addClass('active');
+  $(this).closest('.mainmenu').siblings('.submenu').addClass('active');
+  $(this).closest('.mainmenu').siblings('.submenu').find('.menu').removeClass('active');
+  $(this).closest('.mainmenu').siblings('.submenu').find('.smenu2').addClass('active');
+});
+
+$(document).on('click', '.nav .mainmenu .menu .mlink3', function() {
+  $(this).closest('li').siblings('li').find('.mlink').removeClass('active');
+  $(this).addClass('active');
+  $(this).closest('.mainmenu').siblings('.submenu').addClass('active');
+  $(this).closest('.mainmenu').siblings('.submenu').find('.menu').removeClass('active');
+  $(this).closest('.mainmenu').siblings('.submenu').find('.smenu3').addClass('active');
+});
+
 
 // 서브메뉴 클릭시 active
 $(document).on('click', '.nav .submenu .menu > li > a', function() {
-  $(this).closest('li').siblings('li').find('.mlink').removeClass('active');
+  $(this).closest('li').siblings('li').find('.slink').removeClass('active');
   $(this).addClass('active');
+});
+
+
+// 전체닫기 클릭시 메뉴닫힘
+$(document).on('click', '.nav .submenu .btn_menu_close', function() {
+  $(this).closest('.submenu').removeClass('active');
+  $(this).closest('.submenu').find('.menu').removeClass('active');
+  $(this).closest('.submenu').siblings('.mainmenu').find('.mlink').removeClass('active');
 });
 
 
 
 
+// 파일첨부 팝업 열기
+$(document).on('click', '.js-modal-trigger.file_add_modal_open', function() {
+  $(this).closest('.container').siblings('.modal.file_add_modal').addClass('is-open');
+  $('body').addClass('scrollLock');
+});
+
+// 파일첨부 팝업 닫기
+$(document).on('click', '.modal.file_add_modal .modal__close', function() {
+  $(this).closest('.modal').removeClass('is-open');
+  $('body').removeClass('scrollLock');
+});
 
 
+
+// 파일전송 완료 레이어 팝업 열기
+$(document).on('click', '.js-modal-trigger.file_forwarding_modal_open', function() {
+  $(this).closest('.container').find('.modal.file_forwarding_modal').addClass('is-open');
+});
+
+// 파일전송 완료 레이어 팝업 닫기
+$(document).on('click', '.modal.file_forwarding_modal .modal__close', function() {
+  $(this).closest('.modal').removeClass('is-open');
+});
 
 
 

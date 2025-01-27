@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>데이터송신내역조회</title>
+  <title>3데이터송신내역조회</title>
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/ui.jqgrid.css">
   <link rel="stylesheet" href="css/common.css">
@@ -28,7 +28,7 @@
             </ul>
           </div>
           <div class="btn_area">
-            <button type="button" class="btn_icon icon_login"></button>
+            <button type="button" class="btn_icon_login"></button>
           </div>
         </div>
       </div>
@@ -36,17 +36,37 @@
         <div class="gnbArea">
           <div class="mainmenu">
             <ul class="menu">
-              <li><a href="javascript:void(0)" class="mlink active">파일송수신</a></li>
-              <li><a href="javascript:void(0)" class="mlink">데이터분석용파일송수신</a></li>
-              <li><a href="javascript:void(0)" class="mlink">접근기록조회</a></li>
+              <li><a href="javascript:void(0)" class="mlink mlink1 active">파일송수신</a></li>
+              <li><a href="javascript:void(0)" class="mlink mlink2">데이터분석용파일송수신</a></li>
+              <li><a href="javascript:void(0)" class="mlink mlink3">접근기록조회</a></li>
             </ul>
           </div>
-          <div class="submenu">
-            <ul class="menu">
-              <li><a href="javascript:void(0)" class="mlink active">파일송수신</a></li>
-              <li><a href="javascript:void(0)" class="mlink">데이터분석용파일송수신</a></li>
-              <li><a href="javascript:void(0)" class="mlink">접근기록조회</a></li>
+          <div class="submenu active">
+            <div class="sub_home_btn_area">
+              <button type="button" class="btn_icon_nav_prev"></button>
+              <button type="button" class="btn_icon_nav_home"></button>
+            </div>
+            <ul class="menu smenu1 active">
+              <li><a href="javascript:void(0)" class="slink active">엠디아이메뉴첫번째</a></li>
+              <li><a href="javascript:void(0)" class="slink">메뉴두번째</a></li>
+              <li><a href="javascript:void(0)" class="slink">메뉴세번째</a></li>
             </ul>
+            <ul class="menu smenu2">
+              <li><a href="javascript:void(0)" class="slink active">데이터분석용파일송수신메뉴첫번째</a></li>
+              <li><a href="javascript:void(0)" class="slink">데이터분석용파일송수신메뉴두번째</a></li>
+              <li><a href="javascript:void(0)" class="slink">데이터분석용파일송수신메뉴세번째</a></li>
+            </ul>
+            <ul class="menu smenu3">
+              <li><a href="javascript:void(0)" class="slink active">접근기록조회메뉴첫번째</a></li>
+              <li><a href="javascript:void(0)" class="slink">접근기록조회메뉴두번째</a></li>
+              <li><a href="javascript:void(0)" class="slink">접근기록조회메뉴세번째</a></li>
+            </ul>
+            <div class="btn_area">
+              <button type="button" class="btnType btnOutBR btnSize30 hasicon btn_menu_close">
+                <i class="icon icon_menu_close"></i>
+                <span class="txt">전체닫기</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -83,8 +103,8 @@
               <div class="inpWrap">
                 <label for=""><span class="icon">·</span><span class="txt">거래사</span></label>
                 <input type="text" id="" class="input wdh_100" placeholder="">
-                <button type="button" class="btn_icon icon_seacrh js-modal-trigger company_search_modal_open"></button>
-                <input type="text" id="" class="input wdh_140" placeholder="">
+                <button type="button" class="btn_icon_seacrh js-modal-trigger company_search_modal_open"></button>
+                <input type="text" id="" class="input wdh_120" placeholder="" readonly>
               </div>
             </div>
             <div class="inp_item inp_group">
@@ -138,8 +158,8 @@
                 </div>
               </div>
             </div>
-            <div class="inp_item inp_group whalf full txt4">
-              <div class="inpWrap">
+            <div class="inp_item inp_group whalf txt4">
+              <div class="inpWrap inp_full">
                 <label for=""><span class="icon">·</span><span class="txt">제목</span></label>
                 <input type="text" id="" class="input" placeholder="">
               </div>
@@ -188,7 +208,7 @@
               <div class="inpWrap">
                 <label for=""><span class="icon">·</span><span class="txt">담당자</span></label>
                 <input type="text" id="" class="input wdh_100" placeholder="">
-                <button type="button" class="btn_icon icon_seacrh js-modal-trigger manager_search_modal_open"></button>
+                <button type="button" class="btn_icon_seacrh js-modal-trigger manager_search_modal_open"></button>
                 <input type="text" id="" class="input wdh_100" placeholder="" readonly>
               </div>
             </div>
@@ -248,6 +268,7 @@
             </div>
             <div class="grid_wrap">
               <table id="Gridsample"></table>
+              <div id="jqGridPager"></div>
             </div>
           </div>
         </div>
@@ -354,7 +375,8 @@ $( function() {
   $( "#datepicker2" ).datepicker();
 });
 </script>
-  
+
+<!-- 페이지 하단 그리드 -->
 <script>
   //<![CDATA[
   $(function () {
@@ -376,7 +398,6 @@ $( function() {
       height: '360',
       autowidth : true,
       shrinkToFit: true,
-      // mtype: get,
       rowNum : 10,  // 보여줄 행의 개수 설정
       rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
       pager : "#jqGridPager",
@@ -386,6 +407,7 @@ $( function() {
   //]]>
 </script>
 
+<!-- 거래사조회 팝업 그리드 -->
 <script>
   //<![CDATA[
   $(function () {
@@ -409,6 +431,7 @@ $( function() {
   //]]>
 </script>
 
+<!-- 담당자조회 팝업 그리드 -->
 <script>
   //<![CDATA[
   $(function () {
@@ -425,7 +448,7 @@ $( function() {
       width: '730',
       height: '300',
       autowidth : true,
-      // shrinkToFit: true,
+      shrinkToFit: true,
       rowNum : 8,  // 보여줄 행의 개수 설정
       rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
     });

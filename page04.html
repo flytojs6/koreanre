@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4데이터송신상세</title>
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/ui.jqgrid.css">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+  <div class="wrap sys_bg">
+    <div class="header">
+      <div class="top">
+        <div class="logo">
+          <img src="images/logo1.png" alt="logo">
+          <p>재보험 데이터 수신 시스템</p>
+        </div>
+        <div class="util_area">
+          <div class="lang_change">
+            <ul>
+              <li>
+                <a href="">KOR</a>
+              </li>
+              <li>
+                <a href="">ENG</a>
+              </li>
+            </ul>
+          </div>
+          <div class="btn_area">
+            <button type="button" class="btn_icon_login"></button>
+          </div>
+        </div>
+      </div>
+      <div class="nav">
+        <div class="gnbArea">
+          <div class="mainmenu">
+            <ul class="menu">
+              <li><a href="javascript:void(0)" class="mlink mlink1 active">파일송수신</a></li>
+              <li><a href="javascript:void(0)" class="mlink mlink2">데이터분석용파일송수신</a></li>
+              <li><a href="javascript:void(0)" class="mlink mlink3">접근기록조회</a></li>
+            </ul>
+          </div>
+          <div class="submenu active">
+            <div class="sub_home_btn_area">
+              <button type="button" class="btn_icon_nav_prev"></button>
+              <button type="button" class="btn_icon_nav_home"></button>
+            </div>
+            <ul class="menu smenu1 active">
+              <li><a href="javascript:void(0)" class="slink active">엠디아이메뉴첫번째</a></li>
+              <li><a href="javascript:void(0)" class="slink">메뉴두번째</a></li>
+              <li><a href="javascript:void(0)" class="slink">메뉴세번째</a></li>
+            </ul>
+            <ul class="menu smenu2">
+              <li><a href="javascript:void(0)" class="slink active">데이터분석용파일송수신메뉴첫번째</a></li>
+              <li><a href="javascript:void(0)" class="slink">데이터분석용파일송수신메뉴두번째</a></li>
+              <li><a href="javascript:void(0)" class="slink">데이터분석용파일송수신메뉴세번째</a></li>
+            </ul>
+            <ul class="menu smenu3">
+              <li><a href="javascript:void(0)" class="slink active">접근기록조회메뉴첫번째</a></li>
+              <li><a href="javascript:void(0)" class="slink">접근기록조회메뉴두번째</a></li>
+              <li><a href="javascript:void(0)" class="slink">접근기록조회메뉴세번째</a></li>
+            </ul>
+            <div class="btn_area">
+              <button type="button" class="btnType btnOutBR btnSize30 hasicon btn_menu_close">
+                <i class="icon icon_menu_close"></i>
+                <span class="txt">전체닫기</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <!-- ▼컨텐츠 영역▼ -->
+      <div class="content">
+        <div class="title_box">
+          <div class="title_area">
+            <div class="title">
+              <span class="tit_icon">●</span>
+              <span class="tit_txt">재보험데이터송신상세</span>
+              <!-- <span class="line">|</span> -->
+              <!-- <span class="tit_desc">ESC102545</span> -->
+            </div>
+          </div>
+          <div class="right_area">
+            <div class="breadcrumb" aria-label="breadcrumbs">
+              <ul>
+                <li><a href="javascript:void(0)">home</a></li>
+                <li><a href="javascript:void(0)">데이터통신</a></li>
+                <li class="is-active"><a href="javascript:void(0)" aria-current="page">재보험데이터송신상세</a></li>
+              </ul>
+            </div>
+            <button type="button" class="btnType btnOutGray01 btnSize30 btn_help hasicon">
+              <i class="icon_notice"></i>
+              <span class="txt">Help</span>
+            </button>
+          </div>
+        </div>
+        <div class="contents_box">
+          <div class="cont_group">
+            <div class="title_area">
+              <div class="title">
+                <span class="tit_icon">●</span>
+                <span class="tit_txt">파일 송신 상세 기본</span>
+              </div>
+              <div class="btn_area">
+                <button type="button" class="btnType btnColorB btnSize40">저장</button>
+                <button type="button" class="btnType btnColorBK btnSize40">목록</button>
+                <button type="button" class="btnType btnColorR btnSize40">삭제</button>
+              </div>
+            </div>
+            <div class="search_item_wrap">
+              <div class="inp_item inp_group">
+                <div class="inpWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">거래사</span></label>
+                  <input type="text" id="" class="input wdh_100" placeholder="">
+                  <button type="button" class="btn_icon_seacrh js-modal-trigger company_search_modal_open"></button>
+                  <input type="text" id="" class="input wdh_140" placeholder="" readonly>
+                </div>
+              </div>
+              <div class="inp_item inp_group txt6">
+                <div class="selWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">마감자료구분</span></label>
+                  <div class="selected">
+                    <div class="selectedValue">
+                      <p data-val="">전체</p>
+                      <i class="selArrow"></i>
+                    </div>
+                    <ul class="optBox">
+                      <li class="option optChk" data-val="0">전체</li>
+                      <li class="option" data-val="1">선택1</li>
+                      <li class="option" data-val="2">선택2</li>
+                      <li class="option" data-val="3">선택3</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="inp_item inp_group txt4">
+                <div class="selWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">종목</span></label>
+                  <div class="selected">
+                    <div class="selectedValue">
+                      <p data-val="">전체</p>
+                      <i class="selArrow"></i>
+                    </div>
+                    <ul class="optBox">
+                      <li class="option optChk" data-val="0">전체</li>
+                      <li class="option" data-val="1">선택1</li>
+                      <li class="option" data-val="2">선택2</li>
+                      <li class="option" data-val="3">선택3</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="inp_item inp_group">
+                <div class="selWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">업무</span></label>
+                  <div class="selected">
+                    <div class="selectedValue">
+                      <p data-val="">전체</p>
+                      <i class="selArrow"></i>
+                    </div>
+                    <ul class="optBox">
+                      <li class="option optChk" data-val="0">전체</li>
+                      <li class="option" data-val="1">선택1</li>
+                      <li class="option" data-val="2">선택2</li>
+                      <li class="option" data-val="3">선택3</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="inp_item inp_group">
+                <div class="selWrap disabled">
+                  <label for=""><span class="icon">·</span><span class="txt">구분</span></label>
+                  <div class="selected">
+                    <div class="selectedValue">
+                      <p data-val="">전체</p>
+                      <i class="selArrow"></i>
+                    </div>
+                    <ul class="optBox">
+                      <li class="option optChk" data-val="0">전체</li>
+                      <li class="option" data-val="1">선택1</li>
+                      <li class="option" data-val="2">선택2</li>
+                      <li class="option" data-val="3">선택3</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="inp_item inp_group txt6">
+                <div class="inpWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">작성자</span></label>
+                  <input type="text" id="" class="input" placeholder="" readonly>
+                </div>
+              </div>
+              <div class="inp_item inp_group">
+                <div class="calWrap">
+                  <div class="inpWrap">
+                    <label for=""><span class="icon">·</span><span class="txt">작성일자</span></label>
+                    <input type="text" placeholder="" class="input inp_date" id="datepicker" value="YYYY. DD. MM" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contents_box">
+          <div class="cont_group">
+            <div class="title_area pt10">
+              <div class="title">
+                <span class="tit_icon">●</span>
+                <span class="tit_txt">파일 송신 상세 내역</span>
+              </div>
+            </div>
+            <div class="search_item_wrap">
+              <div class="inp_item inp_group wfull">
+                <div class="selWrap disabled">
+                  <label for=""><span class="icon">·</span><span class="txt">처리상태</span></label>
+                  <div class="selected">
+                    <div class="selectedValue">
+                      <p data-val="">등록</p>
+                      <i class="selArrow"></i>
+                    </div>
+                    <ul class="optBox">
+                      <li class="option optChk" data-val="0">등록</li>
+                      <li class="option" data-val="1">선택1</li>
+                      <li class="option" data-val="2">선택2</li>
+                      <li class="option" data-val="3">선택3</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="inp_item inp_group txt4 wfull">
+                <div class="inpWrap inp_full">
+                  <label for=""><span class="icon">·</span><span class="txt">제목</span></label>
+                  <input type="text" id="" class="input " placeholder="">
+                </div>
+              </div>
+              <div class="inp_item inp_group txt4 wfull">
+                <div class="inpWrap inp_full">
+                  <label for=""><span class="icon">·</span><span class="txt">내용</span></label>
+                  <textarea name="" id=""></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contents_box">
+          <div class="cont_group">
+            <div class="title_area">
+              <div class="title">
+                <span class="tit_icon">●</span>
+                <span class="tit_txt">첨부파일</span>
+              </div>
+              <div class="btn_area">
+                <button type="button" class="btnType btnOutGray01 btnSize40 hasicon btn_file_add js-modal-trigger file_add_modal_open">
+                  <i class="icon icon_save"></i>
+                  <span class="txt">파일첨부</span>
+                </button>
+                <button type="button" class="btnType btnOutGray01 btnSize40 ">파일삭제</button>
+                <button type="button" class="btnType btnOutGray01 btnSize40 hasicon btn_download">
+                  <i class="icon icon_download"></i>
+                  <span class="txt">다운로드</span>
+                </button>
+              </div>
+            </div>
+            <div class="grid_wrap">
+              <div class="modal layer_pop file_forwarding_modal" aria-hidden="true">
+                <div class="modal__overlay">
+                  <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                    <!-- <header class="modal__header">
+                      <h2 class="modal__title">
+                        파일 전송 상태
+                      </h2>
+                      <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                    </header> -->
+                    <main class="modal__content">
+                      <div class="modal_grid_wrap">
+                        <div class="grid_wrap">
+                          <table id="modalforwardingGrid"></table>
+                        </div>
+                      </div>
+                    </main>
+                    <footer class="modal__footer">
+                      <button type="button" class="modal__btn modal__close btnType btnColorBR btnSize40">닫기</button>
+                    </footer>
+                  </div>
+                </div>
+              </div>
+              <table id="Gridsample"></table>
+            </div>
+            <br><br>
+            <div class="grid_wrap">
+              <table id="Gridsample2"></table>
+            </div>
+          </div>
+        </div>
+        <div class="contents_box">
+          <div class="cont_group">
+            <div class="title_area">
+              <div class="title">
+                <span class="tit_icon">●</span>
+                <span class="tit_txt">코리안리 담당자 및 '알림' 수신인</span>
+              </div>
+              <div class="btn_area">
+                <button type="button" class="btnType btnOutGray01 btnSize40">수신인추가</button>
+                <button type="button" class="btnType btnOutGray01 btnSize40">수신인삭제</button>
+              </div>
+            </div>
+            <div class="search_item_wrap">
+              <div class="inp_item inp_group">
+                <div class="inpWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">담당자</span></label>
+                  <input type="text" id="" class="input wdh_100" placeholder="">
+                  <button type="button" class="btn_icon_seacrh js-modal-trigger manager_search_modal_open"></button>
+                  <input type="text" id="" class="input wdh_140" placeholder="" readonly>
+                </div>
+              </div>
+              <div class="inp_item inp_group">
+                <div class="inpWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">소속부서</span></label>
+                  <input type="text" id="" class="input wdh_100" placeholder="" readonly>
+                  <!-- <button type="button" class="btn_icon_seacrh"></button> -->
+                  <input type="text" id="" class="input wdh_140" placeholder="" readonly>
+                </div>
+              </div>
+            </div>
+            <div class="grid_wrap">
+              <table id="Gridsample3"></table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ▲컨텐츠 영역▲ -->
+    </div>
+    <!-- 거래사 조회 팝업 -->
+    <div class="modal company_search_modal" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <header class="modal__header">
+            <h2 class="modal__title">
+              거래사 조회
+            </h2>
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          </header>
+          <main class="modal__content">
+            <div class="modal_inp_wrap">
+              <div class="inp_item">
+                <div class="inpWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">거래사코드</span></label>
+                  <input type="text" id="" class="input " placeholder="">
+                </div>
+              </div>
+              <div class="inp_item">
+                <div class="inpWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">거래사명</span></label>
+                  <input type="text" id="" class="input " placeholder="">
+                </div>
+              </div>
+              <button type="button" class="btnType btnColorB btnSize40">조회</button>
+            </div>
+            <div class="modal_grid_wrap">
+              <div class="grid_wrap">
+                <table id="modalGrid"></table>
+              </div>
+            </div>
+          </main>
+          <footer class="modal__footer">
+            <button type="button" class="modal__btn modal__close btnType btnColorR btnSize40">확인</button>
+            <button type="button" class="modal__btn modal__close btnType btnColorBR btnSize40">닫기</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!-- 파일첨부 팝업 -->
+    <div class="modal file_add_modal" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+          <header class="modal__header">
+            <h2 class="modal__title">
+              파일 첨부
+            </h2>
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          </header>
+          <main class="modal__content">
+            <div class="modal_cont_tit_area">
+              <div class="title"></div>
+              <div class="btn_area">
+                <button type="button" class="btnType btnOutGray01 btnSize40">파일찾기</button>
+                <button type="button" class="btnType btnOutGray01 btnSize40">파일삭제</button>
+              </div>
+            </div>
+            <div class="modal_grid_wrap">
+              <div class="grid_wrap">
+                <table id="managerSearchGrid"></table>
+              </div>
+            </div>
+          </main>
+          <footer class="modal__footer">
+            <button type="button" class="modal__btn modal__close btnType btnColorR btnSize40">확인</button>
+            <button type="button" class="modal__btn modal__close btnType btnOutGray btnSize40">취소</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!-- 담당자 조회 팝업 -->
+    <div class="modal manager_search_modal" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+          <header class="modal__header">
+            <h2 class="modal__title">
+              담당자 조회
+            </h2>
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          </header>
+          <main class="modal__content">
+            <div class="modal_inp_wrap">
+              <div class="inp_item">
+                <div class="inpWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">사원명</span></label>
+                  <input type="text" id="" class="input " placeholder="">
+                </div>
+              </div>
+              <div class="inp_item">
+                <div class="inpWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">사원번호</span></label>
+                  <input type="text" id="" class="input " placeholder="">
+                </div>
+              </div>
+              <div class="inp_item">
+                <div class="inpWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">부서명</span></label>
+                  <input type="text" id="" class="input " placeholder="">
+                </div>
+              </div>
+              <button type="button" class="btnType btnColorB btnSize40">조회</button>
+            </div>
+            <div class="modal_grid_wrap">
+              <div class="grid_wrap">
+                <table id="managerSearchGrid"></table>
+              </div>
+            </div>
+          </main>
+          <footer class="modal__footer">
+            <button type="button" class="modal__btn modal__close btnType btnColorR btnSize40">확인</button>
+            <button type="button" class="modal__btn modal__close btnType btnColorBR btnSize40">닫기</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- <script src="js/jquery-1.11.0.min.js"></script> -->
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/grid.locale-en.js"></script>
+<script src="js/jquery.jqGrid.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/modal.js"></script>
+
+<script>
+$( function() {
+  $( "#datepicker" ).datepicker();
+  $( "#datepicker2" ).datepicker();
+});
+</script>
+
+<!-- 첨부파일 그리드 -->
+<script>
+  //<![CDATA[
+  $(function () {
+    "use strict";
+    $("#Gridsample").jqGrid({
+      url: 'https://jsonplaceholder.typicode.com/users',
+      datatype: "json",
+      colModel: [
+        { name: 'name', label: '파일명', width: 100 },
+        { name: 'username', label: '처리상태', width: 70 },
+        { name: 'email', label: '마감여부', width: 70, formatter: checkModel },
+        { name: 'phone', label: '상세업무구분', width: 120, formatter: selectModel },
+        { name: 'email', label: '건별/집계구분', width: 100, formatter: selectModel2 },
+        { name: 'website', label: '특약/임의구분', width: 100, formatter: selectModel3 },
+        { name: 'username', label: '마감년월', width: 100 },
+        { name: 'website', label: '발생년월', width: 120 },
+        { name: 'phone', label: '가계실계수여부', width: 100, formatter: selectModel4 },
+        { name: 'website', label: '파일전송상태', width: 150, formatter: delButton },
+        { name: 'username', label: '비고', width: 70 },
+      ],
+      width: '1200',
+      height: '37',
+      autowidth : true,
+      shrinkToFit: true,
+      multiselect:true,
+      // mtype: get,
+      rowNum : 1,  // 보여줄 행의 개수 설정
+      rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
+      pager : "#jqGridPager",
+      rownumber : true, // 각 row의 맨 앞줄에 각 행의 번호가 자동으로 부여 되도록 설정
+      
+    });
+  });
+  //]]>
+  function checkModel (cellvalue, options, rowObject) { return '<input type="checkbox" />'; };
+  function selectModel (cellvalue, options, rowObject) { return '<select><option value="opt1">옵션1</option><option value="opt2">옵션2</option></select>'; };
+  function selectModel2 (cellvalue, options, rowObject) { return '<select><option value="opt1">전체</option><option value="opt2">선택</option></select>'; };
+  function selectModel3 (cellvalue, options, rowObject) { return '<select><option value="opt1">선택1</option><option value="opt2">선택2</option></select>'; };
+  function selectModel4 (cellvalue, options, rowObject) { return '<select><option value="opt1">선택1</option><option value="opt2">선택2</option></select>'; };
+  function delButton (cellvalue, options, rowObject) { return '파일전송완료 <input type="button" class="btn_file_forwarding js-modal-trigger file_forwarding_modal_open" onclick="delete('+cellvalue+')" value=""/>'; };
+</script>
+
+<!-- 첨부파일2 그리드 -->
+<script>
+  //<![CDATA[
+  $(function () {
+    "use strict";
+    $("#Gridsample2").jqGrid({
+      url: 'https://jsonplaceholder.typicode.com/users',
+      datatype: "json",
+      colModel: [
+        { name: 'name', label: '파일명', width: 200 },
+        { name: 'username', label: '용량', width: 300 },
+        { name: 'email', label: '파일전송상태', width: 100 },
+      ],
+      width: '1200',
+      height: '37',
+      autowidth : true,
+      shrinkToFit: true,
+      multiselect:true,
+      rowNum : 1,  // 보여줄 행의 개수 설정
+      rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
+      pager : "#jqGridPager",
+      rownumber : true, // 각 row의 맨 앞줄에 각 행의 번호가 자동으로 부여 되도록 설정
+    });
+  });
+  //]]>
+</script>
+
+<!-- 수신인인 그리드 -->
+<script>
+  //<![CDATA[
+  $(function () {
+    "use strict";
+    $("#Gridsample3").jqGrid({
+      url: 'https://jsonplaceholder.typicode.com/users',
+      datatype: "json",
+      colModel: [
+        { name: 'name', label: '수신인', width: 700 },
+      ],
+      width: '1200',
+      height: '37',
+      autowidth : true,
+      shrinkToFit: true,
+      multiselect:true,
+      rowNum : 1,  // 보여줄 행의 개수 설정
+      rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
+      pager : "#jqGridPager",
+      rownumber : true, // 각 row의 맨 앞줄에 각 행의 번호가 자동으로 부여 되도록 설정
+    });
+  });
+  //]]>
+</script>
+
+<!-- 거래사조회 팝업 그리드 -->
+<script>
+  //<![CDATA[
+  $(function () {
+    "use strict";
+    $("#modalGrid").jqGrid({
+      url: 'https://jsonplaceholder.typicode.com/users',
+      datatype: "json",
+      colModel: [
+        { name: 'name', label: '거래사', width: 300 },
+        { name: 'username', label: '거래사명', width: 422 },
+        
+      ],
+      width: '730',
+      height: '300',
+      autowidth : true,
+      shrinkToFit: true,
+      rowNum : 8,  // 보여줄 행의 개수 설정
+      rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
+    });
+  });
+  //]]>
+</script>
+
+<!-- 파일전송완료 팝업 그리드 -->
+<script>
+  //<![CDATA[
+  $(function () {
+    "use strict";
+    $("#modalforwardingGrid").jqGrid({
+      url: 'https://jsonplaceholder.typicode.com/users',
+      datatype: "json",
+      colModel: [
+        { name: 'username', label: '진행상태', width: 300 },
+        { name: 'email', label: '처리일시', width: 422 },
+        
+      ],
+      width: '730',
+      height: '300',
+      autowidth : true,
+      shrinkToFit: true,
+      rowNum : 6,  // 보여줄 행의 개수 설정
+      rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
+    });
+  });
+  //]]>
+</script>
+
+</body>
+</html>

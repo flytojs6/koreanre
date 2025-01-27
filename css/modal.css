@@ -5,6 +5,9 @@
 .modal {display: none;}
 .modal.is-open {display: block;}
 
+.modal.layer_pop.is-open {}
+.modal.layer_pop .modal__overlay {position: fixed; z-index: 8000; top: 0; left: 0; right: 0; bottom: 0; background: transparent; display: flex; justify-content: center; align-items: center;}
+
 .modal__overlay {position: fixed; z-index: 8000; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.2); display: flex; justify-content: center; align-items: center;}
 
 .modal__container {padding: 24px; width: 100%; max-width: 800px; max-height: 100vh; background-color: #fff; border-radius: 10px; overflow-y: auto; box-sizing: border-box; box-shadow: 2px 3px 12px 2px rgba(0,0,0,0.3);}
