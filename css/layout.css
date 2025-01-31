@@ -50,36 +50,24 @@ border-radius: 5px;
 
 
 
+/* 메뉴 탭 영역 */
+.wrap.sys_bg .tab_box{display: flex; align-items: center; justify-content: space-between; width: calc(100% - 14px); min-height: 45px; margin-left: 7px; margin-right: 7px; margin-bottom: 7px; border-radius: 5px; background-color: #f3f3f3; box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.2); box-sizing: border-box;}
+.tab_box .tab_wrap{display: flex; align-items: center; width: 100%; padding-left: 20px; padding-right: 20px; box-sizing: border-box;}
 
-.nav .gnbArea .submenu{display: flex; align-items: center; height: 40px; padding-left: 20px; padding-right: 20px; background-color: #9c7b58; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}
-
-.nav .gnbArea .submenu .sub_home_btn_area{display: flex; align-items: center; gap: 5px;}
-
-.nav .gnbArea .submenu .menu{display: none; align-items: center;}
-.nav .gnbArea .submenu .menu.active{display: flex;}
-.nav .gnbArea .submenu .menu li a{display: flex; align-items: center; height: 40px; padding: 0 14px; white-space: nowrap; color: #f0e4d8; font-size: 14px;}
-.nav .gnbArea .submenu .menu li a.active{text-decoration: underline; text-underline-offset: 3px;}
-
-.nav .gnbArea .submenu .btn_area{flex: 1; display: flex; justify-content: flex-end;}
-.nav .gnbArea .submenu .btn_area .btn_menu_close{display: none;}
-.nav .gnbArea .submenu.active .btn_area .btn_menu_close{display: flex;}
-
-.nav .gnbArea .submenu .sub_home_btn_area .btn_icon_nav_prev{display: none;}
-.nav .gnbArea .submenu .sub_home_btn_area .btn_icon_nav_home{display: none;}
-.nav .gnbArea .submenu.active .sub_home_btn_area .btn_icon_nav_prev{display: inline-block;}
-.nav .gnbArea .submenu.active .sub_home_btn_area .btn_icon_nav_home{display: inline-block;}
-
-
-
-
-.wrap.sys_bg .tab_wrap{display: flex; justify-content: space-between; min-height: 40px; margin-left: 7px; margin-right: 7px; margin-bottom: 7px; border-radius: 5px; background-color: #f3f3f3; box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.2);}
-
+.tab_wrap .sub_home_btn_area{display: flex; align-items: center; gap: 5px;}
+.tab_wrap .tablist{display: flex; padding-left: 10px; gap: 7px;}
+.tab_wrap .tablist > li{display: flex; gap: 5px; padding: 3px 5px; border: 1px solid #ccc; border-radius: 3px; background-color: #ddd;}
+.tab_wrap .tablist > li.tab_item{display: none;}
+.tab_wrap .tablist > li.tab_item.active{display: flex;}
+.tab_wrap .tablist > li .tlink{font-size: 14px; color: #565656;}
+.tab_wrap .tablist > li .tlink.active{color: #000; font-weight: 500;}
+.tab_box .tab_wrap .btn_area{flex: 1; display: flex; justify-content: flex-end; margin-left: auto;}
 
 
 /* page layout */
 .wrap.sys_bg .container{display: flex; justify-content: space-between; min-height: calc(100vh - 134px); margin-left: 7px; margin-right: 7px; margin-bottom: 7px; border-radius: 5px; background-color: #fff; box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.2);}
 
-.wrap.sys_bg .container .content{display: flex; flex-direction: column; width: 100%; padding: 0 20px; box-sizing: border-box;}
+.wrap.sys_bg .container .content{display: flex; flex-direction: column; width: 100%; padding-left: 20px; padding-right: 20px; padding-bottom: 20px; box-sizing: border-box;}
 
 .wrap.sys_bg .container .content .title_box{display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 55px; background-color: #fff; border-bottom: 1px solid #ddd; box-sizing: border-box;}
 .wrap.sys_bg .container .content .search_box{position: relative; width: 100%; background-color: #fff; border-radius: 6px; box-sizing: border-box;}
@@ -123,7 +111,9 @@ background-color: #fff; border-radius: 6px; box-sizing: border-box;}
 
 
 /* 콘텐츠 영역 */
+.wrap.sys_bg .container .content .title_box + .contents_box{margin-top: 20px;}
 .wrap.sys_bg .container .content .search_box + .contents_box{margin-top: 30px;}
+.wrap.sys_bg .container .content .contents_box + .contents_box{margin-top: 20px;}
 .col_cont_box_wrap{display: flex; gap: 5px;}
 .wrap.sys_bg .container .content .contents_box .title_area{display: flex; align-items: center; justify-content: space-between;}
 .wrap.sys_bg .container .content .contents_box .title_area .title{display:flex; align-items: center;}

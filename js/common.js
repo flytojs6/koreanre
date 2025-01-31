@@ -49,82 +49,6 @@ document.addEventListener("click", function (e) {
 
 
 
-// 로그인 2차 google otp 설정 팝업 열기
-$(document).on('click', '.js-modal-trigger.otp_seting_modal_open', function() {
-  $(this).closest('.container').siblings('.modal.otp_seting_modal').addClass('is-open');
-  $('body').addClass('scrollLock');
-});
-
-// 로그인 2차 google otp 설정 팝업 닫기
-$(document).on('click', '.modal.otp_seting_modal .modal__close', function() {
-  $(this).closest('.modal').removeClass('is-open');
-  $('body').removeClass('scrollLock');
-});
-
-
-// 로그인 2차 google otp 인증 팝업 열기
-$(document).on('click', '.js-modal-trigger.otp_cert_modal_open', function() {
-  $(this).closest('.container').siblings('.modal.otp_cert_modal').addClass('is-open');
-  $('body').addClass('scrollLock');
-});
-
-// 로그인 2차 google otp 인증 팝업 닫기
-$(document).on('click', '.modal.otp_cert_modal .modal__close', function() {
-  $(this).closest('.modal').removeClass('is-open');
-  $('body').removeClass('scrollLock');
-});
-
-
-// 얼러트 아이디 팝업 열기
-$(document).on('click', '.js-modal-trigger.alert_modal_open', function() {
-  $(this).closest('.container').siblings('.modal.alert_modal').addClass('is-open');
-});
-
-// 얼러트 아이디 팝업 닫기
-$(document).on('click', '.modal .modal__close', function() {
-  $(this).closest('.modal').removeClass('is-open');
-  $('body').removeClass('scrollLock');
-});
-
-
-// 얼러트 비밀번호 팝업 열기
-$(document).on('click', '.js-modal-trigger.alert_pw_modal_open', function() {
-  $(this).closest('.container').siblings('.modal.alert_pw_modal').addClass('is-open');
-});
-
-// 얼러트 비밀번호 팝업 닫기
-$(document).on('click', '.modal .modal__close', function() {
-  $(this).closest('.modal').removeClass('is-open');
-  $('body').removeClass('scrollLock');
-});
-
-
-// 거래사 조회 팝업 열기
-$(document).on('click', '.js-modal-trigger.company_search_modal_open', function() {
-  $(this).closest('.container').siblings('.modal.company_search_modal').addClass('is-open');
-  $('body').addClass('scrollLock');
-});
-
-// 거래사 조회 팝업 닫기
-$(document).on('click', '.modal.company_search_modal .modal__close', function() {
-  $(this).closest('.modal').removeClass('is-open');
-  $('body').removeClass('scrollLock');
-});
-
-
-// 담당자 조회 팝업 열기
-$(document).on('click', '.js-modal-trigger.manager_search_modal_open', function() {
-  $(this).closest('.container').siblings('.modal.manager_search_modal').addClass('is-open');
-  $('body').addClass('scrollLock');
-});
-
-// 담당자 조회 팝업 닫기
-$(document).on('click', '.modal.manager_search_modal .modal__close', function() {
-  $(this).closest('.modal').removeClass('is-open');
-  $('body').removeClass('scrollLock');
-});
-
-
 // 상단 메인메뉴 클릭시 active
 // $(document).on('click', '.nav .mainmenu .mainlist .mlink', function() {
 //   $(this).closest('li').siblings('li').find('.mlink').removeClass('active');
@@ -144,21 +68,102 @@ $(document).ready(function(){
   });
 });
 
-
-// 서브메뉴 클릭시 active
-$(document).on('click', '.nav .submenu .menu > li > a', function() {
-  $(this).closest('li').siblings('li').find('.slink').removeClass('active');
-  $(this).addClass('active');
+// 헤더 탭 박스 클릭시 토글
+$(document).on('click', '.tab_wrap .tablist > li > a', function() {
+  $(this).toggleClass('active');
 });
 
+// 헤더 탭 아이템 닫기버튼 클릭시
+$(document).on('click', '.tab_box .tab_wrap .tablist > li .btn_tab_item_close', function() {
+  $(this).closest('.tab_item').removeClass('active');
+});
 
 // 전체닫기 클릭시 메뉴닫힘
-$(document).on('click', '.nav .submenu .btn_menu_close', function() {
-  $(this).closest('.submenu').removeClass('active');
-  $(this).closest('.submenu').find('.menu').removeClass('active');
-  $(this).closest('.submenu').siblings('.mainmenu').find('.mlink').removeClass('active');
+$(document).on('click', '.tab_box .tab_wrap .btn_area .btn_menu_close', function() {
+  $(this).closest('.tab_box').removeClass('active');
 });
 
+
+
+// 로그인 2차 google otp 설정 팝업 열기
+$(document).on('click', '.js-modal-trigger.otp_seting_modal_open', function() {
+  $(this).closest('.container').siblings('.modal.otp_seting_modal').addClass('is-open');
+  $('body').addClass('scrollLock');
+});
+
+// 로그인 2차 google otp 설정 팝업 닫기
+$(document).on('click', '.modal.otp_seting_modal .modal__close', function() {
+  $(this).closest('.modal').removeClass('is-open');
+  $('body').removeClass('scrollLock');
+});
+
+
+
+// 로그인 2차 google otp 인증 팝업 열기
+$(document).on('click', '.js-modal-trigger.otp_cert_modal_open', function() {
+  $(this).closest('.container').siblings('.modal.otp_cert_modal').addClass('is-open');
+  $('body').addClass('scrollLock');
+});
+
+// 로그인 2차 google otp 인증 팝업 닫기
+$(document).on('click', '.modal.otp_cert_modal .modal__close', function() {
+  $(this).closest('.modal').removeClass('is-open');
+  $('body').removeClass('scrollLock');
+});
+
+
+
+// 얼러트 아이디 팝업 열기
+$(document).on('click', '.js-modal-trigger.alert_modal_open', function() {
+  $(this).closest('.container').siblings('.modal.alert_modal').addClass('is-open');
+});
+
+// 얼러트 아이디 팝업 닫기
+$(document).on('click', '.modal .modal__close', function() {
+  $(this).closest('.modal').removeClass('is-open');
+  $('body').removeClass('scrollLock');
+});
+
+
+
+// 얼러트 비밀번호 팝업 열기
+$(document).on('click', '.js-modal-trigger.alert_pw_modal_open', function() {
+  $(this).closest('.container').siblings('.modal.alert_pw_modal').addClass('is-open');
+});
+
+// 얼러트 비밀번호 팝업 닫기
+$(document).on('click', '.modal .modal__close', function() {
+  $(this).closest('.modal').removeClass('is-open');
+  $('body').removeClass('scrollLock');
+});
+
+
+
+// 거래사 조회 팝업 열기
+$(document).on('click', '.js-modal-trigger.company_search_modal_open', function() {
+  $(this).closest('.container').siblings('.modal.company_search_modal').addClass('is-open');
+  $('body').addClass('scrollLock');
+});
+
+// 거래사 조회 팝업 닫기
+$(document).on('click', '.modal.company_search_modal .modal__close', function() {
+  $(this).closest('.modal').removeClass('is-open');
+  $('body').removeClass('scrollLock');
+});
+
+
+
+// 담당자 조회 팝업 열기
+$(document).on('click', '.js-modal-trigger.manager_search_modal_open', function() {
+  $(this).closest('.container').siblings('.modal.manager_search_modal').addClass('is-open');
+  $('body').addClass('scrollLock');
+});
+
+// 담당자 조회 팝업 닫기
+$(document).on('click', '.modal.manager_search_modal .modal__close', function() {
+  $(this).closest('.modal').removeClass('is-open');
+  $('body').removeClass('scrollLock');
+});
 
 
 
@@ -185,6 +190,15 @@ $(document).on('click', '.js-modal-trigger.file_forwarding_modal_open', function
 $(document).on('click', '.modal.file_forwarding_modal .modal__close', function() {
   $(this).closest('.modal').removeClass('is-open');
 });
+
+
+
+
+
+
+
+
+
 
 
 
@@ -254,43 +268,6 @@ $(".inpWrap.type_search input").keyup(function(e) {
 // 인풋 비밀번호 암호화 보기 버튼
 $(document).on('click', '.inpWrap .btn_password_view', function() {
     $(this).toggleClass('on');
-});
-
-
-
-
-// tab 
-$(document).on('click', '.tab_area.type_black > ul > li.tab_btn_01', function() {
-    $(this).siblings('li').removeClass('active');
-    $(this).addClass('active');
-    $('.tab_area > .tab_con_01').addClass('active');
-    $('.tab_area > .tab_con_02').removeClass('active');
-    $('.tab_area > .tab_con_03').removeClass('active');
-    $('.tab_area > .tab_con_04').removeClass('active');
-});
-$(document).on('click', '.tab_area.type_black > ul > li.tab_btn_02', function() {
-    $(this).siblings('li').removeClass('active');
-    $(this).addClass('active');
-    $('.tab_area > .tab_con_01').removeClass('active');
-    $('.tab_area > .tab_con_02').addClass('active');
-    $('.tab_area > .tab_con_03').removeClass('active');
-    $('.tab_area > .tab_con_04').removeClass('active');
-});
-$(document).on('click', '.tab_area.type_black > ul > li.tab_btn_03', function() {
-    $(this).siblings('li').removeClass('active');
-    $(this).addClass('active');
-    $('.tab_area > .tab_con_01').removeClass('active');
-    $('.tab_area > .tab_con_02').removeClass('active');
-    $('.tab_area > .tab_con_03').addClass('active');
-    $('.tab_area > .tab_con_04').removeClass('active');
-});
-$(document).on('click', '.tab_area.type_black > ul > li.tab_btn_04', function() {
-    $(this).siblings('li').removeClass('active');
-    $(this).addClass('active');
-    $('.tab_area > .tab_con_01').removeClass('active');
-    $('.tab_area > .tab_con_02').removeClass('active');
-    $('.tab_area > .tab_con_03').removeClass('active');
-    $('.tab_area > .tab_con_04').addClass('active');
 });
 
 
