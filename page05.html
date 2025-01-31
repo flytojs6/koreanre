@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3데이터송신내역조회</title>
+  <title>5데이터수신내역조회</title>
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/ui.jqgrid.css">
   <link rel="stylesheet" href="css/common.css">
@@ -72,7 +72,7 @@
           <div class="title_area">
             <div class="title">
               <span class="tit_icon">●</span>
-              <span class="tit_txt">데이터송신내역조회</span>
+              <span class="tit_txt">재보험 데이터 수신내역</span>
               <!-- <span class="line">|</span> -->
               <!-- <span class="tit_desc">ESC102545</span> -->
             </div>
@@ -82,7 +82,7 @@
               <ul>
                 <li><a href="javascript:void(0)">Home</a></li>
                 <li><a href="javascript:void(0)">데이터통신</a></li>
-                <li class="is-active"><a href="javascript:void(0)" aria-current="page">데이터송신내역조회</a></li>
+                <li class="is-active"><a href="javascript:void(0)" aria-current="page">데이터수신내역조회</a></li>
               </ul>
             </div>
             <button type="button" class="btnType btnOutGray01 btnSize30 btn_help hasicon">
@@ -101,7 +101,7 @@
                 <input type="text" id="" class="input wdh_120" placeholder="" readonly>
               </div>
             </div>
-            <div class="inp_item inp_group">
+            <div class="inp_item inp_group txt4">
               <div class="selWrap">
                 <label for=""><span class="icon">·</span><span class="txt">종목</span></label>
                 <div class="selected">
@@ -118,7 +118,7 @@
                 </div>
               </div>
             </div>
-            <div class="inp_item inp_group">
+            <div class="inp_item inp_group whalf">
               <div class="selWrap">
                 <label for=""><span class="icon">·</span><span class="txt">업무</span></label>
                 <div class="selected">
@@ -135,36 +135,7 @@
                 </div>
               </div>
             </div>
-            <div class="inp_item inp_group txt6">
-              <div class="selWrap">
-                <label for=""><span class="icon">·</span><span class="txt">마감자료구분</span></label>
-                <div class="selected">
-                  <div class="selectedValue">
-                    <p data-val="">전체</p>
-                    <i class="selArrow"></i>
-                  </div>
-                  <ul class="optBox">
-                    <li class="option optChk" data-val="0">전체</li>
-                    <li class="option" data-val="1">선택1</li>
-                    <li class="option" data-val="2">선택2</li>
-                    <li class="option" data-val="3">선택3</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="inp_item inp_group whalf txt4">
-              <div class="inpWrap inp_full">
-                <label for=""><span class="icon">·</span><span class="txt">제목</span></label>
-                <input type="text" id="" class="input" placeholder="">
-              </div>
-            </div>
-            <div class="inp_item inp_group">
-              <div class="inpWrap">
-                <label for=""><span class="icon">·</span><span class="txt">게시자</span></label>
-                <input type="text" id="" class="input" placeholder="">
-              </div>
-            </div>
-            <div class="inp_item inp_group txt6">
+            <div class="inp_item inp_group txt4">
               <div class="selWrap">
                 <label for=""><span class="icon">·</span><span class="txt">등록구분</span></label>
                 <div class="selected">
@@ -182,8 +153,14 @@
               </div>
             </div>
             <div class="inp_item inp_group txt4">
+              <div class="inpWrap">
+                <label for=""><span class="icon">·</span><span class="txt">게시자명</span></label>
+                <input type="text" id="" class="input" placeholder="">
+              </div>
+            </div>
+            <div class="inp_item inp_group whalf">
               <div class="selWrap">
-                <label for=""><span class="icon">·</span><span class="txt">처리상태</span></label>
+                <label for=""><span class="icon">·</span><span class="txt">부서</span></label>
                 <div class="selected">
                   <div class="selectedValue">
                     <p data-val="">전체</p>
@@ -198,15 +175,7 @@
                 </div>
               </div>
             </div>
-            <div class="inp_item inp_group">
-              <div class="inpWrap">
-                <label for=""><span class="icon">·</span><span class="txt">담당자</span></label>
-                <input type="text" id="" class="input wdh_100" placeholder="">
-                <button type="button" class="btn_icon_seacrh js-modal-trigger manager_search_modal_open"></button>
-                <input type="text" id="" class="input wdh_100" placeholder="" readonly>
-              </div>
-            </div>
-            <div class="inp_item inp_group whalf">
+            <div class="inp_item inp_group txt4">
               <div class="calWrap">
                 <div class="inpWrap">
                   <label for=""><span class="icon">·</span><span class="txt">기간</span></label>
@@ -257,7 +226,8 @@
                 </div>
               </div>
               <div class="btn_area">
-                <button type="button" class="btnType btnOutGray01 btnSize40">신규</button>
+                <button type="button" class="btnType btnColorBK btnSize40">신규</button>
+                <button type="button" class="btnType btnColorR btnSize40">삭제</button>
               </div>
             </div>
             <div class="grid_wrap">
@@ -308,51 +278,6 @@
         </div>
       </div>
     </div>
-    <!-- 담당자 조회 팝업 -->
-    <div class="modal manager_search_modal" aria-hidden="true">
-      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-        <div class="modal__container" role="dialog" aria-modal="true">
-          <header class="modal__header">
-            <h2 class="modal__title">
-              담당자 조회
-            </h2>
-            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-          </header>
-          <main class="modal__content">
-            <div class="modal_inp_wrap">
-              <div class="inp_item">
-                <div class="inpWrap">
-                  <label for=""><span class="icon">·</span><span class="txt">사원명</span></label>
-                  <input type="text" id="" class="input " placeholder="">
-                </div>
-              </div>
-              <div class="inp_item">
-                <div class="inpWrap">
-                  <label for=""><span class="icon">·</span><span class="txt">사원번호</span></label>
-                  <input type="text" id="" class="input " placeholder="">
-                </div>
-              </div>
-              <div class="inp_item">
-                <div class="inpWrap">
-                  <label for=""><span class="icon">·</span><span class="txt">부서명</span></label>
-                  <input type="text" id="" class="input " placeholder="">
-                </div>
-              </div>
-              <button type="button" class="btnType btnColorB btnSize40">조회</button>
-            </div>
-            <div class="modal_grid_wrap">
-              <div class="grid_wrap">
-                <table id="managerSearchGrid"></table>
-              </div>
-            </div>
-          </main>
-          <footer class="modal__footer">
-            <button type="button" class="modal__btn modal__close btnType btnColorR btnSize40">확인</button>
-            <button type="button" class="modal__btn modal__close btnType btnColorBR btnSize40">닫기</button>
-          </footer>
-        </div>
-      </div>
-    </div>
   </div>
 
 <script src="js/jquery-3.7.1.min.js"></script>
@@ -380,16 +305,21 @@ $( function() {
       colModel: [
         { name: 'id', label: '순번', width: 50 },
         { name: 'name', label: '거래사', width: 100 },
-        { name: 'username', label: '종목', width: 100 },
-        { name: 'email', label: '업무', width: 100 },
-        { name: 'phone', label: '마감자료구분', width: 100 },
-        { name: 'phone', label: '제목', width: 100 },
-        { name: 'phone', label: '등록구분', width: 100 },
+        { name: 'username', label: '제목', width: 100 },
+        { name: 'email', label: '부서', width: 100 },
+        { name: 'phone', label: '종목', width: 100 },
+        { name: 'phone', label: '업무', width: 100 },
+        { name: 'username', label: '등록구분', width: 100 },
+        { name: 'phone', label: '파일전송상태', width: 100 },
+        { name: 'name', label: '게시자명', width: 100 },
+        { name: 'phone', label: '게시일시', width: 100 },
       ],
       width: '1200',
+      height: '300',
       height: '360',
       autowidth : true,
       shrinkToFit: true,
+      multiselect:true, // 그리드 처음 체크박스 표시
       rowNum : 10,  // 보여줄 행의 개수 설정
       rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
       pager : "#jqGridPager",
@@ -411,31 +341,6 @@ $( function() {
         { name: 'name', label: '거래사', width: 300 },
         { name: 'username', label: '거래사명', width: 422 },
         
-      ],
-      width: '730',
-      height: '300',
-      autowidth : true,
-      shrinkToFit: true,
-      rowNum : 8,  // 보여줄 행의 개수 설정
-      rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
-    });
-  });
-  //]]>
-</script>
-
-<!-- 담당자조회 팝업 그리드 -->
-<script>
-  //<![CDATA[
-  $(function () {
-    "use strict";
-    $("#managerSearchGrid").jqGrid({
-      url: 'https://jsonplaceholder.typicode.com/users',
-      datatype: "json",
-      colModel: [
-        { name: 'name', label: '사원명', width: 160 },
-        { name: 'username', label: '사원번호', width: 160 },
-        { name: 'website', label: '소속부서', width: 160 },
-        { name: 'email', label: '이메일주소', width: 232 },
       ],
       width: '730',
       height: '300',

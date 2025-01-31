@@ -11,10 +11,42 @@
 <body>
   <div class="wrap sys_bg">
     <div class="header">
-      <div class="top">
+      <div class="head_wrap">
         <div class="logo">
           <img src="images/logo1.png" alt="logo">
           <p>재보험 데이터 수신 시스템</p>
+        </div>
+        <div class="nav">
+          <div class="gnbArea">
+            <div class="mainmenu">
+              <ul class="mainlist">
+                <li>
+                  <a href="javascript:void(0)" class="mlink mlink1">파일송수신</a>
+                  <ul class="smenu">
+                    <li><a href="javascript:void(0)" class="slink">엠디아이메뉴첫번째</a></li>
+                    <li><a href="javascript:void(0)" class="slink">메뉴두번째</a></li>
+                    <li><a href="javascript:void(0)" class="slink">메뉴세번째</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" class="mlink mlink2">데이터분석용파일송수신</a>
+                  <ul class="smenu">
+                    <li><a href="javascript:void(0)" class="slink">데이터분석용파일송수신메뉴첫번째</a></li>
+                    <li><a href="javascript:void(0)" class="slink">데이터분석용파일송수신메뉴두번째</a></li>
+                    <li><a href="javascript:void(0)" class="slink">데이터분석용파일송수신메뉴세번째</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" class="mlink mlink3">접근기록조회</a>
+                  <ul class="smenu">
+                    <li><a href="javascript:void(0)" class="slink">접근기록조회메뉴첫번째</a></li>
+                    <li><a href="javascript:void(0)" class="slink">접근기록조회메뉴두번째</a></li>
+                    <li><a href="javascript:void(0)" class="slink">접근기록조회메뉴세번째</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div class="util_area">
           <div class="lang_change">
@@ -29,44 +61,6 @@
           </div>
           <div class="btn_area">
             <button type="button" class="btn_icon_login"></button>
-          </div>
-        </div>
-      </div>
-      <div class="nav">
-        <div class="gnbArea">
-          <div class="mainmenu">
-            <ul class="menu">
-              <li><a href="javascript:void(0)" class="mlink mlink1 active">파일송수신</a></li>
-              <li><a href="javascript:void(0)" class="mlink mlink2">데이터분석용파일송수신</a></li>
-              <li><a href="javascript:void(0)" class="mlink mlink3">접근기록조회</a></li>
-            </ul>
-          </div>
-          <div class="submenu active">
-            <div class="sub_home_btn_area">
-              <button type="button" class="btn_icon_nav_prev"></button>
-              <button type="button" class="btn_icon_nav_home"></button>
-            </div>
-            <ul class="menu smenu1 active">
-              <li><a href="javascript:void(0)" class="slink active">엠디아이메뉴첫번째</a></li>
-              <li><a href="javascript:void(0)" class="slink">메뉴두번째</a></li>
-              <li><a href="javascript:void(0)" class="slink">메뉴세번째</a></li>
-            </ul>
-            <ul class="menu smenu2">
-              <li><a href="javascript:void(0)" class="slink active">데이터분석용파일송수신메뉴첫번째</a></li>
-              <li><a href="javascript:void(0)" class="slink">데이터분석용파일송수신메뉴두번째</a></li>
-              <li><a href="javascript:void(0)" class="slink">데이터분석용파일송수신메뉴세번째</a></li>
-            </ul>
-            <ul class="menu smenu3">
-              <li><a href="javascript:void(0)" class="slink active">접근기록조회메뉴첫번째</a></li>
-              <li><a href="javascript:void(0)" class="slink">접근기록조회메뉴두번째</a></li>
-              <li><a href="javascript:void(0)" class="slink">접근기록조회메뉴세번째</a></li>
-            </ul>
-            <div class="btn_area">
-              <button type="button" class="btnType btnOutBR btnSize30 hasicon btn_menu_close">
-                <i class="icon icon_menu_close"></i>
-                <span class="txt">전체닫기</span>
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -86,7 +80,7 @@
           <div class="right_area">
             <div class="breadcrumb" aria-label="breadcrumbs">
               <ul>
-                <li><a href="javascript:void(0)">home</a></li>
+                <li><a href="javascript:void(0)">Home</a></li>
                 <li><a href="javascript:void(0)">데이터통신</a></li>
                 <li class="is-active"><a href="javascript:void(0)" aria-current="page">재보험데이터송신상세</a></li>
               </ul>
@@ -213,7 +207,7 @@
               </div>
             </div>
             <div class="search_item_wrap">
-              <div class="inp_item inp_group wfull">
+              <div class="inp_item inp_group wfull txt4">
                 <div class="selWrap disabled">
                   <label for=""><span class="icon">·</span><span class="txt">처리상태</span></label>
                   <div class="selected">
@@ -383,18 +377,23 @@
             <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
           </header>
           <main class="modal__content">
-            <div class="modal_cont_tit_area">
-              <div class="title"></div>
-              <div class="btn_area">
-                <button type="button" class="btnType btnOutGray01 btnSize40">파일찾기</button>
-                <button type="button" class="btnType btnOutGray01 btnSize40">파일삭제</button>
+            <form>
+              <div class="modal_file_add_wrap">
+                <div class="modal_file_add_head">
+                  <div class="modal_file_add_tit_area">
+                    <p class="title">파일첨부</p>
+                    <p class="desc">5,000MB 이하의 파일 5개까지 업로드 가능합니다.</p>
+                  </div>
+                  <div class="btn_area">
+                    <button type="button" class="btnType btnOutGray01 btnSize40">파일찾기</button>
+                    <button type="button" class="btnType btnOutGray01 btnSize40">파일삭제</button>
+                  </div>
+                </div>
+                <div class="modal_file_drop_zone">
+                  <p class="tac"><input type="file" id="file" class="btn_fill_choose" multiple> 또는 여기에 파일을 끌어오세요.</p>
+                </div>
               </div>
-            </div>
-            <div class="modal_grid_wrap">
-              <div class="grid_wrap">
-                <table id="managerSearchGrid"></table>
-              </div>
-            </div>
+            </form>
           </main>
           <footer class="modal__footer">
             <button type="button" class="modal__btn modal__close btnType btnColorR btnSize40">확인</button>
@@ -489,7 +488,7 @@ $( function() {
       height: '37',
       autowidth : true,
       shrinkToFit: true,
-      multiselect:true,
+      multiselect:true, // 그리드 처음 체크박스 표시
       // mtype: get,
       rowNum : 1,  // 보여줄 행의 개수 설정
       rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
@@ -524,7 +523,7 @@ $( function() {
       height: '37',
       autowidth : true,
       shrinkToFit: true,
-      multiselect:true,
+      multiselect:true, // 그리드 처음 체크박스 표시
       rowNum : 1,  // 보여줄 행의 개수 설정
       rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
       pager : "#jqGridPager",
@@ -534,7 +533,7 @@ $( function() {
   //]]>
 </script>
 
-<!-- 수신인인 그리드 -->
+<!-- 수신인 그리드 -->
 <script>
   //<![CDATA[
   $(function () {
@@ -606,6 +605,121 @@ $( function() {
   });
   //]]>
 </script>
+
+<!-- 담당자조회 팝업 그리드 -->
+<script>
+  //<![CDATA[
+  $(function () {
+    "use strict";
+    $("#managerSearchGrid").jqGrid({
+      url: 'https://jsonplaceholder.typicode.com/users',
+      datatype: "json",
+      colModel: [
+        { name: 'name', label: '사원명', width: 160 },
+        { name: 'username', label: '사원번호', width: 160 },
+        { name: 'website', label: '소속부서', width: 160 },
+        { name: 'email', label: '이메일주소', width: 232 },
+      ],
+      width: '730',
+      height: '300',
+      autowidth : true,
+      shrinkToFit: true,
+      rowNum : 8,  // 보여줄 행의 개수 설정
+      rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
+    });
+  });
+  //]]>
+</script>
+
+<script>
+(function() {  
+  var $file = document.getElementById("file")
+  var dropZone = document.querySelector(".modal_file_drop_zone")
+
+  var toggleClass = function(className) {
+      
+      console.log("current event: " + className)
+
+      var list = ["dragenter", "dragleave", "dragover", "drop"]
+
+      for (var i = 0; i < list.length; i++) {
+          if (className === list[i]) {
+              dropZone.classList.add("modal_file_drop_zone-" + list[i])
+          } else {
+              dropZone.classList.remove("modal_file_drop_zone-" + list[i])
+          }
+      }
+  }
+  
+  var showFiles = function(files) {
+      dropZone.innerHTML = ""
+      for(var i = 0, len = files.length; i < len; i++) {
+          dropZone.innerHTML += "<p>" + files[i].name + "</p>"
+      }
+  }
+
+  var selectFile = function(files) {
+      // input file 영역에 드랍된 파일들로 대체
+      $file.files = files
+      showFiles($file.files)
+      
+  }
+  
+  $file.addEventListener("change", function(e) {
+      showFiles(e.target.files)
+  })
+
+  // 드래그한 파일이 최초로 진입했을 때
+  dropZone.addEventListener("dragenter", function(e) {
+      e.stopPropagation()
+      e.preventDefault()
+
+      toggleClass("dragenter")
+
+  })
+
+  // 드래그한 파일이 dropZone 영역을 벗어났을 때
+  dropZone.addEventListener("dragleave", function(e) {
+      e.stopPropagation()
+      e.preventDefault()
+
+      toggleClass("dragleave")
+
+  })
+
+  // 드래그한 파일이 dropZone 영역에 머물러 있을 때
+  dropZone.addEventListener("dragover", function(e) {
+      e.stopPropagation()
+      e.preventDefault()
+
+      toggleClass("dragover")
+
+  })
+
+  // 드래그한 파일이 드랍되었을 때
+  dropZone.addEventListener("drop", function(e) {
+      e.preventDefault()
+
+      toggleClass("drop")
+
+      var files = e.dataTransfer && e.dataTransfer.files
+      console.log(files)
+
+      if (files != null) {
+          if (files.length < 1) {
+              alert("폴더 업로드 불가")
+              return
+          }
+          selectFile(files)
+      } else {
+          alert("ERROR")
+      }
+
+  })
+
+})();
+</script>
+
 
 </body>
 </html>

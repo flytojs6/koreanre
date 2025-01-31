@@ -10,29 +10,47 @@ body{overflow-x: hidden;}
 .wrap.sys_bg{display: flex; flex-direction: column; background-color: #dddddd; min-height: 100vh;}
 
 /* header */
-.wrap.sys_bg .header + .container{margin-top: 7px;}
-.header .top{display: flex; align-items: center; justify-content: space-between; width: 100%; height: 44px; padding-left: 20px; padding-right: 20px; box-sizing: border-box;}
-.header .top .logo{display: flex; gap: 10px; align-items: center;}
-.header .top .logo img{height: 26px;}
-.header .top .logo p{color: #876847; font-size: 16px; font-weight: 600;}
-.header .top .util_area{display: flex; align-items: center;}
-.header .top .util_area .lang_change{}
-.header .top .util_area .lang_change > ul{display: flex; align-items: flex-start; justify-content: flex-start; flex-wrap: nowrap;}
-.header .top .util_area .lang_change > ul li{color: #262626;}
-.header .top .util_area .lang_change > ul li+li:before{color: #9e9e9e; content: "|"; }
-.header .top .util_area .lang_change > ul li a{padding: 0 6px; color: #876847;}
+/* .wrap.sys_bg .header + .container{margin-top: 7px;} */
+.wrap.sys_bg .header + .container{margin-top: 0px;}
+.header{display: flex; flex-direction: column;}
 
-.header .top .util_area .lang_change + .btn_area{margin-left: 8px;}
-.header .top .util_area .btn_area{position: relative;}
+.header .head_wrap{display: flex; align-items: center; justify-content: space-between; width: 100%; height: 70px; padding-left: 15px; padding-right: 15px; box-sizing: border-box;}
+.header .logo{display: flex; gap: 10px; align-items: center;}
+.header .logo img{height: 26px;}
+.header .logo p{color: #262626; font-size: 14px; font-weight: 500; margin-top: 8px;}
 
-.header .nav{display: flex; justify-content: space-between; align-items: center; height: 80px; margin: 0 7px; background-color: #876847; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.4);}
+.header .top{display: flex; justify-content: flex-end;}
+.header .util_area{display: flex; align-items: center;}
+.header .util_area .lang_change{}
+.header .util_area .lang_change > ul{display: flex; align-items: flex-start; justify-content: flex-start; flex-wrap: nowrap;}
+.header .util_area .lang_change > ul li{color: #262626;}
+.header .util_area .lang_change > ul li+li:before{color: #9e9e9e; content: "|"; }
+/* .header .top .util_area .lang_change > ul li a{padding: 0 6px; color: #876847;} */
+.header .util_area .lang_change > ul li a{padding: 0 4px; font-size: 14px;}
+
+.header .util_area .lang_change + .btn_area{margin-left: 8px;}
+.header .util_area .btn_area{position: relative;}
+
+.header .nav{display: flex; justify-content: space-between; align-items: center; 
+/* background-color: #876847; */
+background-color: #353535;
+border-radius: 5px;
+}
 
 .nav .gnbArea{display: flex; flex-direction: column; width: 100%;}
-.nav .gnbArea .mainmenu{display: flex; align-items: center; width: 100%; height: 40px; padding-left: 40px; box-sizing: border-box;}
-.nav .gnbArea .mainmenu .menu{display: flex; align-items: center;}
-.nav .gnbArea .mainmenu .menu li{}
-.nav .gnbArea .mainmenu .menu li a{display: flex; align-items: center; height: 40px; padding: 0 18px; white-space: nowrap; color: #f1e8de; font-size: 16px; font-weight: 500}
-.nav .gnbArea .mainmenu .menu li a.active{background-color: #9c7b58;}
+.nav .gnbArea .mainmenu{display: flex; align-items: center; width: 100%; height: 40px; padding-left: 30px; padding-right: 25px; box-sizing: border-box;}
+.nav .gnbArea .mainmenu .mainlist{display: flex; align-items: center;}
+.nav .gnbArea .mainmenu .mainlist li{}
+.nav .gnbArea .mainmenu .mainlist li a{display: flex; align-items: center; height: 40px; padding: 0 30px; white-space: nowrap; color: #fff; font-size: 17px; font-weight: 500}
+.nav .gnbArea .mainmenu .mainlist li a:hover{}
+.nav .gnbArea .mainmenu .mainlist li a.active{color: #9c7b58;}
+
+.nav .gnbArea .mainmenu .mainlist li .smenu{display: none; position: absolute; z-index: 900; min-width: 150px; min-height: 120px; background-color: #353535; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}
+.nav .gnbArea .mainmenu .mainlist li .smenu > li > .slink{height: 40px; padding: 0 14px; white-space: nowrap; color: #f0e4d8; font-size: 14px;}
+.nav .gnbArea .mainmenu .mainlist li .smenu > li > .slink:hover{color: #ddcebf; text-decoration: underline; text-underline-offset: 2px;}
+
+
+
 
 .nav .gnbArea .submenu{display: flex; align-items: center; height: 40px; padding-left: 20px; padding-right: 20px; background-color: #9c7b58; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}
 
@@ -68,6 +86,7 @@ padding: 20px; background-color: #fff; border-radius: 6px; box-shadow: 1px 1px 5
 
 
 
+/* 페이지 제목 영역  */
 .wrap.sys_bg .container .content .title_box .title{display: flex; align-items: center;}
 .wrap.sys_bg .container .content .title_box .title .tit_icon{font-size: 18px; color: #18ab94;}
 .wrap.sys_bg .container .content .title_box .title .tit_icon + .tit_txt{margin-left: 4px;}
@@ -78,7 +97,6 @@ padding: 20px; background-color: #fff; border-radius: 6px; box-shadow: 1px 1px 5
 
 
 
-
 /* 검색 조건 */
 .search_item_wrap{display: flex; flex-wrap: wrap; gap: 12px 25px; width: 100%;}
 .search_item_wrap .inp_group{min-width: calc((100vw - 162px) / 4 );}
@@ -86,6 +104,7 @@ padding: 20px; background-color: #fff; border-radius: 6px; box-shadow: 1px 1px 5
 .search_item_wrap .inp_group.wfull{width: 100%;}
 .search_item_wrap .inp_item.inp_group label{min-width: 56px;}
 .search_item_wrap .inp_item.inp_group.txt4 label{min-width: 71px;}
+.search_item_wrap .inp_item.inp_group.txt5 label{min-width: 78px;}
 .search_item_wrap .inp_item.inp_group.txt6 label{min-width: 103px;}
 
 .search_item_wrap .inp_group .inpWrap{display: flex; align-items: center;}
@@ -97,6 +116,9 @@ padding: 20px; background-color: #fff; border-radius: 6px; box-shadow: 1px 1px 5
 .wrap.sys_bg .container .content .search_box .search_btn_area{position: absolute; right: 20px; bottom: 20px;}
 
 
+
+/* 콘텐츠 영역 */
+.col_cont_box_wrap{display: flex; gap: 5px;}
 .wrap.sys_bg .container .content .contents_box .title_area{display: flex; align-items: center; justify-content: space-between;}
 .wrap.sys_bg .container .content .contents_box .title_area .title{display:flex; align-items: center;}
 .wrap.sys_bg .container .content .contents_box .title_area .title .tit_icon{font-size: 10px; color: #716F64;}

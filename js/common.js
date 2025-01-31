@@ -126,33 +126,22 @@ $(document).on('click', '.modal.manager_search_modal .modal__close', function() 
 
 
 // 상단 메인메뉴 클릭시 active
-// $(document).on('click', '.nav .mainmenu .menu > li > a', function() {
+// $(document).on('click', '.nav .mainmenu .mainlist .mlink', function() {
 //   $(this).closest('li').siblings('li').find('.mlink').removeClass('active');
 //   $(this).addClass('active');
+//   $(this).siblings('.smenu').stop().slideDown(350);
 // });
 
-$(document).on('click', '.nav .mainmenu .menu .mlink1', function() {
-  $(this).closest('li').siblings('li').find('.mlink').removeClass('active');
-  $(this).addClass('active');
-  $(this).closest('.mainmenu').siblings('.submenu').addClass('active');
-  $(this).closest('.mainmenu').siblings('.submenu').find('.menu').removeClass('active');
-  $(this).closest('.mainmenu').siblings('.submenu').find('.smenu1').addClass('active');
-});
-
-$(document).on('click', '.nav .mainmenu .menu .mlink2', function() {
-  $(this).closest('li').siblings('li').find('.mlink').removeClass('active');
-  $(this).addClass('active');
-  $(this).closest('.mainmenu').siblings('.submenu').addClass('active');
-  $(this).closest('.mainmenu').siblings('.submenu').find('.menu').removeClass('active');
-  $(this).closest('.mainmenu').siblings('.submenu').find('.smenu2').addClass('active');
-});
-
-$(document).on('click', '.nav .mainmenu .menu .mlink3', function() {
-  $(this).closest('li').siblings('li').find('.mlink').removeClass('active');
-  $(this).addClass('active');
-  $(this).closest('.mainmenu').siblings('.submenu').addClass('active');
-  $(this).closest('.mainmenu').siblings('.submenu').find('.menu').removeClass('active');
-  $(this).closest('.mainmenu').siblings('.submenu').find('.smenu3').addClass('active');
+// 상단 메인메뉴 오버 하위메뉴 열림
+$(document).ready(function(){
+  $('.nav .mainmenu > ul > li').mouseover(function(){
+    $(this).children('.mlink').addClass('active');
+    $(this).children('.smenu').stop().slideDown(350);
+  });
+  $('.nav .mainmenu > ul > li').mouseleave(function(){
+    $(this).children('.mlink').removeClass('active');
+    $(this).children('.smenu').stop().slideUp(0);
+  });
 });
 
 
