@@ -106,7 +106,7 @@ background-color: #fff; border-radius: 6px; box-sizing: border-box;}
 .search_item_wrap .inp_group .inpWrap .btn_icon_seacrh{margin-left: 6px; margin-right: 6px;}
 .search_item_wrap .inp_group .selWrap .selected .selectedValue{width: 120px; height: 40px;}
 .search_item_wrap .inp_group .selWrap.active ul.optBox{padding-top: 10px; padding-bottom: 10px; top: 40px;}
-.wrap.sys_bg .container .content .search_box .search_btn_area{position: absolute; right: 20px; bottom: 20px;}
+.wrap.sys_bg .container .content .search_box .search_btn_area{position: absolute; right: 0px; bottom: 0px;}
 
 
 

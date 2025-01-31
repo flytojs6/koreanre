@@ -71,9 +71,9 @@
             <button type="button" class="btn_icon_nav_home"></button>
           </div>
           <ul class="tablist">
-            <li class="tab_item active"><a href="javascript:void(0)" class="tlink active">엠디아이메뉴첫번째</a><button type="button" class="btn_tab_item_close"></button></li>
-            <li class="tab_item active"><a href="javascript:void(0)" class="tlink">메뉴두번째</a><button type="button" class="btn_tab_item_close"></button></li>
-            <li class="tab_item active"><a href="javascript:void(0)" class="tlink">메뉴세번째</a><button type="button" class="btn_tab_item_close"></button></li>
+            <li class="tab_item active"><a href="javascript:void(0)" class="tlink active" onclick="javascript:winOpen()">엠디아이메뉴첫번째</a><button type="button" class="btn_tab_item_close"></button></li>
+            <li class="tab_item active"><a href="javascript:void(0)" class="tlink" onclick="javascript:win5Open()">메뉴두번째</a><button type="button" class="btn_tab_item_close"></button></li>
+            <li class="tab_item active"><a href="javascript:void(0)" class="tlink" onclick="javascript:win6Open()">메뉴세번째</a><button type="button" class="btn_tab_item_close"></button></li>
           </ul>
           <div class="btn_area">
             <button type="button" class="btnType btnOutBR btnSize30 hasicon btn_menu_close">
@@ -439,6 +439,45 @@ $( function() {
     });
   });
   //]]>
+</script>
+
+<script language="javascript">
+  function winOpen(){
+    var f = document.frm;
+    k=window.open("page04.html", 'insert','location=0,status=yes,left=0,top=0,width=1500,height=900');
+  }
+  function closeWin(){
+    if(k){
+      k.close();
+    }else{
+    }
+  }
+</script>
+
+<script language="javascript">
+  function win5Open(){
+    var f = document.frm;
+    k=window.open("page05.html", 'insert','location=0,status=yes,left=0,top=0,width=1500,height=900');
+  }
+  function closeWin(){
+    if(k){
+      k.close();
+    }else{
+    }
+  }
+</script>
+
+<script language="javascript">
+  function win6Open(){
+    var f = document.frm;
+    k=window.open("page06.html", 'insert','location=0,status=yes,left=0,top=0,width=1500,height=900');
+  }
+  function closeWin(){
+    if(k){
+      k.close();
+    }else{
+    }
+  }
 </script>
 
 </body>
