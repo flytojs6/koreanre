@@ -43,10 +43,10 @@ border-radius: 5px;
 .nav .gnbArea .mainmenu .mainlist li{}
 .nav .gnbArea .mainmenu .mainlist li a{display: flex; align-items: center; height: 40px; padding: 0 30px; white-space: nowrap; color: #fff; font-size: 17px; font-weight: 500}
 .nav .gnbArea .mainmenu .mainlist li a:hover{}
-.nav .gnbArea .mainmenu .mainlist li a.active{color: #9c7b58;}
+.nav .gnbArea .mainmenu .mainlist li a.active{color: #c9BEAA;}
 
 .nav .gnbArea .mainmenu .mainlist li .smenu{display: none; position: absolute; z-index: 900; min-width: 150px; min-height: 120px; background-color: #353535; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}
-.nav .gnbArea .mainmenu .mainlist li .smenu > li > .slink{height: 40px; padding: 0 14px; white-space: nowrap; color: #f0e4d8; font-size: 14px;}
+.nav .gnbArea .mainmenu .mainlist li .smenu > li > .slink{height: 40px; padding: 0 14px; white-space: nowrap; color: #f8f1ea; font-size: 14px;}
 .nav .gnbArea .mainmenu .mainlist li .smenu > li > .slink:hover{color: #ddcebf; text-decoration: underline; text-underline-offset: 2px;}
 
 
