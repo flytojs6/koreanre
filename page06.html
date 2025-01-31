@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6데이터수신상세</title>
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/ui.jqgrid.css">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+  <div class="wrap sys_bg">
+    <div class="header">
+      <div class="top">
+        <div class="logo">
+          <img src="images/logo1.png" alt="logo">
+          <p>재보험 데이터 수신 시스템</p>
+        </div>
+        <div class="nav">
+          <div class="gnbArea">
+            <div class="mainmenu">
+              <ul class="mainlist">
+                <li>
+                  <a href="javascript:void(0)" class="mlink mlink1">파일송수신</a>
+                  <ul class="smenu">
+                    <li><a href="javascript:void(0)" class="slink">엠디아이메뉴첫번째</a></li>
+                    <li><a href="javascript:void(0)" class="slink">메뉴두번째</a></li>
+                    <li><a href="javascript:void(0)" class="slink">메뉴세번째</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" class="mlink mlink2">데이터분석용파일송수신</a>
+                  <ul class="smenu">
+                    <li><a href="javascript:void(0)" class="slink">데이터분석용파일송수신메뉴첫번째</a></li>
+                    <li><a href="javascript:void(0)" class="slink">데이터분석용파일송수신메뉴두번째</a></li>
+                    <li><a href="javascript:void(0)" class="slink">데이터분석용파일송수신메뉴세번째</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" class="mlink mlink3">접근기록조회</a>
+                  <ul class="smenu">
+                    <li><a href="javascript:void(0)" class="slink">접근기록조회메뉴첫번째</a></li>
+                    <li><a href="javascript:void(0)" class="slink">접근기록조회메뉴두번째</a></li>
+                    <li><a href="javascript:void(0)" class="slink">접근기록조회메뉴세번째</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="util_area">
+          <div class="lang_change">
+            <ul>
+              <li>
+                <a href="">KOR</a>
+              </li>
+              <li>
+                <a href="">ENG</a>
+              </li>
+            </ul>
+          </div>
+          <div class="btn_area">
+            <button type="button" class="btn_icon_login"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <!-- ▼컨텐츠 영역▼ -->
+      <div class="content">
+        <div class="title_box">
+          <div class="title_area">
+            <div class="title">
+              <span class="tit_icon">●</span>
+              <span class="tit_txt">재보험 데이터 수신상세</span>
+              <!-- <span class="line">|</span> -->
+              <!-- <span class="tit_desc">ESC102545</span> -->
+            </div>
+          </div>
+          <div class="right_area">
+            <div class="breadcrumb" aria-label="breadcrumbs">
+              <ul>
+                <li><a href="javascript:void(0)">Home</a></li>
+                <li><a href="javascript:void(0)">데이터통신</a></li>
+                <li class="is-active"><a href="javascript:void(0)" aria-current="page">데이터수신상세</a></li>
+              </ul>
+            </div>
+            <button type="button" class="btnType btnOutGray01 btnSize30 btn_help hasicon">
+              <i class="icon_notice"></i>
+              <span class="txt">Help</span>
+            </button>
+          </div>
+        </div>
+        <div class="contents_box">
+          <div class="cont_group">
+            <div class="title_area">
+              <div class="title">
+                <span class="tit_icon">●</span>
+                <span class="tit_txt">기본항목</span>
+              </div>
+              <div class="btn_area">
+                <button type="button" class="btnType btnColorB btnSize40">저장</button>
+                <button type="button" class="btnType btnColorBK btnSize40">목록</button>
+                <button type="button" class="btnType btnColorR btnSize40">삭제</button>
+              </div>
+            </div>
+            <div class="search_item_wrap">
+              <div class="inp_item inp_group">
+                <div class="selWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">종목</span></label>
+                  <div class="selected">
+                    <div class="selectedValue">
+                      <p data-val="">전체</p>
+                      <i class="selArrow"></i>
+                    </div>
+                    <ul class="optBox">
+                      <li class="option optChk" data-val="0">전체</li>
+                      <li class="option" data-val="1">선택1</li>
+                      <li class="option" data-val="2">선택2</li>
+                      <li class="option" data-val="3">선택3</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="inp_item inp_group txt4">
+                <div class="selWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">업무</span></label>
+                  <div class="selected">
+                    <div class="selectedValue">
+                      <p data-val="">전체</p>
+                      <i class="selArrow"></i>
+                    </div>
+                    <ul class="optBox">
+                      <li class="option optChk" data-val="0">전체</li>
+                      <li class="option" data-val="1">선택1</li>
+                      <li class="option" data-val="2">선택2</li>
+                      <li class="option" data-val="3">선택3</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="inp_item inp_group whalf">
+                <div class="selWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">등록구분</span></label>
+                  <div class="selected">
+                    <div class="selectedValue">
+                      <p data-val="">전체</p>
+                      <i class="selArrow"></i>
+                    </div>
+                    <ul class="optBox">
+                      <li class="option optChk" data-val="0">전체</li>
+                      <li class="option" data-val="1">선택1</li>
+                      <li class="option" data-val="2">선택2</li>
+                      <li class="option" data-val="3">선택3</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="inp_item inp_group">
+                <div class="inpWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">작성자</span></label>
+                  <input type="text" id="" class="input" placeholder="" readonly>
+                </div>
+              </div>
+              <div class="inp_item inp_group txt4">
+                <div class="calWrap">
+                  <div class="inpWrap">
+                    <label for=""><span class="icon">·</span><span class="txt">작성일시</span></label>
+                    <input type="text" placeholder="" class="input inp_date" id="datepicker" value="YYYY. DD. MM" readonly/>
+                  </div>
+                </div>
+              </div>
+              <div class="inp_item inp_group wfull">
+                <div class="inpWrap inp_full">
+                  <label for=""><span class="icon">·</span><span class="txt">제목</span></label>
+                  <input type="text" id="" class="input " placeholder="">
+                </div>
+              </div>
+              <div class="inp_item inp_group wfull">
+                <div class="inpWrap inp_full">
+                  <label for=""><span class="icon">·</span><span class="txt">내용</span></label>
+                  <textarea name="" id=""></textarea>
+                </div>
+              </div>
+              <div class="inp_item inp_group wfull">
+                <div class="inpWrap inp_full">
+                  <label for=""><span class="icon">·</span><span class="txt">수신인</span></label>
+                  <input type="text" id="" class="input " placeholder="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col_cont_box_wrap">
+          <div class="contents_box">
+            <div class="cont_group">
+              <div class="title_area">
+                <div class="title">
+                  <span class="tit_icon">●</span>
+                  <span class="tit_txt">거래사</span>
+                </div>
+                <div class="btn_area">
+                  <button type="button" class="btnType btnOutGray01 btnSize40 ">거래사선택</button>
+                  <button type="button" class="btnType btnOutGray01 btnSize40 ">거래사삭제</button>
+                </div>
+              </div>
+              <div class="grid_wrap">
+                <table id="Gridsample"></table>
+              </div>
+            </div>
+          </div>
+          <div class="contents_box">
+            <div class="cont_group">
+              <div class="title_area">
+                <div class="title">
+                  <span class="tit_icon">●</span>
+                  <span class="tit_txt">파일첨부</span>
+                </div>
+                <div class="btn_area">
+                  <button type="button" class="btnType btnOutGray01 btnSize40 hasicon btn_file_add js-modal-trigger file_add_modal_open">
+                    <i class="icon icon_save"></i>
+                    <span class="txt">파일첨부</span>
+                  </button>
+                  <button type="button" class="btnType btnOutGray01 btnSize40 ">파일삭제</button>
+                </div>
+              </div>
+              <div class="grid_wrap">
+                <table id="Gridsample2"></table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ▲컨텐츠 영역▲ -->
+    </div>
+  </div>
+
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/grid.locale-en.js"></script>
+<script src="js/jquery.jqGrid.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/modal.js"></script>
+
+<script>
+$( function() {
+  $( "#datepicker" ).datepicker();
+  $( "#datepicker2" ).datepicker();
+});
+</script>
+
+<!-- 거래사 그리드 -->
+<script>
+  //<![CDATA[
+  $(function () {
+    "use strict";
+    $("#Gridsample").jqGrid({
+      url: 'https://jsonplaceholder.typicode.com/users',
+      datatype: "json",
+      colModel: [
+        { name: 'phone', label: '거래사코드', width: 100 },
+        { name: 'username', label: '거래사명', width: 200 },
+      ],
+      width: '600',
+      height: '200',
+      autowidth : true,
+      shrinkToFit: true,
+      multiselect:true, // 그리드 처음 체크박스 표시
+      rowNum : 2,  // 보여줄 행의 개수 설정
+      rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
+      rownumber : true, // 각 row의 맨 앞줄에 각 행의 번호가 자동으로 부여 되도록 설정
+    });
+  });
+  //]]>
+</script>
+
+<!-- 파일첨부 그리드 -->
+<script>
+  //<![CDATA[
+  $(function () {
+    "use strict";
+    $("#Gridsample2").jqGrid({
+      url: 'https://jsonplaceholder.typicode.com/users',
+      datatype: "json",
+      colModel: [
+        { name: 'username', label: '파일명', width: 100 },
+        { name: 'name', label: '용량', width: 100 },
+        { name: 'email', label: '파일전송상태', width: 100 },
+        { name: 'phone', label: '등록일시', width: 100 },
+      ],
+      width: '600',
+      height: '200',
+      autowidth : true,
+      shrinkToFit: true,
+      multiselect:true, // 그리드 처음 체크박스 표시
+      rowNum : 2,  // 보여줄 행의 개수 설정
+      rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
+      rownumber : true, // 각 row의 맨 앞줄에 각 행의 번호가 자동으로 부여 되도록 설정
+    });
+  });
+  //]]>
+</script>
+
+</body>
+</html>

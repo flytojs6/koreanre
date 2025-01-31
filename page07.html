@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>5데이터수신내역조회</title>
+  <title>7데이터분석용파일송수신</title>
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/ui.jqgrid.css">
   <link rel="stylesheet" href="css/common.css">
@@ -72,7 +72,7 @@
           <div class="title_area">
             <div class="title">
               <span class="tit_icon">●</span>
-              <span class="tit_txt">재보험 데이터 수신내역</span>
+              <span class="tit_txt">데이터 분석용 파일 송수신</span>
               <!-- <span class="line">|</span> -->
               <!-- <span class="tit_desc">ESC102545</span> -->
             </div>
@@ -82,7 +82,7 @@
               <ul>
                 <li><a href="javascript:void(0)">Home</a></li>
                 <li><a href="javascript:void(0)">데이터통신</a></li>
-                <li class="is-active"><a href="javascript:void(0)" aria-current="page">데이터수신내역조회</a></li>
+                <li class="is-active"><a href="javascript:void(0)" aria-current="page">데이터 분석용 파일 송수신</a></li>
               </ul>
             </div>
             <button type="button" class="btnType btnOutGray01 btnSize30 btn_help hasicon">
@@ -93,24 +93,24 @@
         </div>
         <div class="search_box">
           <div class="search_item_wrap">
-            <div class="inp_item inp_group txt4">
+            <div class="inp_item inp_group whalf">
               <div class="inpWrap">
                 <label for=""><span class="icon">·</span><span class="txt">거래사</span></label>
-                <input type="text" id="" class="input wdh_100" placeholder="">
+                <input type="text" id="" class="input wdh_120" placeholder="">
                 <button type="button" class="btn_icon_seacrh js-modal-trigger company_search_modal_open"></button>
-                <input type="text" id="" class="input wdh_120" placeholder="" readonly>
+                <input type="text" id="" class="input wdh_180" placeholder="" readonly>
               </div>
             </div>
-            <div class="inp_item inp_group txt4">
-              <div class="selWrap">
-                <label for=""><span class="icon">·</span><span class="txt">종목</span></label>
+            <div class="inp_item inp_group txt5">
+              <div class="selWrap disabled">
+                <label for=""><span class="icon">·</span><span class="txt">시스템구분</span></label>
                 <div class="selected">
                   <div class="selectedValue">
-                    <p data-val="">전체</p>
+                    <p data-val="">등록</p>
                     <i class="selArrow"></i>
                   </div>
                   <ul class="optBox">
-                    <li class="option optChk" data-val="0">전체</li>
+                    <li class="option optChk" data-val="0">등록</li>
                     <li class="option" data-val="1">선택1</li>
                     <li class="option" data-val="2">선택2</li>
                     <li class="option" data-val="3">선택3</li>
@@ -119,63 +119,6 @@
               </div>
             </div>
             <div class="inp_item inp_group whalf">
-              <div class="selWrap">
-                <label for=""><span class="icon">·</span><span class="txt">업무</span></label>
-                <div class="selected">
-                  <div class="selectedValue">
-                    <p data-val="">전체</p>
-                    <i class="selArrow"></i>
-                  </div>
-                  <ul class="optBox">
-                    <li class="option optChk" data-val="0">전체</li>
-                    <li class="option" data-val="1">선택1</li>
-                    <li class="option" data-val="2">선택2</li>
-                    <li class="option" data-val="3">선택3</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="inp_item inp_group txt4">
-              <div class="selWrap">
-                <label for=""><span class="icon">·</span><span class="txt">등록구분</span></label>
-                <div class="selected">
-                  <div class="selectedValue">
-                    <p data-val="">전체</p>
-                    <i class="selArrow"></i>
-                  </div>
-                  <ul class="optBox">
-                    <li class="option optChk" data-val="0">전체</li>
-                    <li class="option" data-val="1">선택1</li>
-                    <li class="option" data-val="2">선택2</li>
-                    <li class="option" data-val="3">선택3</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="inp_item inp_group txt4">
-              <div class="inpWrap">
-                <label for=""><span class="icon">·</span><span class="txt">게시자명</span></label>
-                <input type="text" id="" class="input" placeholder="">
-              </div>
-            </div>
-            <div class="inp_item inp_group whalf">
-              <div class="selWrap">
-                <label for=""><span class="icon">·</span><span class="txt">부서</span></label>
-                <div class="selected">
-                  <div class="selectedValue">
-                    <p data-val="">전체</p>
-                    <i class="selArrow"></i>
-                  </div>
-                  <ul class="optBox">
-                    <li class="option optChk" data-val="0">전체</li>
-                    <li class="option" data-val="1">선택1</li>
-                    <li class="option" data-val="2">선택2</li>
-                    <li class="option" data-val="3">선택3</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="inp_item inp_group txt4">
               <div class="calWrap">
                 <div class="inpWrap">
                   <label for=""><span class="icon">·</span><span class="txt">기간</span></label>
@@ -183,6 +126,12 @@
                   <span class="txt">~</span>
                   <input type="text" placeholder="" class="input inp_date" id="datepicker2" value="YYYY. DD. MM" />
                 </div>
+              </div>
+            </div>
+            <div class="inp_item inp_group txt5">
+              <div class="inpWrap">
+                <label for=""><span class="icon">·</span><span class="txt">파일명</span></label>
+                <input type="text" id="" class="input" placeholder="">
               </div>
             </div>
           </div>
@@ -226,8 +175,15 @@
                 </div>
               </div>
               <div class="btn_area">
-                <button type="button" class="btnType btnColorBK btnSize40">신규</button>
-                <button type="button" class="btnType btnColorR btnSize40">삭제</button>
+                <button type="button" class="btnType btnOutGray01 btnSize40 hasicon btn_file_add js-modal-trigger file_add_modal_open">
+                  <i class="icon icon_save"></i>
+                  <span class="txt">파일첨부</span>
+                </button>
+                <button type="button" class="btnType btnOutGray01 btnSize40 ">파일삭제</button>
+                <button type="button" class="btnType btnOutGray01 btnSize40 hasicon btn_download">
+                  <i class="icon icon_download"></i>
+                  <span class="txt">다운로드</span>
+                </button>
               </div>
             </div>
             <div class="grid_wrap">
@@ -278,6 +234,42 @@
         </div>
       </div>
     </div>
+    <!-- 파일첨부 팝업 -->
+    <div class="modal file_add_modal" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+          <header class="modal__header">
+            <h2 class="modal__title">
+              파일 첨부
+            </h2>
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          </header>
+          <main class="modal__content">
+            <form>
+              <div class="modal_file_add_wrap">
+                <div class="modal_file_add_head">
+                  <div class="modal_file_add_tit_area">
+                    <p class="title">파일첨부</p>
+                    <p class="desc">5,000MB 이하의 파일 5개까지 업로드 가능합니다.</p>
+                  </div>
+                  <div class="btn_area">
+                    <button type="button" class="btnType btnOutGray01 btnSize40">파일찾기</button>
+                    <button type="button" class="btnType btnOutGray01 btnSize40">파일삭제</button>
+                  </div>
+                </div>
+                <div class="modal_file_drop_zone">
+                  <p class="tac"><input type="file" id="file" class="btn_fill_choose" multiple> 또는 여기에 파일을 끌어오세요.</p>
+                </div>
+              </div>
+            </form>
+          </main>
+          <footer class="modal__footer">
+            <button type="button" class="modal__btn modal__close btnType btnColorR btnSize40">확인</button>
+            <button type="button" class="modal__btn modal__close btnType btnOutGray btnSize40">취소</button>
+          </footer>
+        </div>
+      </div>
+    </div>
   </div>
 
 <script src="js/jquery-3.7.1.min.js"></script>
@@ -294,7 +286,7 @@ $( function() {
 });
 </script>
 
-<!-- 페이지 하단 그리드 -->
+<!-- 파일송신내역 그리드 -->
 <script>
   //<![CDATA[
   $(function () {
@@ -305,21 +297,18 @@ $( function() {
       colModel: [
         { name: 'id', label: '순번', width: 50 },
         { name: 'name', label: '거래사', width: 100 },
-        { name: 'username', label: '제목', width: 100 },
-        { name: 'email', label: '부서', width: 100 },
-        { name: 'phone', label: '종목', width: 100 },
-        { name: 'phone', label: '업무', width: 100 },
-        { name: 'username', label: '등록구분', width: 100 },
-        { name: 'phone', label: '파일전송상태', width: 100 },
-        { name: 'name', label: '게시자명', width: 100 },
-        { name: 'phone', label: '게시일시', width: 100 },
+        { name: 'username', label: '종목', width: 100 },
+        { name: 'email', label: '업무', width: 100 },
+        { name: 'phone', label: '마감자료구분', width: 100 },
+        { name: 'phone', label: '제목', width: 100 },
+        { name: 'phone', label: '등록구분', width: 100 },
       ],
       width: '1200',
       height: '300',
       height: '360',
       autowidth : true,
       shrinkToFit: true,
-      multiselect:true, // 그리드 처음 체크박스 표시
+      // mtype: get,
       rowNum : 10,  // 보여줄 행의 개수 설정
       rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
       pager : "#jqGridPager",
@@ -353,5 +342,119 @@ $( function() {
   //]]>
 </script>
 
+<!-- 담당자조회 팝업 그리드 -->
+<script>
+  //<![CDATA[
+  $(function () {
+    "use strict";
+    $("#managerSearchGrid").jqGrid({
+      url: 'https://jsonplaceholder.typicode.com/users',
+      datatype: "json",
+      colModel: [
+        { name: 'name', label: '사원명', width: 160 },
+        { name: 'username', label: '사원번호', width: 160 },
+        { name: 'website', label: '소속부서', width: 160 },
+        { name: 'email', label: '이메일주소', width: 232 },
+      ],
+      width: '730',
+      height: '300',
+      autowidth : true,
+      // shrinkToFit: true,
+      rowNum : 8,  // 보여줄 행의 개수 설정
+      rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
+    });
+  });
+  //]]>
+</script>
+
+<script>
+  (function() {  
+    var $file = document.getElementById("file")
+    var dropZone = document.querySelector(".modal_file_drop_zone")
+  
+    var toggleClass = function(className) {
+        
+        console.log("current event: " + className)
+  
+        var list = ["dragenter", "dragleave", "dragover", "drop"]
+  
+        for (var i = 0; i < list.length; i++) {
+            if (className === list[i]) {
+                dropZone.classList.add("modal_file_drop_zone-" + list[i])
+            } else {
+                dropZone.classList.remove("modal_file_drop_zone-" + list[i])
+            }
+        }
+    }
+    
+    var showFiles = function(files) {
+        dropZone.innerHTML = ""
+        for(var i = 0, len = files.length; i < len; i++) {
+            dropZone.innerHTML += "<p>" + files[i].name + "</p>"
+        }
+    }
+  
+    var selectFile = function(files) {
+        // input file 영역에 드랍된 파일들로 대체
+        $file.files = files
+        showFiles($file.files)
+        
+    }
+    
+    $file.addEventListener("change", function(e) {
+        showFiles(e.target.files)
+    })
+  
+    // 드래그한 파일이 최초로 진입했을 때
+    dropZone.addEventListener("dragenter", function(e) {
+        e.stopPropagation()
+        e.preventDefault()
+  
+        toggleClass("dragenter")
+  
+    })
+  
+    // 드래그한 파일이 dropZone 영역을 벗어났을 때
+    dropZone.addEventListener("dragleave", function(e) {
+        e.stopPropagation()
+        e.preventDefault()
+  
+        toggleClass("dragleave")
+  
+    })
+  
+    // 드래그한 파일이 dropZone 영역에 머물러 있을 때
+    dropZone.addEventListener("dragover", function(e) {
+        e.stopPropagation()
+        e.preventDefault()
+  
+        toggleClass("dragover")
+  
+    })
+  
+    // 드래그한 파일이 드랍되었을 때
+    dropZone.addEventListener("drop", function(e) {
+        e.preventDefault()
+  
+        toggleClass("drop")
+  
+        var files = e.dataTransfer && e.dataTransfer.files
+        console.log(files)
+  
+        if (files != null) {
+            if (files.length < 1) {
+                alert("폴더 업로드 불가")
+                return
+            }
+            selectFile(files)
+        } else {
+            alert("ERROR")
+        }
+  
+    })
+  
+  })();
+  </script>
+  
 </body>
 </html>

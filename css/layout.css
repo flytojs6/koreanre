@@ -14,12 +14,11 @@ body{overflow-x: hidden;}
 .wrap.sys_bg .header + .container{margin-top: 0px;}
 .header{display: flex; flex-direction: column;}
 
-.header .head_wrap{display: flex; align-items: center; justify-content: space-between; width: 100%; height: 70px; padding-left: 15px; padding-right: 15px; box-sizing: border-box;}
+.header .top{display: flex; align-items: center; justify-content: space-between; width: 100%; height: 66px; padding-left: 15px; padding-right: 15px; box-sizing: border-box;}
 .header .logo{display: flex; gap: 10px; align-items: center;}
 .header .logo img{height: 26px;}
 .header .logo p{color: #262626; font-size: 14px; font-weight: 500; margin-top: 8px;}
 
-.header .top{display: flex; justify-content: flex-end;}
 .header .util_area{display: flex; align-items: center;}
 .header .util_area .lang_change{}
 .header .util_area .lang_change > ul{display: flex; align-items: flex-start; justify-content: flex-start; flex-wrap: nowrap;}
@@ -72,17 +71,22 @@ border-radius: 5px;
 
 
 
+
+.wrap.sys_bg .tab_wrap{display: flex; justify-content: space-between; min-height: 40px; margin-left: 7px; margin-right: 7px; margin-bottom: 7px; border-radius: 5px; background-color: #f3f3f3; box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.2);}
+
+
+
 /* page layout */
-.wrap.sys_bg .container{display: flex; justify-content: space-between; min-height: calc(100vh - 134px); margin-left: 7px; margin-right: 7px; margin-bottom: 7px; border-radius: 5px; background-color: #eeeeee; box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.4);}
+.wrap.sys_bg .container{display: flex; justify-content: space-between; min-height: calc(100vh - 134px); margin-left: 7px; margin-right: 7px; margin-bottom: 7px; border-radius: 5px; background-color: #fff; box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.2);}
 
-.wrap.sys_bg .container .content{display: flex; flex-direction: column; gap: 7px; width: 100%; padding: 7px; box-sizing: border-box;}
+.wrap.sys_bg .container .content{display: flex; flex-direction: column; width: 100%; padding: 0 20px; box-sizing: border-box;}
 
-.wrap.sys_bg .container .content .title_box{display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 48px; padding-left: 20px; padding-right: 20px; background-color: #fff; border-radius: 6px; box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.3); box-sizing: border-box;}
-.wrap.sys_bg .container .content .search_box{position: relative; width: 100%; padding: 20px; background-color: #fff; border-radius: 6px; box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.3); box-sizing: border-box;}
+.wrap.sys_bg .container .content .title_box{display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 55px; background-color: #fff; border-bottom: 1px solid #ddd; box-sizing: border-box;}
+.wrap.sys_bg .container .content .search_box{position: relative; width: 100%; background-color: #fff; border-radius: 6px; box-sizing: border-box;}
 .wrap.sys_bg .container .content .contents_box{flex:1; 
 width: 100%;
 /* width: calc(100vw - 28px); */
-padding: 20px; background-color: #fff; border-radius: 6px; box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.3); box-sizing: border-box;}
+background-color: #fff; border-radius: 6px; box-sizing: border-box;}
 
 
 
@@ -98,6 +102,7 @@ padding: 20px; background-color: #fff; border-radius: 6px; box-shadow: 1px 1px 5
 
 
 /* 검색 조건 */
+.wrap.sys_bg .container .content .title_box + .search_box{margin-top: 20px;}
 .search_item_wrap{display: flex; flex-wrap: wrap; gap: 12px 25px; width: 100%;}
 .search_item_wrap .inp_group{min-width: calc((100vw - 162px) / 4 );}
 .search_item_wrap .inp_group.whalf{min-width: calc((100vw - 108px) / 2 );}
@@ -118,6 +123,7 @@ padding: 20px; background-color: #fff; border-radius: 6px; box-shadow: 1px 1px 5
 
 
 /* 콘텐츠 영역 */
+.wrap.sys_bg .container .content .search_box + .contents_box{margin-top: 30px;}
 .col_cont_box_wrap{display: flex; gap: 5px;}
 .wrap.sys_bg .container .content .contents_box .title_area{display: flex; align-items: center; justify-content: space-between;}
 .wrap.sys_bg .container .content .contents_box .title_area .title{display:flex; align-items: center;}
