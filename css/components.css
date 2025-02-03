@@ -96,7 +96,7 @@ h5{font-size: var(--fontSize30); font-weight: 600;}
 /* input Common / inpError / read / must / calen dar-calWrap */
 input{outline-color: var(--gray4A4946);}
 input::placeholder{font-size: var(--fontSize16); font-weight: var(--fw400); color: var(--grayCBCBC2);}
-input[type="text"], input[type="password"]{height: 30px; border: 1px solid #CACACB; border-radius: 3px; padding: 0 12px; font-size: 16px; font-weight: 500; box-sizing: border-box;}
+input[type="text"], input[type="password"]{height: 30px; border: 1px solid #CACACB; border-radius: 3px; padding: 0 12px; font-size: 16px; color: #474747; box-sizing: border-box;}
 /* input:focus-visible{outline: none;} */
 input.block{width: 100%;}
 

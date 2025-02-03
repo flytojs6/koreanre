@@ -67,16 +67,15 @@
       <div class="tab_box active">
         <div class="tab_wrap">
           <div class="sub_home_btn_area">
-            <button type="button" class="btn_icon_nav_prev"></button>
             <button type="button" class="btn_icon_nav_home"></button>
           </div>
           <ul class="tablist">
-            <li class="tab_item active"><a href="javascript:void(0)" class="tlink active">엠디아이메뉴첫번째</a><button type="button" class="btn_tab_item_close"></button></li>
-            <li class="tab_item active"><a href="javascript:void(0)" class="tlink">메뉴두번째</a><button type="button" class="btn_tab_item_close"></button></li>
-            <li class="tab_item active"><a href="javascript:void(0)" class="tlink">메뉴세번째</a><button type="button" class="btn_tab_item_close"></button></li>
+            <li class="tab_item active visible"><a href="javascript:void(0)" class="tlink">엠디아이메뉴첫번째</a><button type="button" class="btn_tab_item_close"></button></li>
+            <li class="tab_item visible"><a href="javascript:void(0)" class="tlink">메뉴두번째</a><button type="button" class="btn_tab_item_close"></button></li>
+            <li class="tab_item visible"><a href="javascript:void(0)" class="tlink">메뉴세번째</a><button type="button" class="btn_tab_item_close"></button></li>
           </ul>
           <div class="btn_area">
-            <button type="button" class="btnType btnOutBR btnSize30 hasicon btn_menu_close">
+            <button type="button" class="btnType btnOutBK btnSize30 hasicon btn_menu_close">
               <i class="icon icon_menu_close"></i>
               <span class="txt">전체닫기</span>
             </button>
@@ -206,7 +205,7 @@
             </div>
           </div>
           <div class="search_btn_area">
-            <button type="button" class="btnType btnColorB btnSize40">조회</button>
+            <button type="button" class="btnType btnColorB btnSize30">조회</button>
           </div>
         </div>
         <div class="contents_box">
@@ -245,8 +244,8 @@
                 </div>
               </div>
               <div class="btn_area">
-                <button type="button" class="btnType btnColorBK btnSize40">신규</button>
-                <button type="button" class="btnType btnColorR btnSize40">삭제</button>
+                <button type="button" class="btnType btnColorBK btnSize30">신규</button>
+                <button type="button" class="btnType btnColorR btnSize30">삭제</button>
               </div>
             </div>
             <div class="grid_wrap">
@@ -282,7 +281,7 @@
                   <input type="text" id="" class="input " placeholder="">
                 </div>
               </div>
-              <button type="button" class="btnType btnColorB btnSize40">조회</button>
+              <button type="button" class="btnType btnColorB btnSize30">조회</button>
             </div>
             <div class="modal_grid_wrap">
               <div class="grid_wrap">
@@ -291,8 +290,8 @@
             </div>
           </main>
           <footer class="modal__footer">
-            <button type="button" class="modal__btn modal__close btnType btnColorR btnSize40">확인</button>
-            <button type="button" class="modal__btn modal__close btnType btnColorBR btnSize40">닫기</button>
+            <button type="button" class="modal__btn modal__close btnType btnColorR btnSize30">확인</button>
+            <button type="button" class="modal__btn modal__close btnType btnColorBR btnSize30">닫기</button>
           </footer>
         </div>
       </div>
@@ -334,8 +333,7 @@ $( function() {
         { name: 'phone', label: '게시일시', width: 100 },
       ],
       width: '1200',
-      height: '300',
-      height: '360',
+      height: '310',
       autowidth : true,
       shrinkToFit: true,
       multiselect:true, // 그리드 처음 체크박스 표시

@@ -67,16 +67,15 @@
       <div class="tab_box active">
         <div class="tab_wrap">
           <div class="sub_home_btn_area">
-            <button type="button" class="btn_icon_nav_prev"></button>
             <button type="button" class="btn_icon_nav_home"></button>
           </div>
           <ul class="tablist">
-            <li class="tab_item active"><a href="javascript:void(0)" class="tlink active">엠디아이메뉴첫번째</a><button type="button" class="btn_tab_item_close"></button></li>
-            <li class="tab_item active"><a href="javascript:void(0)" class="tlink">메뉴두번째</a><button type="button" class="btn_tab_item_close"></button></li>
-            <li class="tab_item active"><a href="javascript:void(0)" class="tlink">메뉴세번째</a><button type="button" class="btn_tab_item_close"></button></li>
+            <li class="tab_item active visible"><a href="javascript:void(0)" class="tlink">엠디아이메뉴첫번째</a><button type="button" class="btn_tab_item_close"></button></li>
+            <li class="tab_item visible"><a href="javascript:void(0)" class="tlink">메뉴두번째</a><button type="button" class="btn_tab_item_close"></button></li>
+            <li class="tab_item visible"><a href="javascript:void(0)" class="tlink">메뉴세번째</a><button type="button" class="btn_tab_item_close"></button></li>
           </ul>
           <div class="btn_area">
-            <button type="button" class="btnType btnOutBR btnSize30 hasicon btn_menu_close">
+            <button type="button" class="btnType btnOutBK btnSize30 hasicon btn_menu_close">
               <i class="icon icon_menu_close"></i>
               <span class="txt">전체닫기</span>
             </button>
@@ -121,10 +120,10 @@
               </div>
             </div>
             <div class="inp_item inp_group txt5">
-              <div class="selWrap disabled">
+              <div class="selWrap">
                 <label for=""><span class="icon">·</span><span class="txt">시스템구분</span></label>
                 <div class="selected">
-                  <div class="selectedValue">
+                  <div class="selectedValue wdh_200">
                     <p data-val="">등록</p>
                     <i class="selArrow"></i>
                   </div>
@@ -148,14 +147,14 @@
               </div>
             </div>
             <div class="inp_item inp_group txt5">
-              <div class="inpWrap">
+              <div class="inpWrap inp_full">
                 <label for=""><span class="icon">·</span><span class="txt">파일명</span></label>
-                <input type="text" id="" class="input" placeholder="">
+                <input type="text" id="" class="input wdh_300" placeholder="">
               </div>
             </div>
           </div>
           <div class="search_btn_area">
-            <button type="button" class="btnType btnColorB btnSize40">조회</button>
+            <button type="button" class="btnType btnColorB btnSize30">조회</button>
           </div>
         </div>
         <div class="contents_box">
@@ -194,18 +193,41 @@
                 </div>
               </div>
               <div class="btn_area">
-                <button type="button" class="btnType btnOutGray01 btnSize40 hasicon btn_file_add js-modal-trigger file_add_modal_open">
+                <button type="button" class="btnType btnOutGray01 btnSize30 hasicon btn_file_add js-modal-trigger file_add_modal_open">
                   <i class="icon icon_save"></i>
                   <span class="txt">파일첨부</span>
                 </button>
-                <button type="button" class="btnType btnOutGray01 btnSize40 ">파일삭제</button>
-                <button type="button" class="btnType btnOutGray01 btnSize40 hasicon btn_download">
+                <button type="button" class="btnType btnOutGray01 btnSize30 ">파일삭제</button>
+                <button type="button" class="btnType btnOutGray01 btnSize30 hasicon btn_download">
                   <i class="icon icon_download"></i>
                   <span class="txt">다운로드</span>
                 </button>
               </div>
             </div>
             <div class="grid_wrap">
+              <!-- 파일전송상태 팝업 -->
+              <div class="modal layer_pop file_forwarding_modal" aria-hidden="true">
+                <div class="modal__overlay">
+                  <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                    <!-- <header class="modal__header">
+                      <h2 class="modal__title">
+                        파일 전송 상태
+                      </h2>
+                      <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                    </header> -->
+                    <main class="modal__content">
+                      <div class="modal_grid_wrap">
+                        <div class="grid_wrap">
+                          <table id="modalforwardingGrid"></table>
+                        </div>
+                      </div>
+                    </main>
+                    <footer class="modal__footer">
+                      <button type="button" class="modal__btn modal__close btnType btnColorBR btnSize30">닫기</button>
+                    </footer>
+                  </div>
+                </div>
+              </div>
               <table id="Gridsample"></table>
               <div id="jqGridPager"></div>
             </div>
@@ -238,7 +260,7 @@
                   <input type="text" id="" class="input " placeholder="">
                 </div>
               </div>
-              <button type="button" class="btnType btnColorB btnSize40">조회</button>
+              <button type="button" class="btnType btnColorB btnSize30">조회</button>
             </div>
             <div class="modal_grid_wrap">
               <div class="grid_wrap">
@@ -247,8 +269,8 @@
             </div>
           </main>
           <footer class="modal__footer">
-            <button type="button" class="modal__btn modal__close btnType btnColorR btnSize40">확인</button>
-            <button type="button" class="modal__btn modal__close btnType btnColorBR btnSize40">닫기</button>
+            <button type="button" class="modal__btn modal__close btnType btnColorR btnSize30">확인</button>
+            <button type="button" class="modal__btn modal__close btnType btnColorBR btnSize30">닫기</button>
           </footer>
         </div>
       </div>
@@ -264,27 +286,57 @@
             <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
           </header>
           <main class="modal__content">
+            <div class="modal_inp_wrap mb20">
+              <div class="inp_item">
+                <div class="inpWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">거래사</span></label>
+                  <input type="text" id="" class="input wdh_120" placeholder="">
+                  <button type="button" class="btn_icon_seacrh js-modal-trigger company_search_modal_open"></button>
+                  <input type="text" id="" class="input wdh_180" placeholder="" readonly>
+                </div>
+              </div>
+              <div class="inp_item">
+                <div class="selWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">시스템구분</span></label>
+                  <div class="selected">
+                    <div class="selectedValue wdh_160">
+                      <p data-val="">등록</p>
+                      <i class="selArrow"></i>
+                    </div>
+                    <ul class="optBox">
+                      <li class="option optChk" data-val="0">등록</li>
+                      <li class="option" data-val="1">선택1</li>
+                      <li class="option" data-val="2">선택2</li>
+                      <li class="option" data-val="3">선택3</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
             <form>
               <div class="modal_file_add_wrap">
                 <div class="modal_file_add_head">
                   <div class="modal_file_add_tit_area">
                     <p class="title">파일첨부</p>
-                    <p class="desc">5,000MB 이하의 파일 5개까지 업로드 가능합니다.</p>
+                    <p class="desc">5,000MB 이하의 파일 업로드 가능합니다.</p>
                   </div>
                   <div class="btn_area">
-                    <button type="button" class="btnType btnOutGray01 btnSize40">파일찾기</button>
-                    <button type="button" class="btnType btnOutGray01 btnSize40">파일삭제</button>
+                    <button type="button" class="btnType btnOutGray01 btnSize30">파일찾기</button>
+                    <button type="button" class="btnType btnOutGray01 btnSize30">파일삭제</button>
                   </div>
                 </div>
                 <div class="modal_file_drop_zone">
-                  <p class="tac"><input type="file" id="file" class="btn_fill_choose" multiple> 또는 여기에 파일을 끌어오세요.</p>
+                  <input type="file" id="file" class="btn_fill_choose" multiple>
+                  <p class="drip_txt_area tac">
+                    <span class="txt">또는 여기에 파일을 끌어오세요.</span>
+                  </p>
                 </div>
               </div>
             </form>
           </main>
           <footer class="modal__footer">
-            <button type="button" class="modal__btn modal__close btnType btnColorR btnSize40">확인</button>
-            <button type="button" class="modal__btn modal__close btnType btnOutGray btnSize40">취소</button>
+            <button type="button" class="modal__btn modal__close btnType btnColorR btnSize30">확인</button>
+            <button type="button" class="modal__btn modal__close btnType btnOutGray btnSize30">취소</button>
           </footer>
         </div>
       </div>
@@ -315,18 +367,20 @@ $( function() {
       datatype: "json",
       colModel: [
         { name: 'id', label: '순번', width: 50 },
-        { name: 'name', label: '거래사', width: 100 },
-        { name: 'username', label: '종목', width: 100 },
-        { name: 'email', label: '업무', width: 100 },
-        { name: 'phone', label: '마감자료구분', width: 100 },
-        { name: 'phone', label: '제목', width: 100 },
-        { name: 'phone', label: '등록구분', width: 100 },
+        { name: 'name', label: '시스템구분', width: 100 },
+        { name: 'username', label: '거래사코드', width: 100 },
+        { name: 'email', label: '거래사명', width: 100 },
+        { name: 'phone', label: '파일명', width: 100 },
+        { name: 'phone', label: '용량', width: 100 },
+        { name: 'name', label: '파일전송상태', width: 100, formatter: fileTransperState },
+        { name: 'username', label: '게시자명', width: 100 },
+        { name: 'phone', label: '게시일시', width: 100 },
       ],
       width: '1200',
-      height: '300',
-      height: '360',
+      height: '310',
       autowidth : true,
       shrinkToFit: true,
+      multiselect:true, // 그리드 처음 체크박스 표시
       // mtype: get,
       rowNum : 10,  // 보여줄 행의 개수 설정
       rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
@@ -335,6 +389,7 @@ $( function() {
     });
   });
   //]]>
+  function fileTransperState (cellvalue, options, rowObject) { return '파일전송완료 <input type="button" class="btn_file_forwarding js-modal-trigger file_forwarding_modal_open" onclick="delete('+cellvalue+')" value=""/>'; };
 </script>
 
 <!-- 거래사조회 팝업 그리드 -->
@@ -386,6 +441,31 @@ $( function() {
   //]]>
 </script>
 
+<!-- 파일전송완료 팝업 그리드 -->
+<script>
+  //<![CDATA[
+  $(function () {
+    "use strict";
+    $("#modalforwardingGrid").jqGrid({
+      url: 'https://jsonplaceholder.typicode.com/users',
+      datatype: "json",
+      colModel: [
+        { name: 'username', label: '진행상태', width: 300 },
+        { name: 'email', label: '처리일시', width: 422 },
+        
+      ],
+      width: '730',
+      height: '300',
+      autowidth : true,
+      shrinkToFit: true,
+      rowNum : 6,  // 보여줄 행의 개수 설정
+      rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
+    });
+  });
+  //]]>
+</script>
+
+<!-- 파일첨부 -->
 <script>
   (function() {  
     var $file = document.getElementById("file")
@@ -474,6 +554,5 @@ $( function() {
   
   })();
   </script>
-  
 </body>
 </html>
