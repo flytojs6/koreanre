@@ -129,7 +129,8 @@
 
 /* 거래사 조회 팝업 */
 .modal_inp_wrap{display: flex; justify-content: space-between; gap: 20px;}
-.modal_inp_wrap .inp_item .inpWrap{display: flex; width: unset;}
+.modal_inp_wrap .inp_item .inpWrap{display: flex; width: unset; align-items: center;}
+.modal_inp_wrap .inp_item .inpWrap .btn_icon_seacrh{margin-left: 6px; margin-right: 6px;}
 .modal_inp_wrap .inp_item .inpWrap label{display: flex; align-items: center;}
 .modal_inp_wrap .inp_item .inpWrap input{width: 100%;}
 
@@ -148,8 +149,10 @@
 .modal_file_add_tit_area .desc{font-size: 15px; font-weight: 400; color: #555;}
 
 .modal_file_add_head + .modal_file_drop_zone{margin-top: 15px;}
-.modal_file_drop_zone{display: flex; align-items: center; justify-content: center; width: 100%; min-height: 200px; border: 1px dashed #bbb}
-.modal_file_drop_zone > p{color: #555;}
+.modal_file_drop_zone{position: relative; display: flex; flex-direction: column; width: 100%; min-height: 200px; padding: 30px; border: 1px dashed #bbb; box-sizing: border-box;}
+.modal_file_drop_zone .btn_fill_choose{color: #474747;}
+.modal_file_drop_zone > p span{color: #888;}
+.modal_file_drop_zone .drip_txt_area{position: absolute; z-index: 900; left: 50%; top: 50%; transform: translate(-50% , -50%);}
 
 
 

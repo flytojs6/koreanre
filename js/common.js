@@ -70,12 +70,14 @@ $(document).ready(function(){
 
 // 헤더 탭 박스 클릭시 토글
 $(document).on('click', '.tab_wrap .tablist > li > a', function() {
-  $(this).toggleClass('active');
+  // $(this).toggleClass('active');
+  $(this).closest('.tab_item').toggleClass('active');
 });
 
 // 헤더 탭 아이템 닫기버튼 클릭시
 $(document).on('click', '.tab_box .tab_wrap .tablist > li .btn_tab_item_close', function() {
   $(this).closest('.tab_item').removeClass('active');
+  $(this).closest('.tab_item').removeClass('visible');
 });
 
 // 전체닫기 클릭시 메뉴닫힘
