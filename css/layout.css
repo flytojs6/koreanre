@@ -154,7 +154,7 @@ background-color: #fff; }
 
 .wrap.sys_bg .container .content .contents_box .grid_paging_wrap{display: flex; align-items: center;}
 .wrap.sys_bg .container .content .contents_box .grid_paging_wrap .selWrap + .paging_num_area{margin-left: 8px;}
-.wrap.sys_bg .container .content .contents_box .grid_paging_wrap .paging_num_area{display: flex; }
+.wrap.sys_bg .container .content .contents_box .grid_paging_wrap .paging_num_area{display: flex; font-size: 15px;}
 .paging_num_area .current_page span{color: #86868b;}
 .paging_num_area .current_page + .total_page{margin-left: 6px;}
 .paging_num_area .total_page span{color: #86868b;}

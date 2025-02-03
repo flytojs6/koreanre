@@ -377,6 +377,8 @@ a.btnType.btnSize48{line-height: 48px;}
 
 .icon_save{display: inline-block; width: 16px; height: 16px; background:url("../icon/icon_save.png") no-repeat center center; background-size: contain;}
 
+.icon_excel{display: inline-block; width: 16px; height: 16px; background:url("../icon/icon_excel.png") no-repeat center center; background-size: 14px;}
+
 .btnType.hasicon.btn_download{gap: 4px;}
 .icon_download{display: inline-block; width: 18px; height: 18px; background:url("../icon/icon_download.svg") no-repeat center center; background-size: contain;}
 
