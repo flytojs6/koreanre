@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8중요화면접속기록조회</title>
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/ui.jqgrid.css">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+  <div class="wrap sys_bg">
+    <div class="header">
+      <div class="top">
+        <div class="logo">
+          <img src="images/logo1.png" alt="logo">
+          <p>재보험 데이터 수신 시스템</p>
+        </div>
+        <div class="nav">
+          <div class="gnbArea">
+            <div class="mainmenu">
+              <ul class="mainlist">
+                <li>
+                  <a href="javascript:void(0)" class="mlink mlink1">파일송수신</a>
+                  <ul class="smenu">
+                    <li><a href="javascript:void(0)" class="slink">엠디아이메뉴첫번째</a></li>
+                    <li><a href="javascript:void(0)" class="slink">메뉴두번째</a></li>
+                    <li><a href="javascript:void(0)" class="slink">메뉴세번째</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" class="mlink mlink2">데이터분석용파일송수신</a>
+                  <ul class="smenu">
+                    <li><a href="javascript:void(0)" class="slink">데이터분석용파일송수신메뉴첫번째</a></li>
+                    <li><a href="javascript:void(0)" class="slink">데이터분석용파일송수신메뉴두번째</a></li>
+                    <li><a href="javascript:void(0)" class="slink">데이터분석용파일송수신메뉴세번째</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" class="mlink mlink3">접근기록조회</a>
+                  <ul class="smenu">
+                    <li><a href="javascript:void(0)" class="slink">접근기록조회메뉴첫번째</a></li>
+                    <li><a href="javascript:void(0)" class="slink">접근기록조회메뉴두번째</a></li>
+                    <li><a href="javascript:void(0)" class="slink">접근기록조회메뉴세번째</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="util_area">
+          <div class="lang_change">
+            <ul>
+              <li>
+                <a href="">KOR</a>
+              </li>
+              <li>
+                <a href="">ENG</a>
+              </li>
+            </ul>
+          </div>
+          <div class="btn_area">
+            <button type="button" class="btn_icon_login"></button>
+          </div>
+        </div>
+      </div>
+      <div class="tab_box active">
+        <div class="tab_wrap">
+          <div class="sub_home_btn_area">
+            <button type="button" class="btn_icon_nav_home"></button>
+          </div>
+          <ul class="tablist">
+            <li class="tab_item active visible"><a href="javascript:void(0)" class="tlink active">엠디아이메뉴첫번째</a><button type="button" class="btn_tab_item_close"></button></li>
+            <li class="tab_item visible"><a href="javascript:void(0)" class="tlink">메뉴두번째</a><button type="button" class="btn_tab_item_close"></button></li>
+            <li class="tab_item visible"><a href="javascript:void(0)" class="tlink">메뉴세번째</a><button type="button" class="btn_tab_item_close"></button></li>
+          </ul>
+          <div class="btn_area">
+            <button type="button" class="btnType btnOutBK btnSize30 hasicon btn_menu_close">
+              <i class="icon icon_menu_close"></i>
+              <span class="txt">전체닫기</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <!-- ▼컨텐츠 영역▼ -->
+      <div class="content">
+        <div class="title_box">
+          <div class="title_area">
+            <div class="title">
+              <span class="tit_icon">●</span>
+              <span class="tit_txt">중요화면 접속기록 조회</span>
+              <!-- <span class="line">|</span> -->
+              <!-- <span class="tit_desc">ESC102545</span> -->
+            </div>
+          </div>
+          <div class="right_area">
+            <div class="breadcrumb" aria-label="breadcrumbs">
+              <ul>
+                <li><a href="javascript:void(0)">Home</a></li>
+                <li><a href="javascript:void(0)">데이터통신</a></li>
+                <li class="is-active"><a href="javascript:void(0)" aria-current="page">중요화면 접속기록 조회</a></li>
+              </ul>
+            </div>
+            <button type="button" class="btnType btnOutGray01 btnSize30 btn_help hasicon">
+              <i class="icon_notice"></i>
+              <span class="txt">Help</span>
+            </button>
+          </div>
+        </div>
+        <div class="search_box">
+          <div class="search_item_wrap">
+            <div class="inp_item inp_group whalf txt4">
+              <div class="calWrap">
+                <div class="inpWrap">
+                  <label for=""><span class="icon">·</span><span class="txt">조회일자</span></label>
+                  <input type="text" placeholder="" class="input inp_date" id="datepicker" value="YYYY. DD. MM" />
+                  <span class="txt">~</span>
+                  <input type="text" placeholder="" class="input inp_date" id="datepicker2" value="YYYY. DD. MM" />
+                </div>
+              </div>
+            </div>
+            <div class="inp_item inp_group whalf">
+              <div class="inpWrap inp_full">
+                <label for=""><span class="icon">·</span><span class="txt">접속IP</span></label>
+                <input type="text" id="" class="input wdh_300" placeholder="">
+              </div>
+            </div>
+            <div class="inp_item inp_group whalf txt4">
+              <div class="inpWrap">
+                <label for=""><span class="icon">·</span><span class="txt">화면ID</span></label>
+                <input type="text" id="" class="input wdh_200" placeholder="">
+              </div>
+            </div>
+            <div class="inp_item inp_group whalf">
+              <div class="inpWrap">
+                <label for=""><span class="icon">·</span><span class="txt">화면명</span></label>
+                <input type="text" id="" class="input wdh_300" placeholder="">
+              </div>
+            </div>
+          </div>
+          <div class="search_btn_area">
+            <button type="button" class="btnType btnColorB btnSize30">조회</button>
+          </div>
+        </div>
+        <div class="contents_box">
+          <div class="cont_group">
+            <div class="title_area">
+              <!-- <div class="title">
+                <span class="tit_icon">●</span>
+                <span class="tit_txt">파일 송신 내역</span>
+              </div> -->
+              <div class="grid_paging_wrap">
+                <div class="selWrap">
+                  <div class="selected">
+                    <div class="selectedValue">
+                      <p data-val="">10</p>
+                      <i class="selArrow"></i>
+                    </div>
+                    <ul class="optBox">
+                      <li class="option optChk" data-val="0">10</li>
+                      <li class="option" data-val="1">20</li>
+                      <li class="option" data-val="2">30</li>
+                      <li class="option" data-val="3">40</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="paging_num_area">
+                  <div class="current_page">
+                    <span>1</span>
+                    <span>/</span>
+                    <span>20</span>
+                  </div>
+                  <div class="total_page">
+                    <span>(총</span>
+                    <span>400</span>
+                    <span>건)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="btn_area">
+                <button type="button" class="btnType btnOutGray01 btnSize30">EXCEL DOWN</button>
+              </div>
+            </div>
+            <div class="grid_wrap">
+              <table id="Gridsample"></table>
+              <div id="jqGridPager"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ▲컨텐츠 영역▲ -->
+    </div>
+  </div>
+
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/grid.locale-en.js"></script>
+<script src="js/jquery.jqGrid.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/modal.js"></script>
+
+<script>
+$( function() {
+  $( "#datepicker" ).datepicker();
+  $( "#datepicker2" ).datepicker();
+});
+</script>
+
+<!-- 중요화면 그리드 -->
+<script>
+  //<![CDATA[
+  $(function () {
+    "use strict";
+    $("#Gridsample").jqGrid({
+      url: 'https://jsonplaceholder.typicode.com/users',
+      datatype: "json",
+      colModel: [
+        { name: 'name', label: '접속계정', width: 100 },
+        { name: 'username', label: '접속IP', width: 100 },
+        { name: 'email', label: '화면ID', width: 100 },
+        { name: 'phone', label: '화면명', width: 100 },
+        { name: 'phone', label: '화면버튼명', width: 100 },
+        { name: 'name', label: '처리내역', width: 100 },
+        { name: 'phone', label: '접속일시', width: 100 },
+      ],
+      width: '1200',
+      height: '310',
+      autowidth : true,
+      shrinkToFit: true,
+      // mtype: get,
+      rowNum : 10,  // 보여줄 행의 개수 설정
+      rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
+      pager : "#jqGridPager",
+      rownumber : true, // 각 row의 맨 앞줄에 각 행의 번호가 자동으로 부여 되도록 설정
+    });
+  });
+  //]]>
+</script>
+
+<!-- 거래사조회 팝업 그리드 -->
+<script>
+  //<![CDATA[
+  $(function () {
+    "use strict";
+    $("#modalGrid").jqGrid({
+      url: 'https://jsonplaceholder.typicode.com/users',
+      datatype: "json",
+      colModel: [
+        { name: 'name', label: '거래사', width: 300 },
+        { name: 'username', label: '거래사명', width: 422 },
+        
+      ],
+      width: '730',
+      height: '300',
+      autowidth : true,
+      shrinkToFit: true,
+      rowNum : 8,  // 보여줄 행의 개수 설정
+      rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
+    });
+  });
+  //]]>
+</script>
+
+<!-- 담당자조회 팝업 그리드 -->
+<script>
+  //<![CDATA[
+  $(function () {
+    "use strict";
+    $("#managerSearchGrid").jqGrid({
+      url: 'https://jsonplaceholder.typicode.com/users',
+      datatype: "json",
+      colModel: [
+        { name: 'name', label: '사원명', width: 160 },
+        { name: 'username', label: '사원번호', width: 160 },
+        { name: 'website', label: '소속부서', width: 160 },
+        { name: 'email', label: '이메일주소', width: 232 },
+      ],
+      width: '730',
+      height: '300',
+      autowidth : true,
+      // shrinkToFit: true,
+      rowNum : 8,  // 보여줄 행의 개수 설정
+      rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
+    });
+  });
+  //]]>
+</script>
+
+<!-- 파일전송완료 팝업 그리드 -->
+<script>
+  //<![CDATA[
+  $(function () {
+    "use strict";
+    $("#modalforwardingGrid").jqGrid({
+      url: 'https://jsonplaceholder.typicode.com/users',
+      datatype: "json",
+      colModel: [
+        { name: 'username', label: '진행상태', width: 300 },
+        { name: 'email', label: '처리일시', width: 422 },
+        
+      ],
+      width: '730',
+      height: '300',
+      autowidth : true,
+      shrinkToFit: true,
+      rowNum : 6,  // 보여줄 행의 개수 설정
+      rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
+    });
+  });
+  //]]>
+</script>
+
+<!-- 파일첨부 -->
+<script>
+  (function() {  
+    var $file = document.getElementById("file")
+    var dropZone = document.querySelector(".modal_file_drop_zone")
+  
+    var toggleClass = function(className) {
+        
+        console.log("current event: " + className)
+  
+        var list = ["dragenter", "dragleave", "dragover", "drop"]
+  
+        for (var i = 0; i < list.length; i++) {
+            if (className === list[i]) {
+                dropZone.classList.add("modal_file_drop_zone-" + list[i])
+            } else {
+                dropZone.classList.remove("modal_file_drop_zone-" + list[i])
+            }
+        }
+    }
+    
+    var showFiles = function(files) {
+        dropZone.innerHTML = ""
+        for(var i = 0, len = files.length; i < len; i++) {
+            dropZone.innerHTML += "<p>" + files[i].name + "</p>"
+        }
+    }
+  
+    var selectFile = function(files) {
+        // input file 영역에 드랍된 파일들로 대체
+        $file.files = files
+        showFiles($file.files)
+        
+    }
+    
+    $file.addEventListener("change", function(e) {
+        showFiles(e.target.files)
+    })
+  
+    // 드래그한 파일이 최초로 진입했을 때
+    dropZone.addEventListener("dragenter", function(e) {
+        e.stopPropagation()
+        e.preventDefault()
+  
+        toggleClass("dragenter")
+  
+    })
+  
+    // 드래그한 파일이 dropZone 영역을 벗어났을 때
+    dropZone.addEventListener("dragleave", function(e) {
+        e.stopPropagation()
+        e.preventDefault()
+  
+        toggleClass("dragleave")
+  
+    })
+  
+    // 드래그한 파일이 dropZone 영역에 머물러 있을 때
+    dropZone.addEventListener("dragover", function(e) {
+        e.stopPropagation()
+        e.preventDefault()
+  
+        toggleClass("dragover")
+  
+    })
+  
+    // 드래그한 파일이 드랍되었을 때
+    dropZone.addEventListener("drop", function(e) {
+        e.preventDefault()
+  
+        toggleClass("drop")
+  
+        var files = e.dataTransfer && e.dataTransfer.files
+        console.log(files)
+  
+        if (files != null) {
+            if (files.length < 1) {
+                alert("폴더 업로드 불가")
+                return
+            }
+            selectFile(files)
+        } else {
+            alert("ERROR")
+        }
+  
+    })
+  
+  })();
+  </script>
+</body>
+</html>

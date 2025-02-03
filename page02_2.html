@@ -18,6 +18,8 @@
         </div>
         <div class="nav">
           <div class="gnbArea">
+            <button type="button" class="btn_nav_prev" onclick="leftArrow()"></button>
+            <button type="button" class="btn_nav_next" onclick="rightArrow()"></button>
             <div class="mainmenu">
               <ul class="mainlist">
                 <li>
@@ -34,6 +36,22 @@
                     <li><a href="javascript:void(0)" class="slink">데이터분석용파일송수신메뉴첫번째</a></li>
                     <li><a href="javascript:void(0)" class="slink">데이터분석용파일송수신메뉴두번째</a></li>
                     <li><a href="javascript:void(0)" class="slink">데이터분석용파일송수신메뉴세번째</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" class="mlink mlink3">접근기록조회</a>
+                  <ul class="smenu">
+                    <li><a href="javascript:void(0)" class="slink">접근기록조회메뉴첫번째</a></li>
+                    <li><a href="javascript:void(0)" class="slink">접근기록조회메뉴두번째</a></li>
+                    <li><a href="javascript:void(0)" class="slink">접근기록조회메뉴세번째</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" class="mlink mlink3">접근기록조회</a>
+                  <ul class="smenu">
+                    <li><a href="javascript:void(0)" class="slink">접근기록조회메뉴첫번째</a></li>
+                    <li><a href="javascript:void(0)" class="slink">접근기록조회메뉴두번째</a></li>
+                    <li><a href="javascript:void(0)" class="slink">접근기록조회메뉴세번째</a></li>
                   </ul>
                 </li>
                 <li>
@@ -478,6 +496,20 @@ $( function() {
     });
   });
   //]]>
+</script>
+
+<script>
+function leftArrow(){
+  var leftPos = $('.mainlist').scrollLeft();
+  $(".mainlist").animate({scrollLeft: leftPos - 120}, 400);
+}
+</script>
+
+<script>
+function rightArrow(){
+  var leftPos = $('.mainlist').scrollLeft();
+  $(".mainlist").animate({scrollLeft: leftPos + 120}, 400);
+}
 </script>
 
 <script language="javascript">

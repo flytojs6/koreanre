@@ -68,6 +68,39 @@ $(document).ready(function(){
   });
 });
 
+// 메뉴 리스트 많아질때
+$(document).ready(function(){
+  var menulistnum = $('.mainlist > li').length;
+  // console.log($(".mainlist > li").length);
+  if (menulistnum > 7) {
+    $('.nav').addClass('menuover');
+    $('.gnbArea').find('.btn_nav_prev').show();
+    $('.gnbArea').find('.btn_nav_next').show();
+  }else{
+    $('.nav').removeClass('menuover');
+    $('.gnbArea').find('.btn_nav_prev').hide();
+    $('.gnbArea').find('.btn_nav_next').hide();
+  }
+});
+
+// 메뉴 많을때 이동하기
+$(document).on('click', '.gnbArea .btn_nav_prev', function() {
+  $(this).siblings('.mainmenu .mainlist').css('transform','translateX(0px)');
+});
+
+$(document).on('click', '.gnbArea .btn_nav_next', function() {
+  var movenum = 0;
+  movenum += 130;
+  // var translateMenu = "translateX(-" + movenum + "px)"
+  // $(this).siblings(".mainmenu .mainlist").animate({
+  //   transform: translateMenu
+  // },500);
+  var aMargin = movenum+"px"
+  $(this).siblings(".mainmenu .mainlist").animate({
+      marginLeft: aMargin
+  },500);        
+});
+
 // 헤더 탭 박스 클릭시 토글
 $(document).on('click', '.tab_wrap .tablist > li > a', function() {
   // $(this).toggleClass('active');
