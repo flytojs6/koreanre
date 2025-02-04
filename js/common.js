@@ -71,8 +71,9 @@ $(document).ready(function(){
 // 메뉴 리스트 많아질때
 $(document).ready(function(){
   var menulistnum = $('.mainlist > li').length;
+  $('.nav').addClass('navnum' + menulistnum);
   // console.log($(".mainlist > li").length);
-  if (menulistnum > 7) {
+  if (menulistnum > 9) {
     $('.nav').addClass('menuover');
     $('.gnbArea').find('.btn_nav_prev').show();
     $('.gnbArea').find('.btn_nav_next').show();
