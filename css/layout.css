@@ -54,6 +54,7 @@ body{overflow-x: hidden;}
 }
 .nav.menuover .gnbArea .mainmenu .mainlist li a{padding: 0 17px;}
 .nav .gnbArea .mainmenu .mainlist li a.active{color: #876847; background-color: #fff; font-weight: 600;}
+.nav .gnbArea .mainmenu .mainlist li.mmenu_item.active a.mlink{color: #876847; background-color: #fff; font-weight: 600;}
 
 .nav .gnbArea .mainmenu .mainlist li .smenu{display: none; position: absolute; z-index: 900; 
 /* left: 0; top: 40px;  */

@@ -49,17 +49,6 @@ document.addEventListener("click", function (e) {
 
 
 
-// 상단 메인메뉴 클릭시 active
-$(document).on('click', '.nav .mainmenu .mainlist .mlink', function() {
-  $(this).closest('li').siblings('li').find('.mlink').removeClass('active');
-  $(this).addClass('active');
-  $(this).siblings('.smenu').stop().slideDown(350);
-  // $(this).closest('.nav').siblings('.lnb').find('.lnblist').removeClass('active');
-  // let mlnum = $(".mainlist > li").index(this);
-  // console.log(mlnum);
-  // $(this).closest('.nav').siblings('.lnb').find('.lnb_wrap > .lnb0' + mlnum).addClass('active');
-});
-
 // 상단 메인메뉴 오버 하위메뉴 열림
 // $(document).ready(function(){
 //   $('.nav .mainmenu > ul > li').mouseover(function(){
@@ -74,75 +63,103 @@ $(document).on('click', '.nav .mainmenu .mainlist .mlink', function() {
 
 // 메인메뉴 리스트 많아질때
 $(document).ready(function(){
-  var menulistnum = $('.mainlist > li').length;
-  $('.nav').addClass('navnum' + menulistnum);
-  for (var i = 1; i <= menulistnum; i++) {
-    console.log('.lnb_list' + i );
-    // const lnb_this = ('.lnb_list' + i );
-    // console.log(lnb_this);
-    // lnb_this.addEventListener("click", function(e){ 
+  var mainMenuNum = $('.mainlist > li').length;
+  if($(window).width() < 1440) {
+    if (mainMenuNum > 9) {
+      $('.nav').addClass('menuover');
+      $('.gnbArea').find('.btn_nav_prev').show();
+      $('.gnbArea').find('.btn_nav_next').show();
+    }else{
+      $('.nav').removeClass('menuover');
+      $('.gnbArea').find('.btn_nav_prev').hide();
+      $('.gnbArea').find('.btn_nav_next').hide();
+    }
+  } else {
+    if (mainMenuNum > 11) {
+      $('.nav').addClass('menuover');
+      $('.gnbArea').find('.btn_nav_prev').show();
+      $('.gnbArea').find('.btn_nav_next').show();
+    }else{
+      $('.nav').removeClass('menuover');
+      $('.gnbArea').find('.btn_nav_prev').hide();
+      $('.gnbArea').find('.btn_nav_next').hide();
+    }
+  }
+  $('.nav').addClass('navnum' + mainMenuNum);
+  for (var i = 1; i <= mainMenuNum; i++) {
+    // const lnbList = ('.lnb_list');
+    const lnbThis = ('.lnb_list' + i);
+    // const nav_this = ('.mainlist > li .mlink' + i);
+    // const active_CLASS = "active";
+    // $(document).on('click', '.nav .mainmenu .mainlist .mlink' + i, function() {
+    //   $(this).closest('.nav').siblings('.lnb').find('.lnblist').removeClass('active');
+    //   $(this).closest('.nav').siblings('.lnb').find('.lnb_wrap > .lnb_list' + i).addClass('active');
+    // });
+    // nav_this.addEventListener("click", function (e) {
+    //   lnbList.classList.remove(active_CLASS);
+    //   lnbThis.classList.add(active_CLASS);
+    // });
+    console.log(lnbThis);
+    // lnb_this.on("click", function(){
     //   $('.lnb .lnblist').siblings('.lnblist').removeClass('active');
     //   $('.lnb .lnblist.lnb_list' + i ).addClass('active');
     // });
+    // mainMenuNum[i].addEventListener("click", function(e){
+    //   $('.lnb .lnblist').siblings('.lnblist').removeClass('active');
+    //   $('.lnb .lnblist.lnb_list' + i ).addClass('active');
+    //   
+    // });
   };
-  if (menulistnum > 9) {
-    $('.nav').addClass('menuover');
-    $('.gnbArea').find('.btn_nav_prev').show();
-    $('.gnbArea').find('.btn_nav_next').show();
-  }else{
-    $('.nav').removeClass('menuover');
-    $('.gnbArea').find('.btn_nav_prev').hide();
-    $('.gnbArea').find('.btn_nav_next').hide();
-  }
+});
+
+// 상단 메인메뉴 클릭시 active
+$(document).on('click', '.nav .mainlist > .mmenu_item .mlink', function() {
+  $(this).closest('li').siblings('li').find('.mlink').removeClass('active');
+  $(this).closest('.mmenu_item').siblings('.mmenu_item').removeClass('active');
+  $(this).closest('.mmenu_item').addClass('active');
+  $(this).addClass('active');
+  $(this).closest('.nav').siblings('.lnb').find('.lnblist').removeClass('active');
+  // $(this).siblings('.smenu').stop().slideDown(350);
+  // let mlnum = $(".mainlist > li").index(this);
+  // console.log(mlnum);
+  // $(this).closest('.nav').siblings('.lnb').find('.lnb_wrap > .lnb0' + mlnum).addClass('active');
 });
 
 // 메인메뉴 클릭시 서브메뉴 열림
 $(document).on('click', '.nav .mainlist > li:nth-child(1) .mlink', function() {
-  $('.lnb .lnblist').removeClass('active');
   $('.lnb .lnblist.lnb_list1').addClass('active');
 });
 $(document).on('click', '.nav .mainlist > li:nth-child(2) .mlink', function() {
-  $('.lnb .lnblist').removeClass('active');
   $('.lnb .lnblist.lnb_list2').addClass('active');
 });
 $(document).on('click', '.nav .mainlist > li:nth-child(3) .mlink', function() {
-  $('.lnb .lnblist').removeClass('active');
   $('.lnb .lnblist.lnb_list3').addClass('active');
 });
 $(document).on('click', '.nav .mainlist > li:nth-child(4) .mlink', function() {
-  $('.lnb .lnblist').removeClass('active');
   $('.lnb .lnblist.lnb_list4').addClass('active');
 });
 $(document).on('click', '.nav .mainlist > li:nth-child(5) .mlink', function() {
-  $('.lnb .lnblist').removeClass('active');
   $('.lnb .lnblist.lnb_list5').addClass('active');
 });
 $(document).on('click', '.nav .mainlist > li:nth-child(6) .mlink', function() {
-  $('.lnb .lnblist').removeClass('active');
   $('.lnb .lnblist.lnb_list6').addClass('active');
 });
 $(document).on('click', '.nav .mainlist > li:nth-child(7) .mlink', function() {
-  $('.lnb .lnblist').removeClass('active');
   $('.lnb .lnblist.lnb_list7').addClass('active');
 });
 $(document).on('click', '.nav .mainlist > li:nth-child(8) .mlink', function() {
-  $('.lnb .lnblist').removeClass('active');
   $('.lnb .lnblist.lnb_list8').addClass('active');
 });
 $(document).on('click', '.nav .mainlist > li:nth-child(9) .mlink', function() {
-  $('.lnb .lnblist').removeClass('active');
   $('.lnb .lnblist.lnb_list9').addClass('active');
 });
 $(document).on('click', '.nav .mainlist > li:nth-child(10) .mlink', function() {
-  $('.lnb .lnblist').removeClass('active');
   $('.lnb .lnblist.lnb_list10').addClass('active');
 });
 $(document).on('click', '.nav .mainlist > li:nth-child(11) .mlink', function() {
-  $('.lnb .lnblist').removeClass('active');
   $('.lnb .lnblist.lnb_list11').addClass('active');
 });
 $(document).on('click', '.nav .mainlist > li:nth-child(12) .mlink', function() {
-  $('.lnb .lnblist').removeClass('active');
   $('.lnb .lnblist.lnb_list12').addClass('active');
 });
 
@@ -159,29 +176,50 @@ $(document).on('click', '.gnbArea .btn_nav_next', function() {
 
 // 서브메뉴 리스트 많아질때
 $(document).ready(function(){
-  var lnblistnum = $('.lnblist.active > li').length;
-  $('.lnb').addClass('lnbnum' + lnblistnum);
-  // console.log($(".lnblist.active > li").length);
-  if (lnblistnum > 13) {
-    $('.lnb').addClass('lnbover');
-    $('.lnb_wrap').find('.btn_lnb_prev').show();
-    $('.lnb_wrap').find('.btn_lnb_next').show();
-  }else{
-    $('.lnb').removeClass('lnbover');
-    $('.lnb_wrap').find('.btn_lnb_prev').hide();
-    $('.lnb_wrap').find('.btn_lnb_next').hide();
+  var subMenuNum = $('.lnblist.active > li').length;
+  $('.lnb').addClass('lnbnum' + subMenuNum);
+  if($(window).width() < 1440) {
+    if (subMenuNum > 12) {
+      $('.lnb').addClass('lnbover');
+      $('.lnb_wrap').find('.btn_lnb_prev').show();
+      $('.lnb_wrap').find('.btn_lnb_next').show();
+    }else{
+      $('.lnb').removeClass('lnbover');
+      $('.lnb_wrap').find('.btn_lnb_prev').hide();
+      $('.lnb_wrap').find('.btn_lnb_next').hide();
+    }
+  } else if($(window).width() < 1900) {
+    if (subMenuNum > 14) {
+      $('.lnb').addClass('lnbover');
+      $('.lnb_wrap').find('.btn_lnb_prev').show();
+      $('.lnb_wrap').find('.btn_lnb_next').show();
+    }else{
+      $('.lnb').removeClass('lnbover');
+      $('.lnb_wrap').find('.btn_lnb_prev').hide();
+      $('.lnb_wrap').find('.btn_lnb_next').hide();
+    }
+  } else {
+    if (subMenuNum > 16) {
+      $('.lnb').addClass('lnbover');
+      $('.lnb_wrap').find('.btn_lnb_prev').show();
+      $('.lnb_wrap').find('.btn_lnb_next').show();
+    }else{
+      $('.lnb').removeClass('lnbover');
+      $('.lnb_wrap').find('.btn_lnb_prev').hide();
+      $('.lnb_wrap').find('.btn_lnb_next').hide();
+    }
   }
 });
 
 // 서브메뉴 스크롤 이동
 $(document).on('click', '.lnb_wrap .btn_lnb_prev', function() {
-  var leftPos = $('.lnblist.active').scrollLeft();
-  $(".lnblist.active").animate({scrollLeft: leftPos - 100}, 400);
+  var lnbleftPos = $('.lnblist.active').scrollLeft();
+  $(".lnblist.active").animate({scrollLeft: lnbleftPos - 100}, 400);
 });
 
 $(document).on('click', '.lnb_wrap .btn_lnb_next', function() {
-  var leftPos = $('.lnblist.active').scrollLeft();
-  $(".lnblist.active").animate({scrollLeft: leftPos + 100}, 400);
+  var lnbleftPos = $('.lnblist.active').scrollLeft();
+  $(".lnblist.active").animate({scrollLeft: lnbleftPos + 100}, 400);
 });
 
 
