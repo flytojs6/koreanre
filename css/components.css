@@ -372,9 +372,6 @@ a.btnType.btnSize48{line-height: 48px;}
 
 
 
-.underline{text-decoration: underline;}
-
-
 /* 리스트 */
 ul.list_disc{list-style: disc outside; margin-inline-start: 1.5em;}
 ul.list_disc li{color: #262626;}
@@ -390,15 +387,14 @@ ul.list_disc li{color: #262626;}
 
 /* 테이블 */
 .grid_wrap .ui-widget.ui-widget-content{width: 100% !important; border: 0;}
-.grid_wrap .ui-widget.ui-widget-content .ui-widget-overlay{position: absolute; display: block; background: #e7e7e7;}
-.grid_wrap .ui-jqgrid .loading.ui-state-default.ui-state-active{display: block; top: 50%; left: 50%; padding: 0; margin: 0; margin-top: -20px; margin-left: -20px; font-size: 0; width: 40px; height: 40px; background: transparent; border-radius: 50%; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; animation: spin 1.2s linear infinite; border-width: 4px !important;}
+.grid_wrap .ui-widget.ui-widget-content .ui-widget-overlay{position: absolute; background: #e7e7e7;}
+.grid_wrap .ui-jqgrid .loading.ui-state-default.ui-state-active{top: 50%; left: 50%; padding: 0; margin: 0; margin-top: -20px; margin-left: -20px; font-size: 0; width: 40px; height: 40px; background: transparent; border-radius: 50%; border: 4px solid #e0e0e0; border-top: 4px solid #4285f4; animation: spin 1.2s linear infinite; border-width: 0px !important;}
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 .grid_wrap .ui-widget.ui-widget-content .ui-jqgrid-view{width: 100% !important; border: 0px solid #c5c5c5;}
 .grid_wrap.haspager .ui-widget.ui-widget-content .ui-jqgrid-view{margin-top: 40px;}
-
 
 .ui-jqgrid .ui-jqgrid-hdiv{width: 100% !important; border-top: 1px solid #c5c5c5 !important;}
 .ui-jqgrid .ui-jqgrid-bdiv{width: 100% !important;}
@@ -407,7 +403,6 @@ ul.list_disc li{color: #262626;}
 .ui-jqgrid .ui-jqgrid-htable{width: 100% !important;}
 .ui-jqgrid .ui-jqgrid-htable th{height: 30px; background-color: #f1f1f1;}
 .ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr:first-child{border-left: 1px solid #c5c5c5;}
-/* .ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr:last-child{border-right: 0;} */
 .ui-jqgrid .ui-jqgrid-htable th div{font-size: 15px; font-family: 'Pretendard'; overflow: visible; color: #333333;}
 
 .ui-jqgrid .ui-jqgrid-btable{width: 100% !important;}
