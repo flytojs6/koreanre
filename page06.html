@@ -319,6 +319,9 @@ $( function() {
       rowNum : 2,  // 보여줄 행의 개수 설정
       rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
       rownumber : true, // 각 row의 맨 앞줄에 각 행의 번호가 자동으로 부여 되도록 설정
+      loadComplete: function () {
+        $("#lui_Gridsample").hide(); // 로딩 딤드 숨김
+      },
     });
   });
   //]]>
@@ -346,6 +349,9 @@ $( function() {
       rowNum : 2,  // 보여줄 행의 개수 설정
       rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
       rownumber : true, // 각 row의 맨 앞줄에 각 행의 번호가 자동으로 부여 되도록 설정
+      loadComplete: function () {
+        $("#lui_Gridsample2").hide(); // 로딩 딤드 숨김
+      },
     });
   });
   //]]>
