@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>공통영역1</title>
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/ui.jqgrid.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+</head>
+<body>
+  <div class="loading-overlay is-hidden"><!-- is-hidden 클래스 추가시 로딩 사라짐-->
+    <div class="loading-container">
+      <img src="images/load_logo.png" alt="Logo" class="load_logo">
+      <div class="loading-spinner"></div>
+    </div>
+  </div>
+  <div class="wrap sys_bg">
+    <div class="header">
+      <div class="top">
+        <div class="logo">
+          <img src="images/logo1.png" alt="logo">
+          <p>재보험 데이터 수신 시스템</p>
+        </div>
+        <div class="util_area">
+          <div class="lang_change">
+            <ul>
+              <li>
+                <a href="">KOR</a>
+              </li>
+              <li>
+                <a href="">ENG</a>
+              </li>
+            </ul>
+          </div>
+          <div class="btn_area">
+            <button type="button" class="btn_icon_login"></button>
+          </div>
+        </div>
+      </div>
+      <div class="nav">
+        <div class="gnbArea">
+          <button type="button" class="btn_nav_prev"></button>
+          <button type="button" class="btn_nav_next"></button>
+          <div class="mainmenu">
+            <ul class="mainlist">
+              <li class="mmenu_item mitem1 active">
+                <a href="javascript:void(0)" class="mlink active">파일송수신</a>
+              </li>
+              <li class="mmenu_item mitem2">
+                <a href="javascript:void(0)" class="mlink">데이터분석용파일송수신</a>
+              </li>
+              <li class="mmenu_item mitem3">
+                <a href="javascript:void(0)" class="mlink">접근기록조회</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="lnb submenu">
+        <div class="lnb_wrap">
+          <ul class="lnb_gr_list">
+            <li class="lnb_gr_item active">
+              <ul class="lnb_list">
+                <li class="lnb_item">
+                  <a href="javascript:void(0)" class="lnblink">서브메뉴1</a>
+                </li>
+                <li class="lnb_item">
+                  <a href="javascript:void(0)" class="lnblink">서브메뉴</a>
+                </li>
+                <li class="lnb_item">
+                  <a href="javascript:void(0)" class="lnblink">서브메뉴</a>
+                </li>
+              </ul>
+            </li>
+            <li class="lnb_gr_item">
+              <ul class="lnb_list">
+                <li class="lnb_item">
+                  <a href="javascript:void(0)" class="lnblink">서브메뉴</a>
+                </li>
+                <li class="lnb_item">
+                  <a href="javascript:void(0)" class="lnblink">서브메뉴2</a>
+                </li>
+                <li class="lnb_item">
+                  <a href="javascript:void(0)" class="lnblink">서브메뉴</a>
+                </li>
+              </ul>
+            </li>
+            <li class="lnb_gr_item">
+              <ul class="lnb_list">
+                <li class="lnb_item">
+                  <a href="javascript:void(0)" class="lnblink">서브메뉴</a>
+                </li>
+                <li class="lnb_item">
+                  <a href="javascript:void(0)" class="lnblink">서브메뉴</a>
+                </li>
+                <li class="lnb_item">
+                  <a href="javascript:void(0)" class="lnblink">서브메뉴3</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab_box active">
+        <div class="tab_wrap">
+          <div class="sub_home_btn_area">
+            <button type="button" class="btn_icon_nav_home"></button>
+          </div>
+          <ul class="tablist">
+            <li class="tab_item active visible"><a href="javascript:void(0)" class="tlink">엠디아이메뉴첫번째</a><button type="button" class="btn_tab_item_close"></button></li>
+            <li class="tab_item active visible"><a href="javascript:void(0)" class="tlink">메뉴두번째</a><button type="button" class="btn_tab_item_close"></button></li>
+            <li class="tab_item visible"><a href="javascript:void(0)" class="tlink">메뉴세번째</a><button type="button" class="btn_tab_item_close"></button></li>
+          </ul>
+          <div class="btn_area">
+            <button type="button" class="btnType btnOutBK btnSize24 hasicon btn_menu_close">
+              <i class="icon icon_menu_close"></i>
+              <span class="txt">전체닫기</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <!-- ▼컨텐츠 영역▼ -->
+      <div class="content">
+        <div class="title_box">
+          <div class="title_area">
+            <div class="title">
+              <span class="tit_icon">●</span>
+              <span class="tit_txt">공통영역2</span>
+              <!-- <span class="line">|</span> -->
+              <!-- <span class="tit_desc">ESC102545</span> -->
+            </div>
+          </div>
+          <div class="right_area">
+            <div class="breadcrumb" aria-label="breadcrumbs">
+              <ul>
+                <li><a href="javascript:void(0)">Home</a></li>
+                <li><a href="javascript:void(0)">데이터통신</a></li>
+                <li class="is-active"><a href="javascript:void(0)" aria-current="page">데이터송신내역조회</a></li>
+              </ul>
+            </div>
+            <button type="button" class="btnType btnOutGray01 btnSize30 btn_help hasicon">
+              <i class="icon_notice"></i>
+              <span class="txt">Help</span>
+            </button>
+          </div>
+        </div>
+        <div class="contents_box type_company">
+          <div class="cont_group">
+            <div class="title_area">
+              <div class="title">
+                <span class="tit_icon">●</span>
+                <span class="tit_txt">Mission</span>
+              </div>
+            </div>
+            <div class="content_area">
+              <p class="desc_con">We are committed to providing reinsurance services of the highest possible standards to deliver value for our clients, shareholders, and employees and ultimately support their growth and prosperity.</p>
+              <p class="tit_con">We serve to protect your future</p>
+            </div>
+          </div>
+          <div class="cont_group">
+            <div class="title_area">
+              <div class="title">
+                <span class="tit_icon">●</span>
+                <span class="tit_txt">Vision</span>
+              </div>
+            </div>
+            <div class="content_area">
+              <p class="desc_con">Value-Creating Reinsurance Leader</p>
+              <div class="bgtit">vision directionality</div>
+              <p class="tit_con">Global Top - Tier Reinsurer</p>
+            </div>
+          </div>
+          <div class="cont_group">
+            <div class="title_area">
+              <div class="title">
+                <span class="tit_icon">●</span>
+                <span class="tit_txt">Stategy</span>
+              </div>
+            </div>
+            <div class="content_area">
+              <div class="bgtit">strategic slogan</div>
+              <p class="tit_con">Challenge Ourselves, Change the world</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ▲컨텐츠 영역▲ -->
+    </div>
+  </div>
+
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/grid.locale-en.js"></script>
+<script src="js/jquery.jqGrid.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/modal.js"></script>
+
+</body>
+</html>
