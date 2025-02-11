@@ -387,9 +387,9 @@
             <button type="button" class="btn_icon_nav_home"></button>
           </div>
           <ul class="tablist">
-            <li class="tab_item active visible"><a href="javascript:void(0)" class="tlink" onclick="javascript:winOpen()">엠디아이메뉴첫번째</a><button type="button" class="btn_tab_item_close"></button></li>
-            <li class="tab_item visible"><a href="javascript:void(0)" class="tlink" onclick="javascript:win5Open()">메뉴두번째</a><button type="button" class="btn_tab_item_close"></button></li>
-            <li class="tab_item visible"><a href="javascript:void(0)" class="tlink" onclick="javascript:win6Open()">메뉴세번째</a><button type="button" class="btn_tab_item_close"></button></li>
+            <li class="tab_item active visible"><a href="javascript:void(0)" class="tlink">엠디아이 메뉴첫번째</a><button type="button" class="btn_tab_item_close"></button></li>
+            <li class="tab_item visible"><a href="javascript:void(0)" class="tlink">메뉴두번째</a><button type="button" class="btn_tab_item_close"></button></li>
+            <li class="tab_item visible"><a href="javascript:void(0)" class="tlink">메뉴세번째</a><button type="button" class="btn_tab_item_close"></button></li>
           </ul>
           <div class="btn_area">
             <button type="button" class="btnType btnOutBK btnSize24 hasicon btn_menu_close">
@@ -402,7 +402,7 @@
     </div>
     <div class="container">
       <!-- ▼컨텐츠 영역▼ -->
-      <div class="content">
+      <div class="content" style="display: none;">
         <div class="title_box">
           <div class="title_area">
             <div class="title">
@@ -574,6 +574,9 @@
           </div>
         </div>
       </div>
+      <iframe src="page04_contents.html" class="page_frame page01 active" name="if"></iframe>
+      <iframe src="page05_contents.html" class="page_frame page02" name="if"></iframe>
+      <iframe src="page06_contents.html" class="page_frame page03" name="if"></iframe>
       <!-- ▲컨텐츠 영역▲ -->
     </div>
     <!-- 거래사 조회 팝업 -->
@@ -759,25 +762,11 @@ $( function() {
   //]]>
 </script>
 
-<!-- 메뉴 스크롤 이동하기 -->
-<script>
-// function lnbleftArrow(){
-//   var lnbleftPos = $('.lnb_gr_list').scrollLeft();
-//   $(".lnb_gr_list").animate({scrollLeft: lnbleftPos - 100}, 400);
-// }
-</script>
-
-<script>
-// function lnbrightArrow(){
-//   var lnbleftPos = $('.lnb_gr_list').scrollLeft();
-//   $(".lnb_gr_list").animate({scrollLeft: lnbleftPos + 100}, 400);
-// }
-</script>
 
 
 <!-- 탭 클릭시 아이프레임 열기 -->
 <script language="javascript">
-  function winOpen(){
+  function tab01click(){
     var f = document.frm;
     k=window.open("page04.html", 'insert','location=0,status=yes,left=0,top=0,width=1500,height=900');
   }
