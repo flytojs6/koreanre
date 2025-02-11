@@ -175,7 +175,7 @@ min-width: 110px; min-height: 40px; background-color: #353535; border-bottom-lef
 
 /* 컴퍼니 페이지 */
 .container .content .title_box + .contents_box.type_company{margin-top: 20px;}
-.content .contents_box.type_company{display: flex; justify-content: center; gap: 0 20px; padding: 40px; min-height: 515px; background-color: #e7e7e7; background-image: url('../images/company_bg.jpg'); background-position: right bottom; background-repeat: no-repeat; box-sizing: border-box;}
+.content .contents_box.type_company{display: flex; align-items: center; justify-content: center; gap: 0 20px; padding-bottom: 45px; min-height: 515px; height: calc(100vh - 170px); background-color: #e7e7e7; background-image: url('../images/company_bg.jpg'); background-position: right bottom; background-repeat: no-repeat; box-sizing: border-box;}
 .content .contents_box.type_company .earth_img{width: 420px; height: 420px; margin-top: auto; margin-bottom: auto; background: url('../images/company_earth.jpg') no-repeat center; background-size: contain;}
 .content .contents_box.type_company .contents_wrap{display: flex; flex-direction: column;}
 .contents_box.type_company .cont_group + .cont_group{margin-top: 14px; padding-top: 0px; border-top: 0px solid #ddd;}
