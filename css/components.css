@@ -69,21 +69,10 @@ h5{font-size: var(--fontSize30); font-weight: 600;}
 .sub_txt.b2{font-size: var(--fontSize20); font-weight: 600;}
 .body_txt.b3{font-size: var(--fontSize18); font-weight: 400; line-height: 1.4;}
 
-
-.txt20{font-size: 16px;}
-@media (min-width: 1280px) {
-  .txt20{font-size: 20px;}
-}
-
 .txt18{font-size: 18px;}
-
+.txt20{font-size: 20px;}
 .txt26{font-size: 26px;}
-
-.txt36{font-size: 26px;}
-@media (min-width: 1280px) {
-  .txt36{font-size: 36px;}
-}
-
+.txt36{font-size: 36px;}
 
 .fw400{font-weight: 400;}
 .fw550{font-weight: 550;}
@@ -163,12 +152,7 @@ textarea::placeholder{font-size: 16px; font-weight: 500; color: var(--grayCBCBC2
 .selWrap .selected .selectedValue .icon_sort.type_black{background: url("../icon/icon_sort.svg") no-repeat center center;}
 .selWrap ul{display: none; position: absolute; z-index: 600; top: 55px; left: 0; right: 0; width: calc(100% - 20px); box-sizing: border-box; border-radius: 4px; border: 1px solid var(--grayCBCBC2); background-color: var(--mainColorW); margin: auto; overflow: hidden; cursor: pointer; height: 0;}
 .selWrap ul.optBox{top: 30px; width: 100%; border-radius: 3px;}
-
-
 .selWrap ul.optBox.type_nopadding{width: 100%;}
-@media (min-width: 769px) {
-    .selWrap ul.optBox.type_nopadding{width: 100%;}
-}
 
 .selWrap ul li{position: relative; display: flex; align-items: center; height: 30px; font-size: var(--fontSize14); font-weight: var(--fw300); padding: 0px 4px 0px 32px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .selWrap ul.optBox.type_nopadding li{padding: 7px 8px 7px 10px; display: block; height: auto; line-height: 1.28; white-space: wrap; overflow: visible; text-overflow: unset; word-break: break-all;}
@@ -210,17 +194,11 @@ em.errorCaption .icon_error_caption{margin-right: 8px;}
 /* chkWrap - chkSquare common */
 .chkWrap input[type="checkbox"].chkSquare{display:none;}
 .chkWrap input[type="checkbox"].chkSquare + label{display: flex; cursor: pointer; margin-left: -8px;}
-@media (min-width: 768px) {
-    .chkWrap input[type="checkbox"].chkSquare + label{display: flex; cursor: pointer; margin-left: unset;}
-}
 
 .chkWrap input[type="checkbox"].chkSquare + label span{margin-left: 8px; font-size: var(--fontSize14); font-weight: var(--fw400); line-height: 18.2px; color: #716F64;}
 .chkWrap input[type="checkbox"].chkSquare:disabled + label span{color: #CBCBC2;}
 .inp_check_desc{font-size: 13px; font-weight: 400; line-height: 16.7px; color: #716F64;}
 .policy_btm_foam .inp_check_desc{padding-left: 0px;}
-@media (min-width: 768px) {
-    .policy_btm_foam .inp_check_desc{padding-left: 8px;}
-}
 
 .inp_check_desc > a.link{text-decoration: underline; color: #262626; cursor: pointer;}
 .chkWrap input[type="checkbox"].chkSquare + label:before{content: ""; width: 17px; height:17px; min-width: 17px; display: inline-block; background:url("../icon/icon_check.png") no-repeat center center / 100%;}
@@ -232,17 +210,12 @@ em.errorCaption .icon_error_caption{margin-right: 8px;}
 /* radio */
 .chkWrap.radio_wrap{display: flex;}
 .chkWrap input[type="radio"]{width: 18px; height: 18px; margin: 8px 8px 8px 8px; accent-color: #000;}
-@media (min-width: 768px) {
-    .chkWrap input[type="radio"]{width: 18px; height: 18px; margin: 8px 8px 8px 8px;}
-}
 
 .chkWrap .radio_label{display: flex; align-items: center;}
 .chkWrap .radio_label > span{font-size: 14px; font-weight: 400; color: #716F64;}
 .chkWrap .radio_label + .radio_input{margin-left: 16px;}
 .chkWrap .radio_label + .chkSquare{margin-left: 8px;}
-@media (min-width: 1280px) {
-  .chkWrap .radio_label + .chkSquare{margin-left: 16px;}
-}
+
 
 
 
