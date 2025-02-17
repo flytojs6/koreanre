@@ -88,9 +88,9 @@ body{overflow-x: hidden;}
 .tab_wrap .tablist::-webkit-scrollbar{display:none;}
 .tab_wrap .tablist > li{display: flex; gap: 2px; padding-right: 3px; border: 1px solid #ccc; border-radius: 3px; background-color: #fff;}
 .tab_wrap .tablist > li.active{border: 1px solid #ccc; background-color: #ddd;}
-.tab_wrap .tablist > li.tab_item{display: none; align-items: center;}
+.tab_wrap .tablist > li.tab_item{display: none; align-items: center; height: 22px; box-sizing: border-box;}
 .tab_wrap .tablist > li.tab_item.visible{display: flex;}
-.tab_wrap .tablist > li.tab_item a.tlink{padding: 3px 5px; font-size: 14px; color: #565656; white-space: nowrap;}
+.tab_wrap .tablist > li.tab_item a.tlink{padding: 0px 5px; font-size: 14px; color: #565656; white-space: nowrap; line-height: 20px; box-sizing: border-box;}
 .tab_wrap .tablist > li.tab_item.active .tlink{color: #000; font-weight: 500;}
 
 .tab_box .tab_wrap .btn_area{flex: 1; display: flex; justify-content: flex-end; margin-left: auto;}
