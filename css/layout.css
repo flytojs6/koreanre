@@ -28,7 +28,7 @@ body{overflow-x: hidden;}
 .header .util_area .lang_change > ul li a{padding: 0 4px; font-size: 14px;}
 
 .header .util_area .lang_change + .btn_area{margin-left: 8px;}
-.header .util_area .btn_area{position: relative;}
+.header .util_area .btn_area{position: relative; display: flex;}
 
 
 

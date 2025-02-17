@@ -299,7 +299,7 @@ a.btnType.btnSize48{line-height: 48px;}
 .btnType.hasicon{display: flex; align-items: center; gap: 5px;}
 .btnType.hasicon > .txt{color: #4a4946;}
 
-.btn_icon_login{width: 18px; height: 18px; background: url("../icon/logout.png") no-repeat center center; background-size: cover; cursor: pointer; border: 0;}
+.btn_icon_login{width: 16px; height: 16px; background: url("../icon/logout.png") no-repeat center center; background-size: contain; cursor: pointer; border: 0;}
 
 .icon_notice{display: inline-block; width: 20px; height: 20px; background: url("../icon/icon-notice-48.svg") no-repeat center center; background-size: cover;}
 .btn_help .txt{color: #716F64;}
