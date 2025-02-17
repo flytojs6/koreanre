@@ -9,6 +9,8 @@ body{overflow-x: hidden;}
 .wrap{position: relative; width: 100%;}
 .wrap.sys_bg{display: flex; flex-direction: column; background-color: #dddddd; min-height: 100vh;}
 
+
+
 /* header */
 .wrap.sys_bg .header + .container{margin-top: 5px;}
 .header{display: flex; flex-direction: column;}
@@ -28,18 +30,11 @@ body{overflow-x: hidden;}
 .header .util_area .lang_change + .btn_area{margin-left: 8px;}
 .header .util_area .btn_area{position: relative;}
 
+
+
 /* nav */
 .header .nav{display: flex; justify-content: space-between; align-items: center; width: calc(100% - 10px); margin-left: 5px; margin-right: 5px; background-color: #353535; border-top-left-radius: 5px; border-top-right-radius: 5px;}
 .nav .gnbArea{position: relative; display: flex; flex-direction: column; width: 100%; padding-left: 20px; padding-right: 20px; box-sizing: border-box;}
-@media (min-width: 1660px) {
-  .nav .gnbArea{padding-left: 25px; padding-right: 25px;}
-}
-
-.nav.menuover .gnbArea{padding-left: 40px; padding-right: 40px;}
-@media (min-width: 1660px) {
-  .nav.menuover .gnbArea{padding-left: 45px; padding-right: 45px;}
-}
-
 .nav .gnbArea .mainmenu{position: relative; display: flex; align-items: center; width: 100%; height: 40px; box-sizing: border-box;}
 
 .nav .gnbArea .btn_nav_prev{position: absolute; z-index: 90; left: 13px; top: 11px; display: inline-block; width: 16px; height: 16px; background:url("../icon/btn_paging_prev_black.svg") #fff no-repeat center center; border: 0; border-radius: 8px; background-size: 20px;}
@@ -47,20 +42,20 @@ body{overflow-x: hidden;}
 
 .nav .gnbArea .mainmenu .mainlist{display: flex; align-items: center; overflow-x: auto; overflow-y: visible; -ms-overflow-style: none;}
 .nav .gnbArea .mainmenu .mainlist::-webkit-scrollbar{display:none;}
-/* .nav .gnbArea .mainmenu .mainlist li{position: relative;} */
+
 .nav .gnbArea .mainmenu .mainlist li a{display: flex; align-items: center; height: 40px; padding: 0 20px; white-space: nowrap; color: #fff; font-size: 14px; font-weight: 500; letter-spacing: -0.5px;}
-@media (min-width: 1660px) {
-  .nav .gnbArea .mainmenu .mainlist li a{padding: 0 25px; font-size: 14px; font-weight: 500}
-}
-.nav.menuover .gnbArea .mainmenu .mainlist li a{padding: 0 17px;}
 .nav .gnbArea .mainmenu .mainlist li a.active{color: #876847; background-color: #fff; font-weight: 600;}
 .nav .gnbArea .mainmenu .mainlist li.mmenu_item.active a.mlink{color: #876847; background-color: #fff; font-weight: 600;}
 
-.nav .gnbArea .mainmenu .mainlist li .smenu{display: none; position: absolute; z-index: 900; 
-/* left: 0; top: 40px;  */
-min-width: 110px; min-height: 40px; background-color: #353535; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}
+.nav .gnbArea .mainmenu .mainlist li .smenu{display: none; position: absolute; z-index: 900; min-width: 110px; min-height: 40px; background-color: #353535; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}
 .nav .gnbArea .mainmenu .mainlist li .smenu > li > .slink{height: 35px; padding: 0 10px; white-space: nowrap; color: #f8f1ea; font-size: 14px;}
 .nav .gnbArea .mainmenu .mainlist li .smenu > li > .slink:hover{color: #ddcebf; text-decoration: underline; text-underline-offset: 2px;}
+
+/* 메뉴 많아질때 스크롤 생김 */
+.nav.menuover .gnbArea{padding-left: 40px; padding-right: 40px;}
+.nav.menuover .gnbArea .mainmenu .mainlist li a{padding: 0 17px;}
+
+
 
 /* 서브메뉴 */
 .header .lnb{width: calc(100% - 10px);  margin-left: 5px; margin-right: 5px; margin-bottom: 5px; background-color: #fff; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}
@@ -104,6 +99,7 @@ min-width: 110px; min-height: 40px; background-color: #353535; border-bottom-lef
 .tab_wrap .btn_tab_next{position: absolute; z-index: 90; right: 97px; top: 4px; display: inline-block; width: 16px; height: 16px; background:url("../icon/btn_paging_next_black.svg") #afafaf no-repeat center center; border: 0; border-radius: 8px; background-size: 20px;}
 
 
+
 /* page layout */
 .wrap.sys_bg .container{display: flex; justify-content: space-between; margin-left: 5px; margin-right: 5px; margin-bottom: 5px; border-radius: 5px; background-color: #fff; box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.2);}
 
@@ -117,6 +113,7 @@ min-width: 110px; min-height: 40px; background-color: #353535; border-bottom-lef
 
 .page_frame{display: none; width: 100%; height: calc(100vh - 150px); overflow-y: auto;}
 .page_frame.active{display: block;}
+
 
 
 /* 페이지 제목 영역  */
@@ -183,6 +180,8 @@ min-width: 110px; min-height: 40px; background-color: #353535; border-bottom-lef
 .paging_num_area .current_page + .total_page{margin-left: 6px;}
 .paging_num_area .total_page span{color: #86868b;}
 
+
+
 /* 컴퍼니 페이지 */
 .content .title_box + .contents_box.type_company{margin-top: 20px;}
 .contents_box.type_company{margin-top: 20px;}
@@ -234,11 +233,4 @@ min-width: 110px; min-height: 40px; background-color: #353535; border-bottom-lef
 .contents_box.type_company .cont_group .content_area .tit_con{font-size: 21px; color: #18ab94;}
 @media (min-width: 1920px) {
   .contents_box.type_company .cont_group .content_area .tit_con{font-size: 23px;}
-}
-
-
-
-@keyframes lnbzoomout { 
-    0% { transform: scale3d(1.05, 1.05, 1.05) }
-    100% { transform: scale3d(1.00, 1.00, 1.00) } 
 }
