@@ -84,25 +84,31 @@
   <div class="btnArea pd60" id="btnArea" style="background-color: #f0eee9;">
       <h3 class=" mt20">Buttons disabled</h3>
       <div class="btnWrap mt20">
-          <button type="button" class="btnType btnColorB btnSize40" disabled>btn</button>
-          <button type="button" class="btnType btnColorBK btnSize40" disabled>btn</button>
-          <button type="button" class="btnType btnColorR btnSize40" disabled>btn</button>
+          <button type="button" class="btnType btnColorB btnSize40" disabled>조회</button>
+          <button type="button" class="btnType btnColorBR btnSize40" disabled>닫기</button>
+          <button type="button" class="btnType btnColorBK btnSize40" disabled>목록</button>
+          <button type="button" class="btnType btnColorR btnSize40" disabled>확인</button>
+          <button type="button" class="btnType btnColorG btnSize40" disabled>login</button>
           <button type="button" class="btnType btnColorW btnSize40" disabled>btn</button>
+          <button type="button" class="btnType btnOutBeige btnSize40" disabled>닫기</button>
+          <button type="button" class="btnType btnOutGray01 btnSize40" disabled>파일삭제</button>
+          <button type="button" class="btnType btnOutR btnSize40" disabled>btn</button>
+          <button type="button" class="btnType btnOutGray btnSize40" disabled>취소</button>
       </div>
       <h3 class=" mt40">Buttons 40 - Solid type</h3>
       <div class="btnWrap mt20">
           <button type="button" class="btnType btnColorB btnSize40">조회</button>
-          <button type="button" class="btnType btnColorBR btnSize40">버튼</button>
+          <button type="button" class="btnType btnColorBR btnSize40">닫기</button>
           <button type="button" class="btnType btnColorBK btnSize40">목록</button>
           <button type="button" class="btnType btnColorR btnSize40">확인</button>
           <button type="button" class="btnType btnColorG btnSize40">login</button>
-          <button type="button" class="btnType btnColorW btnSize40">Continue</button>
+          <button type="button" class="btnType btnColorW btnSize40">btn</button>
       </div>
       <h3 class=" mt40">Buttons 40 - Outlined type</h3>
       <div class="btnWrap mt20">
           <button type="button" class="btnType btnOutBeige btnSize40">닫기</button>
           <button type="button" class="btnType btnOutGray01 btnSize40">파일삭제</button>
-          <button type="button" class="btnType btnOutR btnSize40">Continue</button>
+          <button type="button" class="btnType btnOutR btnSize40">btn</button>
           <button type="button" class="btnType btnOutGray btnSize40">취소</button>
       </div>
       <h3 class=" mt40">a link </h3>
@@ -417,11 +423,16 @@ $( function() {
       ],
       
       width: '1200',
+      height: '310',
       autowidth : true,
+      shrinkToFit: true,
       rowNum : 10,  // 보여줄 행의 개수 설정
       rowList : [10,20,30], // 한 화면에 보여줄 row의 수(rowNum의 수) 를 조절 가능하도록 기능 제공            
       pager : "#jqGridPager",
       rownumber : true, // 각 row의 맨 앞줄에 각 행의 번호가 자동으로 부여 되도록 설정
+      loadComplete: function () {
+        $("#lui_Gridsample").hide(); // 로딩 딤드 숨김
+      },
     });
   });
   //]]>

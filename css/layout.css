@@ -208,7 +208,7 @@ body{overflow-x: hidden;}
 @media (min-width: 1920px) {
   .contents_box.type_company .cont_group{padding-bottom: 18px; max-width: 880px;}
 }
-.contents_box.type_company .cont_group .title_area{width: 20%;}
+.contents_box.type_company .cont_group .title_area{min-width: 130px; margin-right: 10px; box-sizing: border-box;}
 .contents_box.type_company .title_area .title .tit_icon{display: flex; align-items: center; font-size: 0px; color: #18ab94; width: 16px; height: 16px; background-color: #e7e7e7; border: 5px inset #18ab94; border-radius: 50%; box-sizing: border-box;}
 .contents_box.type_company .title_area .title .tit_txt{font-size: 24px; font-weight: 600; color: #18ab94;}
 @media (min-width: 1610px) {
@@ -218,9 +218,9 @@ body{overflow-x: hidden;}
   .contents_box.type_company .title_area .title .tit_txt{font-size: 28px; line-height: 1.3;}
 }
 
-.contents_box.type_company .cont_group .content_area{width: 78%; margin-left: 2%;}
+.contents_box.type_company .cont_group .content_area{margin-left: 10px;}
 @media (min-width: 1920px) {
-  .contents_box.type_company .cont_group .content_area{width: 80%; margin-left: 0%;}
+  .contents_box.type_company .cont_group .content_area{}
 }
 .contents_box.type_company .cont_group .content_area .desc_con + .bgtit{margin-top: 8px;}
 @media (min-width: 1920px) {
