@@ -266,7 +266,7 @@ button:disabled,button[disabled]{cursor: not-allowed; opacity: 0.6;}
 .btnOutBR:disabled{background-color: #fff; color: rgba(255,255,255,0.7);}
 
 .btnOutGray01{background-color: var(--mainColorW); border: 1px solid var(--grayCBCBC2); color: var(--gray4A4946);}
-.btnOutGray01:hover{opacity: 0.8;}
+.btnOutGray01:hover:not(:disabled){opacity: 0.8;}
 .btnOutGray01:disabled{background-color: var(--mainColorW); border: 1px solid var(--grayCBCBC2); color: rgba(55,55,55,0.7);}
 
 .btnOutGray{background-color: #f2f2f2; border: 1px solid var(--grayCBCBC2); color: var(--gray4A4946);}
